@@ -14,14 +14,16 @@
 
 # Overview
 
-## Part One: CSS -> Sass
+start w/ Q&A
+what are you in your project
 
+## Part One: CSS -> Sass
 
 * overview of ways to install/use it (codekit, rails gem, libsass)
 * ways to switch easily (.css -> .scss, pulling out variables like colors, type, etc, importing files w/o changing import order)
 * commenting (per file, per section, instructions)
 * small chunks - one thing at a time!
-* where do all your modules live? determine WHAT modules you have, WHERE they are, which should be the same, which need a parent to have a st* yle change under (namespacing)
+* where do all your modules live? determine WHAT modules you have, WHERE they are, which should be the same, which need a parent to have a style change under (namespacing)
 
 
 ## Part Two: Adv Sass Refactoring

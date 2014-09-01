@@ -1,7 +1,7 @@
 # Choose your own Refactoring Adventure!
 #### A workshop at SassConf 2014 by Jina Bolton & Elyse Holladay
 
-!cya-supercomputer.jpg!
+![CYA](cya-supercomputer.jpg)
 
 
 ## Overview

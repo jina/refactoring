@@ -13,6 +13,8 @@
   * general compromise and getting everyone on the same page
     * understanding principles of why you are doing a certain way
   * systems, not pages
+  * don't refactor everything at once; small manageable chunks
+  * keep things documented as you go
  * Using Sass to refactor
    * why it's valuable
      * allows us to make modules
@@ -38,6 +40,14 @@
 * CYA: Import files
   * breaking code out into files
   * importing files w/o changing import order
+* CYA: file and folder organization
+  * vendor and third party libraries
+  * frameworks
+  * settings and variables
+  * helpers, mixins, dependencies, tools and testing
+  * IE, themes, responsive if you keep it separate
+  * base - your semantic HTML - layout/page level
+  * components or modules - icons, buttons, page components
 * CYA: Commenting
   * commenting files
   * commenting imports
@@ -75,6 +85,12 @@
   * docco, kss, etc, an overview of what they are
   * vs manual creation
   * show example of comments in sass file w/ relevant HTML & generate one)
+* CYA: documentation
+  * inline comment documentation
+  * keep it up to date when you change your code.
+  * if you move files, change classnames that are referenced elsewhere
+  * if you make or change a mixin or helper, explain it, write instructions
+  * intructions for using mixins and extends
 * CYA: testing
   * how to test for changes/things that are broken after a refactor
   * diffux, phantom

@@ -42,4 +42,4 @@ Current countdown: 33 Days!
 
 * refactoring cheat sheet on github repo to share after talk
 * see about reveal js slide jumping to sections for CYA style talk
-* set up reveal js notes on the repo and how to for jina
+* ~~set up reveal js notes on the repo and how to for jina~~

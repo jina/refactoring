@@ -10,6 +10,9 @@
     * you have new requirements
     * the design or UI needs to change
     * code smell
+  * general compromise and getting everyone on the same page
+    * understanding principles of why you are doing a certain way
+  * systems, not pages
  * Using Sass to refactor
    * why it's valuable
      * allows us to make modules
@@ -27,6 +30,11 @@
 * CYA: Refactoring variables
   * colors
   * typography
+* CYA: abstracting variables
+  * variable naming conventions
+  * levels of abstraction
+    * theming
+    * keeping functions/helpers out of style code
 * CYA: Import files
   * breaking code out into files
   * importing files w/o changing import order
@@ -37,6 +45,7 @@
   * documentation/instructions
   * /* versus // comments
 * CYA: Modules
+  * systems, not pages
   * how to determine WHAT modules you have
     * going thru old html and css and determining what is the same and what is different
     * which need a parent to have a style change under (namespacing)
@@ -59,6 +68,9 @@
   * OOCSS
   * BEM
   * SMACSS
+  * pros and cons of naming convention standards
+  * how to iterate on naming conventions and change them
+  * organizing properties (alpha, properties, camelcase vs underscore vs dash, etc)
 * CYA: living style guides
   * docco, kss, etc, an overview of what they are
   * vs manual creation
@@ -67,4 +79,9 @@
   * how to test for changes/things that are broken after a refactor
   * diffux, phantom
   * keeping refactors small so they don't break things
-
+* CYA: what's right for my project
+  * how to tell what works for you...
+    * naming conventions - why one would work better than another FOR your project
+    * organization of files/folders
+    * using elements vs classnames, BEM, OOCSS, etc
+    * using frameworks or not

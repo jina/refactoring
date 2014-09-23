@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>Choose your own Refactoring Adventure | a workshop at SassConf 2014 by Elyse Holladay & Jina Bolton</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -15,10 +15,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="css/theme/elyse.css" id="theme">
 
 		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="lib/css/tomorrowlight.css">
 
 		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
 		<script>
@@ -42,315 +42,384 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
+
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
+					<h2>Choose your own Refactoring Adventure</h2>
+					<h6>A workshop at SassConf 2014</h6>
+					<h6>by Elyse Holladay &amp; Jina Bolton</h6>
 				</section>
 
-				<section>
-					<h2>Heads Up</h2>
-					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.
-					</p>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
-
-				<!-- Example of nested vertical slides -->
-				<section>
+				<section data-state="introduction">
 					<section>
-						<h2>Vertical Slides</h2>
-						<p>
-							Slides can be nested inside of other slides,
-							try pressing <a href="#" class="navigate-down">down</a>.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
+						<h2>Introduction</h2>
 					</section>
+				</section>
+
+				<section data-state="refactoring">
 					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
+						<h2>Refactoring</h2>
 					</section>
+
 					<section>
-						<h2>Basement Level 2</h2>
-						<p>Cornify</p>
-						<a class="test" href="http://cornify.com">
-							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
-						</a>
+						<h3>What is it?</h3>
+						<p>changing the structure of existing code without changing its behavior</p>
 					</section>
+
 					<section>
-						<h2>Basement Level 3</h2>
-						<p>That's it, time to go back up.</p>
-						<a href="#/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
+						<h3>Why do we do it?</h3>
+						<ul>
+							<li>because we never write code perfectly the first time</li>
+							<li>clarity, maintainability, efficiency, DRY</li>
+							<li>you have new requirements</li>
+							<li>the design or UI needs to change</li>
+							<li>code smell</li>
+						</ul>
+					</section>
+
+					<section>
+						<p>general compromise and getting everyone on the same page</p>
+						<p>understanding principles of why you are doing a certain way</p>
+					</section>
+
+					<section>
+						<p>systems, not pages</p>
+					</section>
+
+					<section>
+						<p>don't refactor everything at once; small manageable chunks</p>
+					</section>
+
+					<section>
+						<p>keep things documented as you go</p>
+					</section>
+
+					<section>
+						<h2>Why Sass helps us refactor</h2>
+						<p>why it's valuable</p>
+					</section>
+
+					<section>
+						<ul>
+							<li>allows us to make modules</li>
+							<li>separation of concerns</li>
+							<li>importing individual files</li>
+							<li>variables, functions</li>
+							<li>writing DRYer code than pure CSS</li>
+						</ul>
 					</section>
 				</section>
 
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? No problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slid.es" target="_blank">http://slid.es</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
-
-				<section>
-					<h2>Works in Mobile Safari</h2>
-					<p>
-						Try it out! You can swipe through the slides and pinch your way to the overview.
-					</p>
-				</section>
-
-				<section>
-					<h2>Marvelous Unordered List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  For those of you who like that sort of thing.
-						  Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=cube#/transitions">Cube</a> -
-						<a href="?transition=page#/transitions">Page</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a> -
-						<a href="?transition=linear#/transitions">Linear</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?#/transitions">Default</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						Reveal.js comes with a few themes built in: <br>
-						<a href="?#/themes">Default</a> -
-						<a href="?theme=sky#/themes">Sky</a> -
-						<a href="?theme=beige#/themes">Beige</a> -
-						<a href="?theme=simple#/themes">Simple</a> -
-						<a href="?theme=serif#/themes">Serif</a> -
-						<a href="?theme=night#/themes">Night</a> <br>
-						<a href="?theme=moon#/themes">Moon</a> -
-						<a href="?theme=solarized#/themes">Solarized</a>
-					</p>
-					<p>
-						<small>
-							* Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
-						</small>
-					</p>
-				</section>
-
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the background.
-					</p>
-				</section>
-
-				<section data-state="customevent">
-					<h2>Custom Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
-				<section>
-					<section data-background="#007777">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#007777"</code> on a slide to change the full page background to the given color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
+				<section data-state="cya-starting">
+					<section>
+						<h2>CYA: Installing and starting with Sass</h2>
 					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Repeated Image Backgrounds</h2>
-						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
+
+					<section>
+						<ul>
+							<li>using gems</li>
+							<li>codekit</li>
+							<li>libsass</li>
+							<li>foundation</li>
+							<li>compass</li>
+							<li>changing .css to .scss</li>
+						</ul>
 					</section>
 				</section>
 
-				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
-					<h2>Background Transitions</h2>
-					<p>
-						Pass reveal.js the <code>backgroundTransition: 'slide'</code> config argument to make backgrounds slide rather than fade.
-					</p>
+				<section data-state="cya-variables">
+					<section>
+						<h2>CYA: Refactoring variables</h2>
+					</section>
+
+					<section>
+						<p>colors</p>
+					</section>
+
+					<section>
+						<p>typography</p>
+					</section>
+
 				</section>
 
-				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-					<h2>Background Transition Override</h2>
-					<p>
-						You can override background transitions per slide by using <code>data-background-transition="slide"</code>.
-					</p>
+				<section data-state="cya-abstracting-vars">
+					<section>
+						<h2>CYA: abstracting variables</h2>
+					</section>
+
+					<section>
+						<p>variable naming conventions</p>
+					</section>
+
+					<section>
+						<p>levels of abstraction</p>
+					</section>
+
+					<section>
+						<p>theming</p>
+					</section>
+
+					<section>
+						<p>keeping functions/helpers out of style code</p>
+					</section>
+
 				</section>
 
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
+				<section data-state="cya-import">
+					<section>
+						<h2>CYA: Import files</h2>
+					</section>
+
+					<section>
+						<p>breaking code out into files</p>
+					</section>
+
+					<section>
+						<p>importing files w/o changing import order</p>
+					</section>
+
 				</section>
 
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
+				<section data-state="cya-organization">
+					<section>
+						<h2>CYA: file and folder organization</h2>
+					</section>
 
-    var nodes = document.querySelectorAll( selector );
+					<section>
+						<p>vendor and third party libraries</p>
+					</section>
 
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
+					<section>
+						<p>frameworks</p>
+					</section>
 
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+					<section>
+						<p>settings and variables</p>
+					</section>
+
+					<section>
+						<p>helpers, mixins, dependencies, tools and testing</p>
+					</section>
+
+					<section>
+						<p>IE, themes, responsive if you keep it separate</p>
+					</section>
+
+					<section>
+						<p>base - your semantic HTML - layout/page level</p>
+					</section>
+
+					<section>
+						<p>components or modules - icons, buttons, page components</p>
+					</section>
+
 				</section>
 
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
+				<section data-state="cya-commenting">
+					<section>
+						<h2>CYA: Commenting</h2>
+					</section>
+
+					<section>
+						<p>commenting files</p>
+					</section>
+
+					<section>
+						<p>commenting imports</p>
+					</section>
+
+					<section>
+						<p>commenting sections</p>
+					</section>
+
+					<section>
+						<p>documentation/instructions</p>
+					</section>
+
+					<section>
+						<p>/versus // comments</p>
+					</section>
+
 				</section>
 
-				<section>
-					<section id="fragments">
-						<h2>Fragmented Views</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
+				<section data-state="cya-modules">
+					<section>
+						<h2>CYA: Modules</h2>
+					</section>
+
+					<section>
+						<p>systems, not pages</p>
+					</section>
+
+					<section>
+						<p>how to determine WHAT modules you have; going thru old html and css and determining what is the same and what is different</p>
+					</section>
+
+					<section>
+						<p>which need a parent to have a style change under (namespacing); WHERE they are and which should be the same</p>
+					</section>
+
+					<section>
+						<p>where do you put new modules</p>
+					</section>
+
+					<section>
+						<p>how do you group and organize them?</p>
+					</section>
+
+				</section>
+
+				<section data-state="cya-module-refactor">
+					<section>
+						<h2>CYA: Steps to refactor a module</h2>
+					</section>
+
+					<section>
+						once you have determined what goes into a module:
 						<ol>
-							<li class="fragment"><code>any type</code></li>
-							<li class="fragment"><em>of view</em></li>
-							<li class="fragment"><strong>fragments</strong></li>
+							<li>Extract partial</li>
+							<li>Find repeating patterns</li>
+							<li>Create/extract base class</li>
+							<li>Apply nesting</li>
+							<li>Create mixins/extends</li>
 						</ol>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
 					</section>
+
 					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's a few styles of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment roll-in">roll-in</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-green">highlight-green</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-current-blue">highlight-current-blue</p>
+						<p>determining the size of a refactor</p>
+					</section>
+
+				</section>
+
+				<section data-state="cya-classname-refactor">
+					<section>
+						<h2>CYA: class naming refactoring in both HTML and CSS</h2>
+					</section>
+
+					<section>
+						<p>elements -> classnames</p>
+					</section>
+
+				</section>
+
+				<section data-state="cya-naming-conventions">
+					<section>
+						<h2>CYA: naming conventions</h2>
+					</section>
+
+					<section>
+						<p>whatever you do, be consistent: .section, .section-item, .section-item-individualthingy</p>
+					</section>
+
+					<section>
+						<p>OOCSS</p>
+					</section>
+
+					<section>
+						<p>BEM</p>
+					</section>
+
+					<section>
+						<p>SMACSS</p>
+					</section>
+
+					<section>
+						<p>pros and cons of naming convention standards</p>
+					</section>
+
+					<section>
+						<p>how to iterate on naming conventions and change them</p>
+					</section>
+
+					<section>
+						<p>organizing properties (alpha, properties, camelcase vs underscore vs dash, etc)</p>
+					</section>
+
+				</section>
+
+				<section data-state="cya-styleguides">
+					<section>
+						<h2>CYA: living style guides</h2>
+					</section>
+
+					<section>
+						<p>docco, kss, etc, an overview of what they are</p>
+					</section>
+
+					<section>
+						<p>vs manual creation</p>
+					</section>
+
+					<section>
+						<p>show example of comments in sass file w/ relevant HTML & generate one)</p>
+					</section>
+
+				</section>
+
+				<section data-state="cya-documentation">
+					<section>
+						<h2>CYA: documentation</h2>
+					</section>
+
+					<section>
+						<p>inline comment documentationl keep it up to date when you change your code.</p>
+					</section>
+
+					<section>
+						<p>if you move files, change classnames that are referenced elsewhere</p>
+					</section>
+
+					<section>
+						<p>if you make or change a mixin or helper, explain it, write instructions</p>
+					</section>
+
+					<section>
+						<p>intructions for using mixins and extends</p>
 					</section>
 				</section>
 
-				<section>
-					<h2>Spectacular image!</h2>
-					<a class="image" href="http://lab.hakim.se/meny/" target="_blank">
-						<img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
-					</a>
+				<section data-state="cya-testing">
+					<section>
+						<h2>CYA: testing</h2>
+					</section>
+
+					<section>
+						<p>how to test for changes/things that are broken after a refactor</p>
+					</section>
+
+					<section>
+						<p>diffux, phantom</p>
+					</section>
+
+					<section>
+						<p>keeping refactors small so they don't break things</p>
+					</section>
+
 				</section>
 
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
-					<iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
-					<script>
-						document.getElementById('slideshare').attributeName = 'allowfullscreen';
-					</script>
-				</section>
+				<section data-state="cya-myproject">
+					<section>
+						<h2>CYA: what's right for my project</h2>
+					</section>
 
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
-						during a presentation.
-					</p>
-				</section>
+					<section>
+						<p>how to tell what works for you</p>
+					</section>
 
-				<section>
-					<h2>Stellar Links</h2>
-					<ul>
-						<li><a href="http://slid.es">Try the online editor</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js">Source code on GitHub</a></li>
-						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
-					</ul>
-				</section>
+					<section>
+						<p>naming conventions - why one would work better than another FOR your project</p>
+					</section>
 
-				<section>
-					<h1>THE END</h1>
-					<h3>BY Hakim El Hattab / hakim.se</h3>
+					<section>
+						<p>organization of files/folders</p>
+					</section>
+
+					<section>
+						<p>using elements vs classnames, BEM, OOCSS, etc</p>
+					</section>
+
+					<section>
+						<p>using frameworks or not</p>
+					</section>
 				</section>
 
 			</div>
@@ -371,7 +440,7 @@ function linkify( selector ) {
 				center: true,
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+				transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
 
 				// Parallax scrolling
 				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',

@@ -29,17 +29,20 @@
   * foundation
   * compass
   * changing .css to .scss
-* CYA: Refactoring variables
+  * .scss versus .sass and translation
+* CYA: Import files
+  * breaking code out into files
+  * importing files w/o changing import order
+* CYA: Creating basic variables and helpers
   * colors
   * typography
+  * helpers: clearfix, css3, etc
+  * using compass, bourbon, etc versus rolling your own
 * CYA: abstracting variables
   * variable naming conventions
   * levels of abstraction
     * theming
     * keeping functions/helpers out of style code
-* CYA: Import files
-  * breaking code out into files
-  * importing files w/o changing import order
 * CYA: file and folder organization
   * vendor and third party libraries
   * frameworks

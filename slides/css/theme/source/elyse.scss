@@ -1,0 +1,91 @@
+/**
+ * Elyse theme!
+ * Author: Elyse Holladay
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+@import "fonts.css";
+// ---------------------------------------------
+
+
+// Colors
+$fuschia: #8b243e;
+$purple: #904098;
+$turquoise: #3b8aa2;
+$blue: #0f59b4;
+$orange: #f19732;
+$green: #5b8138;
+$black: #000;
+$white: #fff;
+
+
+// Backgrounds
+$backgroundColor: $purple;
+
+// Primary/body text
+$mainFont: 'PlutoSansExtraLight', sans-serif;
+$mainFontSize: 36px;
+$mainColor: $white;
+
+// Headings
+$headingFont: 'pluto_sanscond_regular', 'PlutoSansRegular', Impact, sans-serif;
+$headingColor: $white;
+$headingLineHeight: 1.25em;
+$headingLetterSpacing: 0;
+$headingTextTransform: none;
+// $headingTextShadow: 0px 0px 6px rgba(0,0,0,0.2);
+$headingTextShadow: none;
+$heading1TextShadow: $headingTextShadow;
+
+// Links and actions
+$linkColor: lighten($black,10%);
+$linkColorHover: lighten($black,50%);
+
+// Text selection
+$selectionBackgroundColor: $fuschia;
+$selectionColor: $white;
+
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+
+// Backgrounds
+// use by adding data-state="fuschia" to a section in index.html
+.fuschia .reveal { background-color: $fuschia; }
+.purple .reveal { background-color: $purple; }
+.turquoise .reveal { background-color: $turquoise; }
+.blue .reveal { background-color: $blue; }
+.orange .reveal { background-color: $orange; }
+.green .reveal { background-color: $green; }
+.black .reveal { background-color: $black; }
+.white .reveal { background-color: $white; }
+
+
+// Overriding text styles
+.reveal .slides {text-align: left;}
+.reveal h1 {text-transform: uppercase;}
+.reveal h2 {text-transform: uppercase;}
+.reveal h3 {}
+.reveal h4 {}
+.reveal h5 {}
+
+.reveal h6 {
+    color:  lighten($black,90%);;
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+// GIFS and backgrounds
+.data-state-name body {
+    background: $white url('../../images/no-idea-dog-title.jpg') no-repeat center center;
+    background-size: cover;
+}
+

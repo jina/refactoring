@@ -6,7 +6,7 @@
 Every attendee leaves with a game plan of how they would refactor their app. What are my next steps, order of operations,  potential tools to look into.
 
 
-## Poll
+## Survey/Questionnaire
 
 _Before the workshop starts, send out this as a digital poll; we can use survey responses for how much in depth we go, and also general information._
 

@@ -24,6 +24,10 @@ Current countdown: 33 Days!
 
 ## Elyse
 
+#### To Do
+
+* update outline in slides based on gameplan questions (order is now different)
+
 #### Topics to expand on
 
 * overview of ways to install/use it (codekit, rails gem, libsass)
@@ -41,5 +45,5 @@ Current countdown: 33 Days!
 #### Misc To Do
 
 * refactoring cheat sheet on github repo to share after talk
-* see about reveal js slide jumping to sections for CYA style talk
+* ~~see about reveal js slide jumping to sections for CYA style talk~~ _I think having them pick the order is too confusing; instead, I made the gameplan doc kind of a checklist/questionnaire they can answer as we go through the sections._
 * ~~set up reveal js notes on the repo and how to for jina~~

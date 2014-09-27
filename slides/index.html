@@ -70,7 +70,6 @@
 					<div class="color-sample-orange">$orange</div>
 					<div class="color-sample-black">$black</div>
 					<div class="color-sample-grey">$grey</div>
-
 				</section>
 
 				<section data-state="elyse">
@@ -220,11 +219,30 @@
 					</section>
 
 					<section>
-						<p>separation of concerns</p>
+						<h3>Why Sass helps us refactor</h3>
 					</section>
 
 					<section>
-						<p>systems, not pages</p>
+						<h2>Systems, not Pages</h2>
+
+						<aside class="notes">
+							<p>Jina (YEAH YOU!), in her Sass presentations, says "create systems, not pages." We used to do this—about page, home page, etc etc—but now as our apps and projects have gotten significantly more complex, that's a particularly bad plan.</p>
+
+							<p>How can you make a framework of code that is reusable and modular and separate from individual pages? Instead of "style the homepage", style the modules that are on the homepage.</p>
+
+							<p>Your code should be reusable in as many places as possible, which makes it more efficient to write and debug.</p>
+
+							<p>Sass helps you—or forces you—to do that. When you have the powerful tools of Sass available to you, instead of going to use the color picker to grab a shade of grey from your mockup, you know you can just write $grey. It allows you to write reusable code with very little effort.</p>
+
+						</aside>
+					</section>
+
+					<section>
+						<p>separation of concerns</p>
+						<p>importing files, import order</p>
+						<p>variables</p>
+						<p>mixins</p>
+						<p>nesting and namespacing</p>
 					</section>
 
 					<section>
@@ -239,14 +257,13 @@
 					</section>
 
 					<section>
-						<h3>Why Sass helps us refactor</h3>
-					</section>
-
-					<section>
-						<p>importing files, import order</p>
-						<p>variables</p>
-						<p>mixins</p>
-						<p>nesting and namespacing</p>
+						<p class="quote">&#8220;Sass is not a replacement for CSS, it’s more like having a CSS assistant who will help you write your code.&#8221;</p>
+						<aside class="notes">
+							<p>Tom Genoni wrote a blog post about switching to Sass, in which he says that the best way to learn Sass without getting the insane output is to not use the crazy functionality in Sass.</p>
+							<p>"Sass is not a replacement for CSS, it’s more like having a CSS assistant who will help you write your code. So when you’re ready to really put it to work I recommend occasional sanity checks on the resulting CSS to see if this “assistant” has created too much repeated code or if the selectors are getting too complicated. Refactoring your Sass will help keep your code clean and you’ll start learning how you can make the best use of it."</p>
+							<p>I personally think using variables and mixins for obvious things you will reuse (like css3, clearfix, etc) is helpful, but if you are unsure about some of the extend or nesting or functions, don't use them--keep an eye on your code. This is an authoring tool and it's supposed to make your life BETTER, not harder.</p>
+							<a href="http://atomeye.com/sass-and-compass.html">http://atomeye.com/sass-and-compass.html</a>
+						</aside>
 					</section>
 
 				</section>
@@ -254,18 +271,209 @@
 				<section data-state="cya-starting">
 					<section>
 						<h2>CYA: Installing and starting with Sass</h2>
+						<aside class="notes">
+							<p>The tools of using Sass—how to install it, what apps and options there are.</p>
+						</aside>
+					</section>
+
+					<section data-state="meridaugh gifs">
+						<br><br><br><br><br><br><br><br>
+						<h3>I have to use the <br> command line!?</h3>
+						<aside class="notes">Yes, to install Sass you MAY have to install it via Rails in the command line. The really long and difficult command you have to write is as follows:</aside>
 					</section>
 
 					<section>
-						<ul>
-							<li>using gems</li>
-							<li>codekit</li>
-							<li>libsass</li>
-							<li>foundation</li>
-							<li>compass</li>
-							<li>changing .css to .scss</li>
-						</ul>
+						<p><code>gem install sass</code></p>
 					</section>
+
+					<section data-state="sass-terminal">
+						<code class="fragment">sass --watch /path/style.scss:/path/style.css</code>
+						<aside class="notes">
+							<p>When to use terminal: small personal projects that don't require many other tasks done, if you want to learn and get comfortable in Terminal, to quickly compile one file and look at output. Knowing how to use this is a handy skill in your arsenal even if you don't use it as your primary compilation option.</p>
+						</aside>
+					</section>
+
+					<section data-state="codekit">
+						<aside class="notes">
+							<p>CodeKit helpfully compiles your stylesheets for you into regular or minified CSS, expanded or collapsed, and has LiveReload. It also now does LiveReload in multiple browsers/devices, creates source maps, and easily allows you to add plugins like Foundation, Compass, via Bower. It also does other types of processing, like Haml or Coffeescript. </p>
+							<p>When to use CodeKit: if you prefer a GUI/apps, you want simple compilation AND livereload w/o using a tool like Grunt, you want to use/play with plugins without manual install.</p>
+							<p>More: http://css-tricks.com/codekit-2-0/, https://incident57.com/codekit/help.html#sass</p>
+						</aside>
+					</section>
+
+					<section data-state="foundation-sass">
+						<aside class="notes">
+							<p>If using Zurb Foundation, you can install and use the Sass version. This allows you to edit the settings and variables, rather than override their complex code. You can also pick and choose which parts of Foundation you want to import.</p>
+							<p>You install it with the Foundation command line interface, which uses npm and Bower.</p>
+							<p>Then you can choose one of two ways to create a project with Foundation: with Compass as the compiler (which is quite slow), and one with Grunt using the libsass compiler. Obviously the Compass one has Compass included, so you have their styles and mixins available to you automatically, but I prefer the Grunt and libsass version. I find it significantly faster. Neither of these came with livereload, though, or running a server, so you'd have to edit the own grunt file to include it. More on that and libsass later.</p>
+							<p>more: http://foundation.zurb.com/docs/sass.html</p>
+						</aside>
+					</section>
+
+					<section data-state="prototyping gifs">
+						<aside class="notes">
+							<p>If you are prototyping, I <em>love</em> Foundation for this. I think it's valuable to use the Sass version, throw in your variables, colors, type, etc, and super-quickly have a sandbox where you can get a working wireframe up. I know a lot of companies that do this, whether its with Foundation, or like Happy Cog, using Compass and the Susy grid.</p>
+							<p>As Sophie at Happy Cog says, we prototype because "It moves."</p>
+							<p>Gif from: https://dribbble.com/shots/1438407-Live-Prototyping</p>
+						</aside>
+					</section>
+
+					<section>
+						<p class="quote">&#08220;We started building prototypes because responsive websites are fluid, and static wireframes are not. A prototype shows the site as it is meant to be seen—in a browser, on any device.&#08221;</p>
+						<h6>—Sophie Shepherd</h6>
+						<aside class="notes">
+							<p>"We can define how elements change at different screen sizes, and we can add in movement and interaction so that the site is tangible—something users and our clients can actually experience like a live website. We can test user flows and observe how people interact with the site. Since the prototype is a low-fidelity artifact, we can take what we learn from usability testing and iterate rapidly until we get it right."</p>
+						</aside>
+					</section>
+
+					<section data-state="libsass">
+						<aside class="notes">
+							<p>Libsass is a compiler for Sass that does not rely on Ruby to generate the CSS. It’s blazingly fast. You have to compile it (in C), if you are using the original version. You can install and compile it yourself with the C compiler, but there are other ways to access libsass' speed.</p>
+						</aside>
+					</section>
+
+					<section>
+						<h3>10x speed improvement</h3>
+						<h4>2.5 seconds down to 0.2 seconds</h4>
+						<aside class="notes">
+							<p>This speed benchmark by Jo Liss http://www.solitr.com/blog/2014/01/css-preprocessor-benchmark/ tested Libsass as providing a massive (>10x) speed improvement over the original Sass compiled in Ruby, dropping processing time from 2.5 seconds to 0.2 seconds.</p>
+							<p>She says, "The speed of your CSS preprocessor is important for developer/designer ergonomics. The preprocessing time measured by this benchmark will typically incur as a delay every time you edit the stylesheet sources and hit reload in the browser. Delays below 0.2 to 0.5 seconds tend to be perceived by the human brain as near-instantaneous. The higher the delay, the higher the mental overhead."</p>
+							<p>So—we want to be able to use libsass, that's awesome. But I don't feel like trying to deal with a C compiler. Luckily...</p>
+						</aside>
+					</section>
+
+
+					<section data-state="node-sass">
+						<aside class="notes">
+							<p>Node-sass is a library that provides binding for Node.js to libsass.</p>
+							<p>This is great if you are using Node, or other JS apps.. or Grunt. Or the Foundation libsass option. They all use the nodesass bind to libsass to compile.</p>
+
+							<p>More: http://benfrain.com/lightning-fast-sass-compiling-with-libsass-node-sass-and-grunt-sass/</p>
+
+						</aside>
+					</section>
+
+					<section data-state="sass-maps">
+						<aside class="notes">
+							<p>And no.. libsass does not yet support Sass 3.3, so it does not support maps. This is probably the biggest complaint we hear about libsass. So if you use the Foundation libsass version, you can't use maps, or plugins like Susy that require Sass 3.3</p>
+							<p>On screen is a color-guide that Una Kravets made, and it's using the maps functionality to do so. When I try to copy this into my Foundation-with-libsass project, I get the following error:</p>
+							<p>More: http://unakravets.tumblr.com/post/67057158293/use-sass-3-3-maps-to-make-on-the-fly-color-guides, http://sassmeister.com/gist/7479693, https://github.com/ericam/susy/issues/285, http://benfrain.com/libsass-lightning-fast-sass-compiler-ready-prime-time/</p>
+						</aside>
+					</section>
+
+					<section data-state="full-code">
+						<code style="color:white;">
+$ grunt<br/>
+Running "watch" task<br/>
+Waiting...OK<br/>
+>> File "scss/app.scss" changed.<br/><br/>
+
+<span style="color:yellow;">Warning: /Users/elyse/Documents/test-libsass/scss/app.scss:61: error:
+ error reading values after brick-red</span><br/><br/>
+
+<span style="color:red;">Aborted due to warnings.</span>
+						</code>
+
+					</section>
+
+					<section data-state="white">
+						<img src="/images/grunt-logo.png" alt="" style="margin-right: 250px;">
+						<img src="/images/gulp-logo.png" alt="">
+						<aside class="notes">
+							<p>Sooo... Grunt, Gulp, Broccoli, whatever it is nowadays! When I first started getting in to these, I'd ask what they did and people go, "Oh, they're task runners!" Which I think has become one of those non-answers. It's TRUE but I don't think particularly explanatory if you have never used them or don't know what a task being run might even mean.</p>
+
+							<p>Tasks are things like compiling sass, concat/minify js and css, run a local server, live reload, optimize images. Instead of using an app like CodeKit to do that, if we are writing a JS or Rails app, we can write JS to define these tasks, and run them in the Terminal.</p>
+
+							<p>If you are using Grunt or Gulp, and don't need Sass 3.3 features like maps, you can use the grunt-sass plugin—not to be confused with grunt-contrib-sass, the ruby version grunt plugin. grunt-sass compiles with libsass and should be very quick in comparison.</p>
+
+							<p><small>Source: http://24ways.org/2013/grunt-is-not-weird-and-hard/</small></p>
+						</aside>
+					</section>
+
+
+					<section data-state="full-code">
+						<pre><code class="JSON">
+  grunt.initConfig({
+    watch: {
+      css: {
+        files: ['Gruntfile.js', 'app/**/*.js', './app/scss/**/*.scss']
+      },
+      livereload: {
+        options: { livereload: true }
+      }
+    },
+
+    connect: {
+      server: {
+    options: {
+      port: 8000,
+      base: './app',
+      livereload: true
+    }
+     }
+    },
+
+    open: {
+      dev : {
+    path: 'http://localhost:8000'
+      }
+    }
+  });
+
+  // Server Task
+   grunt.registerTask('server', [
+      'connect',
+      'open',
+      'watch'
+  ]);
+						</code></pre>
+						<aside class="notes">
+							<p>In plain English: you write some JavaScript/JSON and define some tasks that need to be done. Here we make a task to compile sass and watch for changes, connect to a server and open it. Then, in Terminal, you can run those tasks with a command like "grunt server", and it would connect to a local server, open it in the browser for you, compile files and watch for changes and livereload...</p>
+						</aside>
+
+					</section>
+
+					<section data-state="full-code">
+						<pre><code>
+  // npm install
+  grunt-contrib-sass       // Compile Sass to CSS with Ruby compiler
+  grunt-sass               // Compile Sass to CSS using node-sass/libsass
+  grunt-contrib-connect    // Start a web server
+  grunt-open               // Open server in your browser automatically
+  grunt-contrib-watch      // Watch for file changes
+  connect-livereload       // Auto-reload browser with files are changed
+  grunt-contrib-imagemin   // Minify PNG and JPG images
+  grunt-contrib-htmlmin    // Minify HTML
+  grunt-contrib-cssmin     // Minify compiled CSS files
+  grunt-autoprefixer       // Adds vendor prefixes automatically
+						</code></pre>
+
+						<aside class="notes">
+							<p>Useful grunt pluginsp>
+						</aside>
+					</section>
+
+					<section>
+						<p class="quote"><a href="http://24ways.org/2013/grunt-is-not-weird-and-hard/">Grunt for People Who Think Things <br/>Like Grunt are Weird and Hard</a></p>
+						<h6>by Chris Coyier</h6>
+						<aside class="notes">
+							<p><small>Source: http://24ways.org/2013/grunt-is-not-weird-and-hard/</small></p>
+						</aside>
+					</section>
+
+					<section>
+						<h3>Steps to switch to Sass</h3>
+						<ol>
+							<li>Pick a compiler</li>
+							<li>change all your <code>.css</code> files to <code>.scss</code></li>
+							<li>compile your code</li>
+							<li>Open your site in a browser</li>
+						</ol>
+					</section>
+
+					<section data-state="sciencedino gifs">
+					</section>
+
 				</section>
 
 				<section data-state="cya-variables">

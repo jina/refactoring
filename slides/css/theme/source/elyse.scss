@@ -77,7 +77,6 @@ $selectionBackgroundColor: $fuschia;
 $selectionColor: $white;
 
 
-
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
@@ -144,9 +143,70 @@ $selectionColor: $white;
     line-height: 170%;
 }
 
-// GIFS and backgrounds
-.data-state-name body {
-    background: $white url('../../images/no-idea-dog-title.jpg') no-repeat center center;
+.reveal p.quote {
+    font-size: 1.25em;
+    line-height: 160%;
+}
+
+
+// slide backgrounds
+
+.full-code body {
+    background: #0a2028;
+    .reveal pre code {
+        max-height: 600px;
+        margin-top: -50px;
+    }
+}
+
+.sass-terminal body {
+    background: url('/images/sass-terminal.jpg') no-repeat 0 -22px;
+    p {color: $white;}
+}
+
+.codekit body {
+    background: url('/images/codekit.png') no-repeat 0 -22px;
     background-size: cover;
 }
 
+.foundation-sass body {
+    background: url('/images/foundation-sass.png') no-repeat 0 -22px;
+    background-size: cover;
+}
+
+.libsass body {
+    background: #5e5e5e url('/images/libsass-logo.png') no-repeat center center;
+}
+
+.node-sass body {
+    background: #fff url('/images/node-sass.svg') no-repeat center center;
+}
+
+.sass-maps body {
+    background: url('/images/una-sass-maps.png') no-repeat 0 -100px;
+    background-size: cover;
+}
+
+// GIFs
+
+.gifs body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    h1, h2, h3, h4, h5, h6, p {
+        color: $white;
+    }
+}
+
+.prototyping body {
+    background-image: url('/images/gifs/cody-wireframe-animation.gif');
+    background-position: 0 -120px;
+}
+
+.meridaugh body {
+    background-image: url('/images/gifs/meridaugh.gif');
+}
+
+.sciencedino body {
+    background-image: url('/images/gifs/sciencedino.gif');
+}

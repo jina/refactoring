@@ -871,6 +871,167 @@ $button-color-hover: $white;
 						</aside>
 					</section>
 
+
+
+					<section>
+						<h2>Named Media Queries</h2>
+					</section>
+
+					<section data-state="full-code">
+						<aside class="notes"><p>
+							Media queries in Sass behave the same as in CSS, except they can be nested inside a CSS rule.
+						</p></aside>
+
+						<pre>
+						<code class="scss">
+  // SCSS
+  .sidebar {
+	 width: 300px;
+	 @media screen and (min-width: 1000px) {
+	  width: 500px;
+	 }
+  }
+
+
+  /* OUTPUT - Same as CSS */
+  .sidebar {
+	 width: 300px;
+  }
+
+  @media screen and (min-width: 1000px) {
+	 .sidebar {
+	  width: 500px;
+	 }
+  }
+						</code>
+						</pre>
+
+						<aside class="notes">"@media directives in Sass behave just like they do in plain CSS, with one extra capability: they can be nested in CSS rules. If a @media directive appears within a CSS rule, it will be bubbled up to the top level of the stylesheet, putting all the selectors on the way inside the rule. This makes it easy to add media-specific styles without having to repeat selectors or break the flow of the stylesheet."</aside>
+					</section>
+
+					<section data-state="full-code">
+						<pre>
+						<code class="scss">
+  // Define your breakpoint sizes; these are based on min-width MQ's
+  // e.g. tiny is 0-499px
+  $tiny: 0;
+  $small: 500px;
+  $medium: 1000px;
+  $large: 1300px;
+						</code>
+						</pre>
+					</section>
+
+					<section data-state="full-code">
+						<pre>
+						<code class="scss">
+  // Breakpoint mixin
+  @mixin breakpoint($media) {
+	// if the media is 'tiny'
+	@if $media == tiny {
+	  // define mediaquery with variable
+	  @media only screen and (min-width: $tiny) {
+		// print content CSS
+		@content
+	  }
+	}
+
+	@else if $media == small {
+	  // small and medium are 1px smaller than their previous variable
+	  @media only screen and (min-width: $small - 1) {
+		@content
+	  }
+	}
+
+	@else if $media == medium {
+	  @media only screen and (min-width: $medium - 1) {
+		@content
+	  }
+	}
+
+	@else if $media == large {
+	  @media only screen and (min-width: $large) {
+		@content
+	  }
+	}
+  }
+
+
+						</code>
+						</pre>
+						<aside class="notes">
+							<p>This is another good example of a Sass if statement; here we are defining a mixin with an argument of $point, and then saying, if my $point value that gets passed in my include is large, then print out this mediaquery, and the @content of it inside it.</p>
+						</aside>
+
+					</section>
+
+					<section>
+						<h5>So you can do this magic:</h5>
+						<pre>
+						<code class="scss">
+  .page-wrap {
+	@include breakpoint(tiny) { width: 95%; } // at 0 to 499px
+	@include breakpoint(small) { width: 80%; } // at 500px to 999px
+	@include breakpoint(medium) { width: 70%; } // at 1000px to 1299px
+	@include breakpoint(large) { width: 60%; } // 1300px and up
+  }
+						</code>
+						</pre>
+
+						<aside class="notes">
+							<p>This is a much nicer way to author mediaqueries; it makes it easy to see what styles are related to what MQ size, you never have to write the #s again, or go searching through 2 different files to debug styles.</p>
+							<p>More: <a href="http://css-tricks.com/media-queries-sass-3-2-and-codekit/">Chris Coyier's CSS-tricks Named Media Queries article.</a></small></p>
+						</aside>
+
+					</section>
+
+				</section>
+
+				<section data-state="cya-organization">
+					<section>
+						<h2>Organize files and folders</h2>
+						<p>Goal: Keep style, vendor, and helper code separate; make files easy to find and not cluttered.</p>
+					</section>
+
+					<section>
+						<p>config: settings, variables</p>
+						<p>themes, if you have any</p>
+						<p>helpers: mixins, JS state classes, CSS3</p>
+						<p>frameworks: foundation, bootstrap, grids</p>
+						<p>components: icons, buttons, page components like header/footer</p>
+						<p>modules/base: your semantic HTML - page content, not elements like buttons</p>
+						<p>IE or responsive if you keep it separate</p>
+						<p>vendor: third party libraries, JS</p>
+					</section>
+
+					<section>
+
+						<pre><code>
+|- sass/
+|--- application.sass    // manifest, imports config, components, modules, frameworks
+|--- config.sass         // imports actual config file, helpers, colors, typography, themes
+|--- config/
+|------ _config.sass
+|------ _helpers.sass    // includes mixins, testing functions, css3, js is- states
+|------ _colors.sass
+|------ _typography.sass // webfonts and type declarations
+|--- components.sass     // imports icons, buttons, UI elements, page components
+|--- components/
+|------ page.sass        // general page/body
+|------ header.sass
+|------ footer.sass
+|------ buttons.sass
+|------ icons.sass
+|------ nav.sass
+|------ forms.sass
+|--- modules.sass        // imports page content and semantic HTML
+|--- modules/
+|------ [your page content files]
+|--- vendor.sass         // imports CSS from third party or JS libs
+
+						</code></pre>
+					</section>
+
 					<section>
 						<h3>Creating Configuration Files</h3>
 						<aside class="notes">
@@ -1072,168 +1233,23 @@ h3
 						</code></section>
 
 					<section>
-						<h2>Named Media Queries</h2>
-					</section>
+						<pre><code class="scss">
+// base
+@import "base/_variables"
+@import "base/_typography"
+@import "base/_helpers"
 
-					<section data-state="full-code">
-						<aside class="notes"><p>
-							Media queries in Sass behave the same as in CSS, except they can be nested inside a CSS rule.
-						</p></aside>
+// layout
+@import "layout/_layout"
 
-						<pre>
-						<code class="scss">
-  // SCSS
-  .sidebar {
-	 width: 300px;
-	 @media screen and (min-width: 1000px) {
-	  width: 500px;
-	 }
-  }
+// modules
+@import "modules/_modules"
 
-
-  /* OUTPUT - Same as CSS */
-  .sidebar {
-	 width: 300px;
-  }
-
-  @media screen and (min-width: 1000px) {
-	 .sidebar {
-	  width: 500px;
-	 }
-  }
-						</code>
-						</pre>
-
-						<aside class="notes">"@media directives in Sass behave just like they do in plain CSS, with one extra capability: they can be nested in CSS rules. If a @media directive appears within a CSS rule, it will be bubbled up to the top level of the stylesheet, putting all the selectors on the way inside the rule. This makes it easy to add media-specific styles without having to repeat selectors or break the flow of the stylesheet."</aside>
-					</section>
-
-					<section data-state="full-code">
-						<pre>
-						<code class="scss">
-  // Define your breakpoint sizes; these are based on min-width MQ's
-  // e.g. tiny is 0-499px
-  $tiny: 0;
-  $small: 500px;
-  $medium: 1000px;
-  $large: 1300px;
-						</code>
-						</pre>
-					</section>
-
-					<section data-state="full-code">
-						<pre>
-						<code class="scss">
-  // Breakpoint mixin
-  @mixin breakpoint($media) {
-	// if the media is 'tiny'
-	@if $media == tiny {
-	  // define mediaquery with variable
-	  @media only screen and (min-width: $tiny) {
-		// print content CSS
-		@content
-	  }
-	}
-
-	@else if $media == small {
-	  // small and medium are 1px smaller than their previous variable
-	  @media only screen and (min-width: $small - 1) {
-		@content
-	  }
-	}
-
-	@else if $media == medium {
-	  @media only screen and (min-width: $medium - 1) {
-		@content
-	  }
-	}
-
-	@else if $media == large {
-	  @media only screen and (min-width: $large) {
-		@content
-	  }
-	}
-  }
-
-
-						</code>
-						</pre>
-						<aside class="notes">
-							<p>This is another good example of a Sass if statement; here we are defining a mixin with an argument of $point, and then saying, if my $point value that gets passed in my include is large, then print out this mediaquery, and the @content of it inside it.</p>
-						</aside>
-
-					</section>
-
-					<section>
-						<h5>So you can do this magic:</h5>
-						<pre>
-						<code class="scss">
-  .page-wrap {
-	@include breakpoint(tiny) { width: 95%; } // at 0 to 499px
-	@include breakpoint(small) { width: 80%; } // at 500px to 999px
-	@include breakpoint(medium) { width: 70%; } // at 1000px to 1299px
-	@include breakpoint(large) { width: 60%; } // 1300px and up
-  }
-						</code>
-						</pre>
-
-						<aside class="notes">
-							<p>This is a much nicer way to author mediaqueries; it makes it easy to see what styles are related to what MQ size, you never have to write the #s again, or go searching through 2 different files to debug styles.</p>
-							<p>More: <a href="http://css-tricks.com/media-queries-sass-3-2-and-codekit/">Chris Coyier's CSS-tricks Named Media Queries article.</a></small></p>
-						</aside>
-
-					</section>
-
-				</section>
-
-				<section data-state="cya-organization">
-					<section>
-						<h2>Organize files and folders</h2>
-						<p>Goal: Keep style, vendor, and helper code separate; make files easy to find and not cluttered.</p>
-					</section>
-
-					<section>
-						<p>config: settings, variables</p>
-						<p>themes, if you have any</p>
-						<p>helpers: mixins, JS state classes, CSS3</p>
-						<p>frameworks: foundation, bootstrap, grids</p>
-						<p>components: icons, buttons, page components like header/footer</p>
-						<p>modules/base: your semantic HTML - page content, not elements like buttons</p>
-						<p>IE or responsive if you keep it separate</p>
-						<p>vendor: third party libraries, JS</p>
-					</section>
-
-					<section>
-
-						<pre><code>
-|- sass/
-|--- application.sass    // manifest, imports config, components, modules, frameworks
-|--- config.sass         // imports actual config file, helpers, colors, typography, themes
-|--- config/
-|------ _config.sass
-|------ _helpers.sass    // includes mixins, testing functions, css3, js is- states
-|------ _colors.sass
-|------ _typography.sass // webfonts and type declarations
-|--- components.sass     // imports icons, buttons, UI elements, page components
-|--- components/
-|------ page.sass        // general page/body
-|------ header.sass
-|------ footer.sass
-|------ buttons.sass
-|------ icons.sass
-|------ nav.sass
-|------ forms.sass
-|--- modules.sass        // imports page content and semantic HTML
-|--- modules/
-|------ [your page content files]
-|--- vendor.sass         // imports CSS from third party or JS libs
 
 						</code></pre>
-					</section>
-
-					<section data-state="import2">
 						<aside class="notes">
 							<p>Here's how I do it on my blog.</p>
-							<p>In this case, I did style somewhat by "pages"—but on a small site like this, that's totally fine.</p>
+							<p>In this case, super simple—but on a small site like this, that's totally fine.</p>
 						</aside>
 					</section>
 
@@ -1843,12 +1859,8 @@ h3
 						<p>determining the size of a refactor</p>
 					</section>
 
-				</section>
-
-				<section data-state="cya-classname-refactor">
 					<section>
 						<h2>Refactoring both HTML and CSS</h2>
-						<p>Goal: Determine how to refactor messy HTML.</p>
 					</section>
 
 					<section>
@@ -1991,8 +2003,12 @@ h3
 					</section>
 
 					<section>
-						<p>diffux, phantom, wraith</p>
+						<p>diffux, wraith</p>
 						<p>https://github.com/klamping/UIRegression/blob/master/exercises/1-Wraith.md</p>
+					</section>
+
+					<section>
+						<p>True</p>
 					</section>
 
 					<section>

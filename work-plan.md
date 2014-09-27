@@ -1,49 +1,30 @@
 # Work Plan
 
-#### SassConf Date: 10/4
+#### SassConf Workshop Date: Fri, 10/3, 9am
 
-Current countdown: 33 Days!
+Current countdown: **SIX DAYS OMG**
 
 ## Jina
 
-#### Topics to expand on
+#### To Do
 
+* introduction is a bit sparse in places; could use more info
 * living style guides  (docco, kss, etc, an overview of what they are, vs manual creation - show example of comments in sass file w/ relevant HTML & generate one)
-* how to test for changes/things that are broken after a refactor
+* options for importing and file org -- I mention a simple one, mine at work, and Dale Sande's, but I don't fully grok Dale's and I think we need some better, clearer examples.
 * pros and cons of naming conventions (OO, BEM, SMACSS, etc)
 * how to iterate on naming conventions and change them
-* systems not pages, abstracting out variables and importing
 * organizing properties (alpha, properties, camelcase vs underscore vs dash, etc)
 * general compromise and getting everyone on the same page, principles of why you are doing a certain way
-
-#### Resources to find
-
-#### Misc To Do
-
-* talk to Eric about True
+* variables and abstracting them; options for naming conventions and things you might break out into vars
+* testing -- can you talk to Eric about True and how to use it?
 
 ## Elyse
 
 #### To Do
 
-* update outline in slides based on gameplan questions (order is now different)
-
-#### Topics to expand on
-
-* overview of ways to install/use it (codekit, rails gem, libsass)
-* how to test for changes/things that are broken after a refactor
 * naming conventions - why one would work better than another FOR your project
-* variable naming conventions and abstracting
-* commenting (per file, per section, instructions)
-* determining WHAT modules you have, WHERE they are, which should be the same, which need a parent to have a style change under (namespacing)
-* naming and organizing files/folders, imports - dale sande, etc
+* modules and refactoring -- create a hands on example for those you dont have project code with them
 * doing what is right for your project
-
-
-#### Resources to find
-
-#### Misc To Do
-
-* refactoring cheat sheet on github repo to share after talk
-* ~~see about reveal js slide jumping to sections for CYA style talk~~ _I think having them pick the order is too confusing; instead, I made the gameplan doc kind of a checklist/questionnaire they can answer as we go through the sections._
-* ~~set up reveal js notes on the repo and how to for jina~~
+* I think we should link to a few options of file/folder rather than showing code in the slides, so I will break that out into folders in this repo
+* pros and cons of naming conventions (OO, BEM, SMACSS, etc)
+* keeping refactors small so they don't break things

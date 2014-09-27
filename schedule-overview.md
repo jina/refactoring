@@ -1,34 +1,84 @@
 # Schedule
 
+## Timeline
 
-|   Start	| End  	| Topic  	|
-|---	|---	|---	|---	|
-|  0  	|  :45 	| Lecture Part One |
-|  0:45 | 1:30	| Work on Part One |  
-|  1:30 | 1:45	| 15 Minute Break |
-|  1:45 | 2:30 | Lecture Part Two |
-|  2:30 | 3:30 | Work Part Two |
-|  3:30 | 4:00 | Q&A |  
-
-
-
-# Overview
-
-start w/ Q&A
-what are you in your project
-
-## Part One: CSS -> Sass
-
-* overview of ways to install/use it (codekit, rails gem, libsass)
-* ways to switch easily (.css -> .scss, pulling out variables like colors, type, etc, importing files w/o changing import order)
-* commenting (per file, per section, instructions)
-* small chunks - one thing at a time!
-* where do all your modules live? determine WHAT modules you have, WHERE they are, which should be the same, which need a parent to have a style change under (namespacing)
-
-
-## Part Two: Adv Sass Refactoring
-
-* living style guides  (docco, kss, etc, an overview of what they are, vs manual creation - show example of comments in sass file w/ relevant HTML & generate one)
-* html/css class naming refactoring (elements -> classnames, naming conventions (whatever you do, be consistent) .section, .section-item, .section-item-individualthingy ) - good place for examples/live coding
-* how to test for changes/things that are broken after a refactor
-
+_9am to 10am_
+* Introduction
+  * introduce ourselves
+  * send out digital survey, get responses http://bit.ly/cya-refactoring
+  * Q&A: get to know attendees, where they are in their project, what they want to learn
+  * update response states in slides?
+_10am to 10:45am_
+* Refactoring Overview
+  * Clarity, Maintainability, Efficiency, DRY
+  * why we do and don't refactor
+  * getting everyone on the same page
+  * why Sass helps us refactor
+  * making refactoring a regular part of your workflow
+* Installation and Apps
+  * gem
+  * codekit
+  * foundation
+  * libsass
+    * nodesass
+    * a note on feature parity
+  * grunt and gulp
+  * choosing .scss or .sass syntax
+* Importing
+  * create a manifest
+  * break up existing files and import w/o altering existing output
+  * reorg/regroup files
+* Creating variables
+  * colors, type
+  * ???
+* Variable abstraction
+  * patterns
+  * abstracted name options
+  * creating simple themes
+  * named media queries
+* Organize Files and Folders
+  * creating config files
+    * [show examples of config options: simple, medium, Dale Sande style]
+_10:45am to 11am_
+* BREAK
+_11am to 11:30am_
+* Creating Modules
+  * systems, not pages -- but what if you have existing code
+  * how to determine what kinds of modules you HAVE
+  * namespacing
+    * & parent
+    * state classes
+    * placeholders
+* Refactoring a Module
+  * Extract partial
+  * Find repeating patterns
+  * Create/extract base class
+  * Apply nesting
+  * Create mixins/extends
+  * determining the size of a module refactor 
+  * refactoring HTML/CSS
+    * elements -> classnames
+_11:30am to 12:30pm_
+* WORK TIME
+  * spend ~1hr looking for a module in their code, starting a refactor on it
+  * TODO: have an example for those who don't have project code
+* BREAK
+_12:30pm to 1pm_
+* Naming Conventions
+  * OOCSS
+  * BEM
+  * SMACSS
+  * pros/cons and iterating on conventions
+  * organizing properties
+* Living Style Guides
+  * options
+  * how to create them
+  * show examples
+* Documentation & Commenting
+  * commenting files, sections
+  * inline comment documentation
+  * comment types
+* Testing
+  * diffux, wraith
+  * true
+  * keeping refactors small

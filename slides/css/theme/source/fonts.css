@@ -1,11 +1,65 @@
+/* Rooney Light */
+/* to include use 'font-face: "RooneyLight", [rest of font stack for fallback];' */
+/* apply this font stack to body declaration */
+@font-face {
+  font-family: "RooneyLight";
+  src: url('fonts/RooneyLight.eot');
+  src: url('fonts/RooneyLight.eot?#iefix') format('embedded-opentype'),
+       url('fonts/RooneyLight.woff') format('woff'),
+       url('fonts/RooneyLight.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Rooney Light Italic */
+/* to include use 'font-face: "RooneyLightItalic", [rest of font stack for fallback];' */
+/* apply this font stack to em, i declaration for italic use */
+@font-face {
+  font-family: "RooneyLightItalic";
+  src: url('fonts/RooneyLightItalic.eot');
+  src: url('fonts/RooneyLightItalic.eot?#iefix') format('embedded-opentype'),
+       url('fonts/RooneyLightItalic.woff') format('woff'),
+       url('fonts/RooneyLightItalic.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Rooney Medium */
+/* to include use 'font-face: "RooneyMedium", [rest of font stack for fallback];' */
+/* apply this font stack to h2-h6 for headlines. use Centrale Sans for h1 */
+@font-face {
+  font-family: "RooneyMedium";
+  src: url('fonts/RooneyMedium.eot');
+  src: url('fonts/RooneyMedium.eot?#iefix') format('embedded-opentype'),
+       url('fonts/RooneyMedium.woff') format('woff'),
+       url('fonts/RooneyMedium.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Rooney Medium Italic */
+/* to include use 'font-face: "RooneyMediumItalic", [rest of font stack for fallback];' */
+/* apply if necessary where a headline may be italicized */
+@font-face {
+  font-family: "RooneyMediumItalic";
+  src: url('fonts/RooneyMediumItalic.eot');
+  src: url('fonts/RooneyMediumItalic.eot?#iefix') format('embedded-opentype'),
+       url('fonts/RooneyMediumItalic.woff') format('woff'),
+       url('fonts/RooneyMediumItalic.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
 
 @font-face {
-    font-family: 'pluto_sanscond_medium';
-    src: url('hvd_fonts_-_plutosanscondmedium-webfont.eot');
-    src: url('hvd_fonts_-_plutosanscondmedium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('hvd_fonts_-_plutosanscondmedium-webfont.woff') format('woff'),
-         url('hvd_fonts_-_plutosanscondmedium-webfont.ttf') format('truetype'),
-         url('hvd_fonts_-_plutosanscondmedium-webfont.svg#pluto_sanscond_medium') format('svg');
+    font-family: 'pluto-sans-condensed-medium';
+    src: url('fonts/pluto-sans-condensed-medium.eot');
+    src: url('fonts/pluto-sans-condensed-medium.eot?#iefix') format('embedded-opentype'),
+         url('fonts/pluto-sans-condensed-medium.woff') format('woff'),
+         url('fonts/pluto-sans-condensed-medium.ttf') format('truetype'),
+         url('fonts/pluto-sans-condensed-medium.svg#pluto-sans-condensed-medium') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -15,12 +69,12 @@
 
 
 @font-face {
-    font-family: 'pluto_sanscond_regular';
-    src: url('hvd_fonts_-_plutosanscondregular-webfont.eot');
-    src: url('hvd_fonts_-_plutosanscondregular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('hvd_fonts_-_plutosanscondregular-webfont.woff') format('woff'),
-         url('hvd_fonts_-_plutosanscondregular-webfont.ttf') format('truetype'),
-         url('hvd_fonts_-_plutosanscondregular-webfont.svg#pluto_sanscond_regular') format('svg');
+    font-family: 'pluto-sans-condensed-regular';
+    src: url('fonts/pluto-sans-condensed-regular.eot');
+    src: url('fonts/pluto-sans-condensed-regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/pluto-sans-condensed-regular.woff') format('woff'),
+         url('fonts/pluto-sans-condensed-regular.ttf') format('truetype'),
+         url('fonts/pluto-sans-condensed-regular.svg#pluto-sans-condensed-regular') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -29,12 +83,12 @@
 
 
 @font-face {
-    font-family: 'pluto_sanscond_light';
-    src: url('hvd_fonts_-_plutosanscondlight-webfont.eot');
-    src: url('hvd_fonts_-_plutosanscondlight-webfont.eot?#iefix') format('embedded-opentype'),
-         url('hvd_fonts_-_plutosanscondlight-webfont.woff') format('woff'),
-         url('hvd_fonts_-_plutosanscondlight-webfont.ttf') format('truetype'),
-         url('hvd_fonts_-_plutosanscondlight-webfont.svg#pluto_sanscond_light') format('svg');
+    font-family: 'pluto-sans-condensed-light';
+    src: url('fonts/pluto-sans-condensed-light.eot');
+    src: url('fonts/pluto-sans-condensed-light.eot?#iefix') format('embedded-opentype'),
+         url('fonts/pluto-sans-condensed-light.woff') format('woff'),
+         url('fonts/pluto-sans-condensed-light.ttf') format('truetype'),
+         url('fonts/pluto-sans-condensed-light.svg#pluto-sans-condensed-light') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -43,12 +97,12 @@
 
 
 @font-face {
-    font-family: 'pluto_sanscond_exlight';
-    src: url('hvd_fonts_-_plutosanscondexlight-webfont.eot');
-    src: url('hvd_fonts_-_plutosanscondexlight-webfont.eot?#iefix') format('embedded-opentype'),
-         url('hvd_fonts_-_plutosanscondexlight-webfont.woff') format('woff'),
-         url('hvd_fonts_-_plutosanscondexlight-webfont.ttf') format('truetype'),
-         url('hvd_fonts_-_plutosanscondexlight-webfont.svg#pluto_sanscond_exlight') format('svg');
+    font-family: 'pluto-sans-condensed-exlight';
+    src: url('fonts/pluto-sans-condensed-exlight.eot');
+    src: url('fonts/pluto-sans-condensed-exlight.eot?#iefix') format('embedded-opentype'),
+         url('fonts/pluto-sans-condensed-exlight.woff') format('woff'),
+         url('fonts/pluto-sans-condensed-exlight.ttf') format('truetype'),
+         url('fonts/pluto-sans-condensed-exlight.svg#pluto-sans-condensed-exlight') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -57,31 +111,17 @@
 
 
 @font-face {
-    font-family: 'pluto_sanscond_thin';
-    src: url('hvd_fonts_-_plutosanscondthin-webfont.eot');
-    src: url('hvd_fonts_-_plutosanscondthin-webfont.eot?#iefix') format('embedded-opentype'),
-         url('hvd_fonts_-_plutosanscondthin-webfont.woff') format('woff'),
-         url('hvd_fonts_-_plutosanscondthin-webfont.ttf') format('truetype'),
-         url('hvd_fonts_-_plutosanscondthin-webfont.svg#pluto_sanscond_thin') format('svg');
+    font-family: 'pluto-sans-condensed-thin';
+    src: url('fonts/pluto-sans-condensed-thin.eot');
+    src: url('fonts/pluto-sans-condensed-thin.eot?#iefix') format('embedded-opentype'),
+         url('fonts/pluto-sans-condensed-thin.woff') format('woff'),
+         url('fonts/pluto-sans-condensed-thin.ttf') format('truetype'),
+         url('fonts/pluto-sans-condensed-thin.svg#pluto-sans-condensed-thin') format('svg');
     font-weight: normal;
     font-style: normal;
 
 }
 
-
-
-
-@font-face {
-    font-family: 'pluto_sans_regular';
-    src: url('hvd_fonts_-_plutosansregular-webfont.eot');
-    src: url('hvd_fonts_-_plutosansregular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('hvd_fonts_-_plutosansregular-webfont.woff') format('woff'),
-         url('hvd_fonts_-_plutosansregular-webfont.ttf') format('truetype'),
-         url('hvd_fonts_-_plutosansregular-webfont.svg#pluto_sans_regular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
 
 
 @font-face {

@@ -2,24 +2,60 @@
  * Elyse theme!
  * Author: Elyse Holladay
  */
-@import url(fonts.css);
+@import url(source/fonts.css);
+.reveal [class^=color-sample-] {
+  width: 175px;
+  height: 175px;
+  display: inline-block;
+  color: #fff;
+  padding: 15px 0 0 15px;
+  margin: 0 30px 30px 0;
+  font-size: 22px; }
+
+.color-sample-fuschia {
+  background: #C2185B; }
+
+.color-sample-purple {
+  background: #904098; }
+
+.color-sample-turquoise {
+  background: #3b8aa2; }
+
+.color-sample-blue {
+  background: #0f59b4; }
+
+.color-sample-orange {
+  background: #f19732; }
+
+.color-sample-green {
+  background: #5b8138; }
+
+.color-sample-black {
+  background: #000; }
+
+.color-sample-grey {
+  background: #444; }
+
+.white body {
+  background-color: #fff; }
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #904098;
-  background-color: #904098; }
+  background: #fff;
+  background-color: #fff; }
 
 .reveal {
-  font-family: "PlutoSansExtraLight", sans-serif;
+  font-family: "RooneyLight", "Adelle", Georgia sans-serif;
   font-size: 36px;
   font-weight: normal;
   letter-spacing: -0.02em;
-  color: #fff; }
+  color: #0f59b4; }
 
 ::selection {
   color: #fff;
-  background: #8b243e;
+  background: #C2185B;
   text-shadow: none; }
 
 /*********************************************
@@ -32,9 +68,9 @@ body {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #fff;
-  font-family: "pluto_sanscond_regular", "PlutoSansRegular", Impact, sans-serif;
-  line-height: 1.25em;
+  color: #000;
+  font-family: "PlutoSansRegular", "pluto-sans-condensed-light", Impact, sans-serif;
+  line-height: 150%;
   letter-spacing: 0;
   text-transform: none;
   text-shadow: none; }
@@ -69,7 +105,7 @@ body {
 .reveal section img {
   margin: 15px 0px;
   background: rgba(255, 255, 255, 0.12);
-  border: 4px solid #fff;
+  border: 4px solid #0f59b4;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   -webkit-transition: all .2s linear;
   -moz-transition: all .2s linear;
@@ -134,7 +170,7 @@ body {
   color: #1a1a1a; }
 
 .fuschia .reveal {
-  background-color: #8b243e; }
+  background-color: #C2185B; }
 
 .purple .reveal {
   background-color: #904098; }
@@ -161,17 +197,46 @@ body {
   text-align: left; }
 
 .reveal h1 {
-  text-transform: uppercase; }
+  font-family: "RooneyLight", "Adelle", Georgia sans-serif;
+  font-size: 2.25em;
+  color: #C2185B; }
 
 .reveal h2 {
-  text-transform: uppercase; }
+  font-family: "PlutoSansRegular", "pluto-sans-condensed-light", Impact, sans-serif;
+  font-size: 1.65em;
+  text-transform: uppercase;
+  color: #904098; }
+
+.reveal h3 {
+  font-family: "pluto-sans-condensed-light", Impact, sans-serif;
+  text-transform: uppercase;
+  font-size: 1.35em;
+  color: #000; }
+
+.reveal h4 {
+  font-family: "pluto-sans-condensed-light", Impact, sans-serif;
+  font-size: 1.125em;
+  color: #0f59b4; }
+
+.reveal h5 {
+  font-family: "PlutoSansRegular", "pluto-sans-condensed-light", Impact, sans-serif;
+  text-transform: uppercase;
+  font-size: 1em;
+  color: #0f59b4; }
 
 .reveal h6 {
-  color: #e6e6e6;
+  font-family: "PlutoSansRegular", "pluto-sans-condensed-light", Impact, sans-serif;
   font-size: 18px;
   line-height: 18px;
-  margin-bottom: 0;
-  text-transform: uppercase; }
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  color: #444; }
+
+.reveal p {
+  font-size: 1em; }
+
+.reveal li {
+  line-height: 170%; }
 
 .data-state-name body {
   background: #fff url("../../images/no-idea-dog-title.jpg") no-repeat center center;

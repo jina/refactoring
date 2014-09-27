@@ -7,33 +7,61 @@
 // Default mixins and settings -----------------
 @import "../template/mixins";
 @import "../template/settings";
-@import "fonts.css";
+@import "source/fonts.css";
 // ---------------------------------------------
 
 
 // Colors
-$fuschia: #8b243e;
+$fuschia: #C2185B;
 $purple: #904098;
 $turquoise: #3b8aa2;
 $blue: #0f59b4;
 $orange: #f19732;
 $green: #5b8138;
 $black: #000;
+$grey: #444;
 $white: #fff;
 
+.reveal [class^=color-sample-] {
+    width: 175px;
+    height: 175px;
+    display: inline-block;
+    color: $white;
+    padding: 15px 0 0 15px;
+    margin: 0 30px 30px 0;
+    font-size: 22px;
+}
+
+// yes this could have been a map but I was too lazy to look up the syntax
+.color-sample-fuschia {background: $fuschia;}
+.color-sample-purple {background: $purple;}
+.color-sample-turquoise {background: $turquoise;}
+.color-sample-blue {background: $blue;}
+.color-sample-orange {background: $orange;}
+.color-sample-green {background: $green;}
+.color-sample-black {background: $black;}
+.color-sample-grey {background: $grey;}
 
 // Backgrounds
-$backgroundColor: $purple;
+$backgroundColor: $white; // $fuschia;
+
+// make a slide bg white with data-state="white"
+.white body {
+    background-color: $white;
+}
 
 // Primary/body text
-$mainFont: 'PlutoSansExtraLight', sans-serif;
+$mainFont: 'RooneyLight', 'Adelle', Georgia sans-serif;
 $mainFontSize: 36px;
-$mainColor: $white;
+$mainColor: $blue;
 
 // Headings
-$headingFont: 'pluto_sanscond_regular', 'PlutoSansRegular', Impact, sans-serif;
-$headingColor: $white;
-$headingLineHeight: 1.25em;
+$headerPrimary: 'PlutoSansRegular', 'pluto-sans-condensed-light', Impact, sans-serif;
+$headerSecondary: 'pluto-sans-condensed-light', Impact, sans-serif;
+$headerTertiary: $mainFont;
+$headingFont: $headerPrimary;
+$headingColor: $black;
+$headingLineHeight: 150%;
 $headingLetterSpacing: 0;
 $headingTextTransform: none;
 // $headingTextShadow: 0px 0px 6px rgba(0,0,0,0.2);
@@ -66,21 +94,54 @@ $selectionColor: $white;
 .black .reveal { background-color: $black; }
 .white .reveal { background-color: $white; }
 
-
 // Overriding text styles
+
 .reveal .slides {text-align: left;}
-.reveal h1 {text-transform: uppercase;}
-.reveal h2 {text-transform: uppercase;}
-.reveal h3 {}
-.reveal h4 {}
-.reveal h5 {}
+
+.reveal h1 {
+    font-family: $headerTertiary;
+    font-size: 2.25em;
+    color: $fuschia;
+}
+.reveal h2 {
+    font-family: $headerPrimary;
+    font-size: 1.65em;
+    text-transform: uppercase;
+    color: $purple;
+}
+.reveal h3 {
+    font-family: $headerSecondary;
+    text-transform: uppercase;
+    font-size: 1.35em;
+    color: $black;
+}
+.reveal h4 {
+    font-family: $headerSecondary;
+    font-size: 1.125em;
+    color: $blue;
+}
+.reveal h5 {
+    font-family: $headerPrimary;
+    text-transform: uppercase;
+    font-size: 1em;
+    color: $blue;
+}
 
 .reveal h6 {
-    color:  lighten($black,90%);;
+    font-family: $headerPrimary;
     font-size: 18px;
     line-height: 18px;
-    margin-bottom: 0;
+    margin-bottom: 18px;
     text-transform: uppercase;
+    color: $grey;
+}
+
+.reveal p {
+    font-size: 1em;
+}
+
+.reveal li {
+    line-height: 170%;
 }
 
 // GIFS and backgrounds

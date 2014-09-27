@@ -728,11 +728,18 @@ Waiting...OK<br/>
 						</aside>
 					</section>
 
+					<section>
+						<aside class="notes">
+							<p>[are we missing any other vars we should talk about - basics? for example: grids, margin/padding...? I think button abstraction, grids w loops, etc, should be in the next section]</p>
+						</aside>
+					</section>
+
 				</section>
 
 				<section data-state="cya-abstracting-vars">
 					<section>
-						<h2>CYA: abstracting variables</h2>
+						<h2>Variable Abstraction</h2>
+						<p>Goal: Clarify variable names, create themes, named media queries.</p>
 					</section>
 
 					<section data-state="white">
@@ -762,13 +769,28 @@ Waiting...OK<br/>
 					</section>
 
 					<section>
-						<p>other variable naming conventions</p>
-					</section>
+						<h4>Abstracted Variable Names</h4>
+						<pre><code>
 
-					<section>
-						<p>levels of abstraction</p>
-					</section>
+  $header-primary
+  $header-secondary
+  $header-tertiary
 
+  $background-color-default
+  $background-color-highlight
+  $background-color-lowlight
+  $background-color-dark
+
+  $button-bg
+  $button-border
+  $button-shadow
+  $button-color
+  $button-bg-hover
+  $button-border-hover
+  $button-shadow-hover
+  $button-color-hover
+						</code></pre>
+					</section>
 
 					<section>
 						<h3>Creating Simple Themes</h3>
@@ -803,7 +825,7 @@ $green-dark: rgb(18, 120, 0);
 					<section data-state="full-code">
 						<pre><code class="scss">
 // ------------------------------------------------------ //
-// MAKERSQUARE DEFAULT THEME ---------------------------- //
+// DEFAULT THEME ---------------------------------------- //
 // ------------------------------------------------------ //
 
 
@@ -849,6 +871,15 @@ $button-color-hover: $white;
 						</aside>
 					</section>
 
+					<section>
+						<h3>Creating Configuration Files</h3>
+						<aside class="notes">
+							<p>A simple theme is a nice way to separate out colors, if you need it, but you can take it one step further and break things out into a config.</p>
+							<p>This config is then called into the app manifest; you can call different configs, or change it based on what's required for the project/theme.</p>
+							<p>This also helps with keeping functions/helpers out of style code</p>
+						</aside>
+					</section>
+
 					<section data-state="full-code">
 						<pre><code class="scss">
 // ------------------------------------------------------ //
@@ -870,16 +901,175 @@ $button-color-hover: $white;
 // Import webfonts, typography
 @import "config/webfonts";
 @import "config/typography";
-
-
 						</code></pre>
 						<aside class="notes">
 							<p>Then we have the ability to change out the theme we are using pretty much on the fly, by picking which file we import.</p>
 						</aside>
 					</section>
+
 					<section>
-						<p>keeping functions/helpers out of style code</p>
+						<pre><code class="scss">
+// ------------------------------------------------------ //
+// CONFIGURATION & SETTINGS ----------------------------- //
+// ------------------------------------------------------ //
+// In the config file you can edit colors, typography,
+// and general default variables. Note that all variables
+// have the !default flag this means that they can be
+// overridden by variables later in the Sass workflow.
+// This will allow us to create themes easily, if we
+// choose.
+
+
+// Font Sizing ------------------------------------------ //
+// ------------------------------------------------------ //
+
+// Base font size  -------------------------------------- //
+// 16px is the browser default.
+
+$base-font-size: 1em !default
+
+// Font Sizes  ------------------------------------------ //
+
+$giga: 4.5em !default
+$alpha: 3.662em !default
+$beta: 2.930em !default
+$gamma: 1.875em !default
+$delta: 1.5em !default
+$epsilon: 1.2em !default
+$zeta: .875em !default
+$iota: .75rem !default
+
+// Line Heights ----------------------------------------- //
+
+$line-base: 1.5 !default
+$line-large: 1.75 !default
+$line-small: 1.25 !default
+
+// Typography ------------------------------------------- //
+// ------------------------------------------------------ //
+
+
+// Body text -------------------------------------------- //
+
+$body-fallback: 'Cambria', 'Lucida Bright', 'Georgia', serif
+
+$body-font: 'adelle', $body-fallback !default
+$body-bold: 'adelle-bold', $body-font !default
+$body-italic: 'adelle-italic', $body-font !default
+
+
+// Alternate Body text ---------------------------------- //
+
+$body-font-alt-fallback: 'Geneva', 'Franklin Gothic', 'Calibri', 'Arial Narrow', 'Helvetica', sans-serif
+
+$body-font-alt: 'pluto-sans-condensed-light', $body-font-alt-fallback !default
+$body-font-alt-bold: 'pluto-sans-condensed-regular', $body-font-alt !default
+
+
+// Headers ---------------------------------------------- //
+
+$header-fallback: 'Geneva', 'Franklin Gothic', 'Calibri', 'Arial Narrow', 'Helvetica', sans-serif
+
+$header-primary: 'pluto-sans-condensed-thin', $header-fallback !default
+$header-secondary: $body-font !default
+$header-secondary-bold: $body-bold !default
+$header-tertiary: $body-font-alt-bold !default
+
+
+// Navigation ------------------------------------------- //
+
+$nav-font: 'pluto-sans-condensed-medium', $header-fallback !default
+
+
+// Code Blocks  ----------------------------------------- //
+
+$code-fallback: 'Inconsolata', 'Monaco', 'Consolas', monospace
+
+$code-font: 'fira-mono', $code-fallback !default
+$code-font-bold: 'fira-mono-medium', $code-font !default
+
+
+// Buttons  --------------------------------------------- //
+
+$button-font: 'pluto-sans-regular', $header-fallback !default
+
+
+// Font Awesome  ---------------------------------------- //
+
+$icon-font: 'font-awesome' !default
+
+
+// Borders ---------------------------------------------- //
+// ------------------------------------------------------ //
+
+$border-width-default: 6px
+$border-width-small: 2px
+$border-width-link: 1px
+$border-width-large: 12px
+
+$border-radius-default: 4px
+
+						</code></pre>
 					</section>
+
+					<section>
+						<pre><code class="scss">
+// -------------------------------------------------- //
+// TYPOGRAPHY --------------------------------------- //
+// -------------------------------------------------- //
+// variables are set in _config.sass and themes
+
+
+
+// Body text -------------------------------------------- //
+body
+    font-family: $body-font
+    font-size: $base-font-size
+    line-height: $line-base
+
+
+
+// Headers ---------------------------------------------- //
+
+
+h1, h2, h3, h4, h5, h6
+    line-height: $line-small // keep line-height smaller if they stack
+    margin: 0
+    text-rendering: geometricPrecision
+
+// h1 - Pluto SC Thin 60px+
+h1
+    font-family: $header-primary
+    @include breakpoint(tiny)
+        font-size: $beta
+    @include breakpoint(medium)
+        font-size: $alpha
+
+
+// h2 - Adelle 46px
+h2
+    font-family: $header-secondary
+    font-size: $beta
+
+
+// h3 - Pluto SC Regular 30px
+h3
+    font-family: $header-tertiary
+    font-size: $gamma
+						</code></pre>
+					</section>
+
+					<section><code>
+							<pre class="scss">
+// ------------------------------------------------------ //
+// APPLICATION IMPORT ----------------------------------- //
+// ------------------------------------------------------ //
+
+@import "config"
+@import "layout"
+@import "modules"
+							</pre>
+						</code></section>
 
 				</section>
 

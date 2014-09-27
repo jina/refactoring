@@ -10,21 +10,9 @@ Every attendee leaves with a game plan of how they would refactor their app. Wha
 
 _Before the workshop starts, send out this as a digital poll; we can use survey responses for how much in depth we go, and also general information._
 
-My current Sass status:
-[ ] I am not using Sass in my project—but I want to!
-[ ] I am using Sass but not utilizing its value.
-[ ] I have a good Sass setup but need to refactor/fix up some things.
+http://bit.ly/cya-refactoring
 
-My biggest issue or concern with my codebase is:
-[ ] getting my team to agree on a system/refactoring/using Sass at all
-[ ] how to best install/set up Sass in my project
-[ ] issues with consistency of visual styles
-[ ] specificity and naming problems
-[ ] importing, file size, confusing framework/vendor CSS
-[ ] responsive code or browser-compliancy
-[ ] organization and architecture
-[ ] documentation or testing
-[ ] I want one of these style guide things everyone is talking about
+
 
 ## Handout for Attendees
 

@@ -44,41 +44,183 @@
 			<div class="slides">
 
 				<section>
-					<h2>Choose your own Refactoring Adventure</h2>
-					<h6>A workshop at SassConf 2014</h6>
+					<h1>Choose your own Refactoring Adventure</h1>
+					<h5>A workshop at SassConf 2014</h5>
 					<h6>by Elyse Holladay &amp; Jina Bolton</h6>
 				</section>
 
-				<section data-state="introduction">
-					<section>
-						<h2>Introduction</h2>
-					</section>
+				<!-- un/comment me to see type styles for reference! -->
+				<section>
+					<h1>Header</h1>
+					<h2>Subhead or big quote</h2>
+					<h3>Copy Headline</h3>
+					<h4>Subhead</h4>
+					<h5>Big copy</h5>
+					<h6>Meta</h6>
+					<p>Paragraph copy</p>
 				</section>
+
+				<!-- un/comment me to see colors for reference! -->
+				<section data-state="white">
+					<div class="color-sample-fuschia">$fuschia</div>
+					<div class="color-sample-purple">$purple</div>
+					<div class="color-sample-blue">$blue</div>
+					<div class="color-sample-turquoise">$turquoise</div>
+					<div class="color-sample-green">$green</div>
+					<div class="color-sample-orange">$orange</div>
+					<div class="color-sample-black">$black</div>
+					<div class="color-sample-grey">$grey</div>
+
+				</section>
+
+				<section data-state="elyse">
+					<h2>@elyseholladay</h2>
+					<h6>Dev/Designer, Instructor, MakerSquare</h6>
+				</section>
+
+				<section data-state="jina">
+					<h2>@jina</h2>
+					<h6>Senior Product Designer, Salesforce</h6>
+				</section>
+
+				<section>
+					<h3><a href="http://bit.ly/cya-refactoring">http://bit.ly/cya-refactoring</a></h3>
+					<h6>Mini Questionnaire!</h6>
+					<aside class="notes">
+						<p>We just want to get an idea of where you're at before we begin. Nothing's required but any information you're willing to share helps us tailor this adventure to you!</p>
+						<p>[give about 5-10]</p>
+					</aside>
+				</section>
+
+				<section>
+					<div class="survey-responses">
+						<h6>My biggest issue(s) or concern(s) with my codebase is...</h6>
+						<div><b>10</b>&nbsp;&nbsp;&nbsp;getting my team to agree</div>
+						<div><b>5</b>&nbsp;&nbsp;&nbsp;issues with consistency of visual styles</div>
+						<div><b>1</b>&nbsp;&nbsp;&nbsp;responsive code or browser-compliancy</div>
+						<div><b>18</b>&nbsp;&nbsp;&nbsp;documentation</div>
+						<div><b>4</b>&nbsp;&nbsp;&nbsp;how to best install/set up Sass</div>
+						<!-- <ol>
+							<li>getting my team to agree on a system/refactoring/using Sass at all</li>
+							<li>how to best install/set up Sass in my project</li>
+							<li>issues with consistency of visual styles, variables, etc</li>
+							<li>specificity and naming problems in my HTML/CSS</li>
+							<li>creating or editing modules</li>
+							<li>importing, file size, confusing framework/vendor CSS</li>
+							<li>responsive code or browser-compliancy</li>
+							<li>I want one of these style guide things everyone is talking about</li>
+							<li>organization and architecture</li>
+							<li>documentation or testing</li>
+						</ol> -->
+					</div>
+					<aside class="notes">
+						<p>If we are lucky we can make a "stats" slide and put in some basic #s about the survey responses!</p>
+					</aside>
+				</section>
+
 
 				<section data-state="refactoring">
 					<section>
-						<h2>Refactoring</h2>
+						<h4>&#8220;I always code perfectly the first time!&#8221;</h4>
+						<h6>—Some Liar</h6>
+						<aside class="notes">
+							<p></p>
+						</aside>
 					</section>
 
 					<section>
-						<h3>What is it?</h3>
-						<p>changing the structure of existing code without changing its behavior</p>
+						<h2>Clarity &middot; Maintainability &middot; Efficiency &middot; DRY</h2>
+						<aside class="notes">
+							<p>We generally aim for a few standards in our code: clarity, maintainability, efficiency, and DRYness.</p>
+						</aside>
 					</section>
 
 					<section>
-						<h3>Why do we do it?</h3>
+						<h1>Clarity</h1>
+						<p>Code should be clear, well-commented, and <br/>follow consistent rules. A developer new to <br/>the project should be able to understand it.</p>
+					</section>
+
+					<section>
+						<h1>Maintainability</h1>
+						<p>Code should be easy to update & maintain, <br/>not requiring hacks or over-specific styles. <br/>It should be clear where files and styles belong.</p>
+					</section>
+
+					<section>
+						<h1>Efficiency</h1>
+						<p>It should be easy for a developer to find <br/>where styles live, write new styles, fix bugs, <br/>or find documentation and instructions.</p>
+					</section>
+
+					<section>
+						<h1>DRY</h1>
+						<p>Don't repeat yourself! Code should be <br/>reusable, have efficient selectors, and <br/>not be overly repetitive or nested.</p>
+					</section>
+
+					<section>
+						<h6>but what if</h6>
 						<ul>
-							<li>because we never write code perfectly the first time</li>
-							<li>clarity, maintainability, efficiency, DRY</li>
-							<li>you have new requirements</li>
-							<li>the design or UI needs to change</li>
-							<li>code smell</li>
+							<li>we didn't write it perfectly the first time</li>
+							<li>lack of clarity</li>
+							<li>hard to maintain</li>
+							<li>new requirements</li>
+							<li>design or UI needs to change</li>
+							<li>duplication or bloat</li>
+							<li>code smells</li>
+						</ul>
+						<aside class="notes">
+							<p>So in the case we DON'T have those 4 things perfect, or in any of these other cases [read examples from slide], we refactor.</p>
+						</aside>
+					</section>
+
+					<section>
+						<h2>Refactoring</h2>
+						<h4>changes the structure of existing code<br/> without changing its behavior</h4>
+						<aside class="notes">
+							<p></p>
+						</aside>
+					</section>
+
+					<section>
+						<h2>Refactoring</h2>
+						<h4>supports the process of change</h4>
+						<aside class="notes">
+							<p></p>
+							<p><small>Source: http://st-www.cs.illinois.edu/users/opdyke/wfo.990201.refac.html</small></p>
+						</aside>
+					</section>
+
+					<section>
+						<h2>Refactoring</h2>
+						<h4>makes code easier to modify and <br/>maintain in the future</h4>
+						<aside class="notes">
+							<p></p>
+							<p><small>Source: http://st-www.cs.illinois.edu/users/opdyke/wfo.990201.refac.html</small></p>
+						</aside>
+					</section>
+
+					<section>
+						<h3>getting everyone on the same page</p>
+						<aside class="notes">
+							<p>In many ways, refactoring is like exercise and eating a proper diet. Many of us know that we ought to exercise more and eat a more balanced diet. Some of us live in cultures that highly encourage this. Some of us can get by, for a while, without doing this, perhaps even without visible effects. We can always make excuses for not doing this. But, we are only fooling ourselves if we continue to ignore it. Some of us are motivated by near term benefits of exercise and eating a proper diet, such as high(er) energy levels, greater flexibility, higher self-esteem and other benefits. Nearly all of us know that these near term benefits are very real. Many - but not all - of us make at least sporadic efforts in these areas. Others, however, aren't sufficiently motivated to "do something" until they reach a crisis point.</p>
+							<p><small>Source: http://st-www.cs.illinois.edu/users/opdyke/wfo.990201.refac.html</small></p>
+						</aside>
+					</section>
+
+					<section>
+						<h6>Why we Don't refactor</h6>
+						<ul>
+							<li>you/your team doesn't understand how</li>
+							<li>long-term benefits aren't worth immediate effort</li>
+							<li>overhead; you're paid to write new features</li>
+							<li>it might break something</li>
 						</ul>
 					</section>
 
 					<section>
-						<p>general compromise and getting everyone on the same page</p>
 						<p>understanding principles of why you are doing a certain way</p>
+					</section>
+
+					<section>
+						<p>separation of concerns</p>
 					</section>
 
 					<section>
@@ -86,7 +228,10 @@
 					</section>
 
 					<section>
-						<p>don't refactor everything at once; small manageable chunks</p>
+						<h3>Make refactoring a regular <br/>part of your workflow</h3>
+						<aside class="notes">
+							<p>don't refactor everything at once; small manageable chunks</p>
+						</aside>
 					</section>
 
 					<section>
@@ -94,19 +239,16 @@
 					</section>
 
 					<section>
-						<h2>Why Sass helps us refactor</h2>
-						<p>why it's valuable</p>
+						<h3>Why Sass helps us refactor</h3>
 					</section>
 
 					<section>
-						<ul>
-							<li>allows us to make modules</li>
-							<li>separation of concerns</li>
-							<li>importing individual files</li>
-							<li>variables, functions</li>
-							<li>writing DRYer code than pure CSS</li>
-						</ul>
+						<p>importing files, import order</p>
+						<p>variables</p>
+						<p>mixins</p>
+						<p>nesting and namespacing</p>
 					</section>
+
 				</section>
 
 				<section data-state="cya-starting">

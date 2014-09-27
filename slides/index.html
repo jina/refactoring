@@ -1071,34 +1071,6 @@ h3
 							</pre>
 						</code></section>
 
-				</section>
-
-				<section data-state="cya-organization">
-					<section>
-						<h2>CYA: file and folder organization</h2>
-					</section>
-
-					<section>
-						<p>vendor and third party libraries</p>
-					</section>
-
-					<section>
-						<p>frameworks</p>
-					</section>
-
-					<section>
-						<p>settings and variables</p>
-					</section>
-
-					<section>
-						<p>helpers, mixins, dependencies, tools and testing</p>
-					</section>
-
-					<section>
-						<p>IE, themes, responsive if you keep it separate</p>
-					</section>
-
-
 					<section>
 						<h2>Named Media Queries</h2>
 					</section>
@@ -1211,33 +1183,57 @@ h3
 
 					</section>
 
+				</section>
 
+				<section data-state="cya-organization">
 					<section>
-						<p>base - your semantic HTML - layout/page level</p>
+						<h2>Organize files and folders</h2>
+						<p>Goal: Keep style, vendor, and helper code separate; make files easy to find and not cluttered.</p>
 					</section>
 
 					<section>
-						<p>components or modules - icons, buttons, page components</p>
+						<p>config: settings, variables</p>
+						<p>themes, if you have any</p>
+						<p>helpers: mixins, JS state classes, CSS3</p>
+						<p>frameworks: foundation, bootstrap, grids</p>
+						<p>components: icons, buttons, page components like header/footer</p>
+						<p>modules/base: your semantic HTML - page content, not elements like buttons</p>
+						<p>IE or responsive if you keep it separate</p>
+						<p>vendor: third party libraries, JS</p>
 					</section>
 
 					<section>
-						<ul>
-							<li>Break out related code modules</li>
-							<li class="fragment">Keep files small, readable</li>
-							<li class="fragment">Comment each file with explanation, contents</li>
-						</ul>
+
+						<pre><code>
+|- sass/
+|--- application.sass    // manifest, imports config, components, modules, frameworks
+|--- config.sass         // imports actual config file, helpers, colors, typography, themes
+|--- config/
+|------ _config.sass
+|------ _helpers.sass    // includes mixins, testing functions, css3, js is- states
+|------ _colors.sass
+|------ _typography.sass // webfonts and type declarations
+|--- components.sass     // imports icons, buttons, UI elements, page components
+|--- components/
+|------ page.sass        // general page/body
+|------ header.sass
+|------ footer.sass
+|------ buttons.sass
+|------ icons.sass
+|------ nav.sass
+|------ forms.sass
+|--- modules.sass        // imports page content and semantic HTML
+|--- modules/
+|------ [your page content files]
+|--- vendor.sass         // imports CSS from third party or JS libs
+
+						</code></pre>
 					</section>
 
 					<section data-state="import2">
 						<aside class="notes">
 							<p>Here's how I do it on my blog.</p>
 							<p>In this case, I did style somewhat by "pages"—but on a small site like this, that's totally fine.</p>
-						</aside>
-					</section>
-
-					<section data-state="import3">
-						<aside class="notes">
-							<p>Here's an example of how I did it at my last job. This is a bit simplified, but we had a lot more modules, so grouping and commenting by type was more valuable.</p>
 						</aside>
 					</section>
 
@@ -1285,8 +1281,6 @@ h3
 							Keeping functional Sass separate from presentational Sass is important in order to maintain readability, search-ability and scaleability of your code. Patterns like placing mixins in the same file as presentational Sass leads to overly complex files to scan and opportunities for accidental pollution of your processed CSS.</p>
 						</aside>
 					</section>
-
-
 
 					<section data-state="sassystarter">
 						<h3 style="color:#666; text-transform: none;">Mina Markham's Sassy Starter</h3>
@@ -1351,62 +1345,12 @@ h3
 
 				</section>
 
-				<section data-state="cya-commenting">
-					<section>
-						<h2>CYA: Commenting</h2>
-					</section>
 
-
-					<section data-state="comments">
-						<li>Comment each file to explain what is in it</li>
-						<li>Comment every large section of CSS</li>
-						<li>Comment individual items that need clarification</li>
-						<li>Be consistent</li>
-						<aside class="notes">
-							<p>Imagine the next person who inherits your codebase. Your comments should be a guide for them through your CSS. Especially with potentially confusing Sass variables and mixins, it's not enough to have a comment that says "This is a mixin for a CSS3 gradient with eighteen arguments". Better to also add instructions on how to use. If you have a style guide or wiki docs, reference that page/section as well!</p>
-						</aside>
-					</section>
-
-					<section>
-						<p>commenting files</p>
-					</section>
-
-					<section>
-						<p>commenting imports</p>
-					</section>
-
-					<section>
-						<p>commenting sections</p>
-					</section>
-
-					<section>
-						<p>documentation/instructions</p>
-					</section>
-
-					<section data-state="full-code">
-					<pre><code class="no-highlight">
-// Single-line JS-style comments don't need a closing tag,
-// and they are hidden from your compiled output! This is
-// great for inline documentation about the styles themselves
-// and how they should be used, mentioning hacks, or TODOs.
-
-/* CSS style comments can be multi-line with a closing tag
-   and they appear in your compiled output. This is great for
-   section documentation and headers/dividers! */
-					</code></pre>
-
-						<aside class="notes">
-							<p>In Sass, the JS style single-line comments with the two slashes are hidden from your output, which is great, because you can do a ton of commenting without anything showing up.</p>
-
-							<p>However, there are occasions where you may WANT your comments to show up in your compiled CSS—recently I was trying to do this so that I could see where imported files began and ended in my output. Helpfully, the CSS style slash-asterisk comments DO show up in output! Handy!</p>
-						</aside>
-					</section>
-
-				</section>
 
 				<section data-state="cya-modules">
 					<section>
-						<h2>CYA: Modules</h2>
+						<h2>Creating Modules</h2>
+						<p>Goal: determine what modules your project has & how to group them</p>
 					</section>
 
 					<section>
@@ -1415,6 +1359,16 @@ h3
 
 					<section>
 						<p>how to determine WHAT modules you have; going thru old html and css and determining what is the same and what is different</p>
+					</section>
+
+					<section>
+						<p>print your website out on paper!</p>
+						<aside class="notes">
+							<p>No but srsly. At Bazaarvoice we had 3 separate codebases, one for Reviews, one for AA, one for Stories. We wanted to consolidate the CSS, but it was too big of an undertaking to refactor all the HTML and UI components.</p>
+							<p>So what we did is we printed out every page/area of our software. Then we took them in groups and with colored pencils, boxed out what sections were the same.</p>
+							<p>All primary buttons got one color, secondary another. Common form elements got one; headers another. After that we boxed out larger page modules, like "comment" and "comment form" and larger than that, "comment area".</p>
+							<p>This helped us determine what our modules were. Even though we couldn't change our HTML, when we were writing our Sass (ok, LESS) templates, we could group all the relevant CSS classnames together in one declaration, rather than having multiple redundant files.</p>
+						</aside>
 					</section>
 
 					<section>
@@ -1797,13 +1751,8 @@ h3
 
 					<section>
 						<p>where do you put new modules</p>
+						<p>create new folder structure when you outgrow it</p>
 					</section>
-
-					<section>
-						<p>how do you group and organize them?</p>
-					</section>
-
-
 
 					<!-- namespacing / nesting leads to bloat -->
 					<section data-state="badcomputer gifs">
@@ -1818,14 +1767,11 @@ h3
 
 				<section data-state="cya-module-refactor">
 					<section>
-						<h2>CYA: Steps to refactor a module</h2>
-					</section>
+						<h2>Steps to refactor a module</h2>
+						<p>Goal: take your modules and do the actual refactor work!</p>
 
-					<section>
-						<h5>Step Two</h5>
-						<h2>Refactoring Some Actual CSS</h2>
 						<aside class="notes">
-							<p>So now that we have done that, our <em>files</em> are a bit easier to read, but what's in those files may still be clunky and messy. We'll still be getting the bugs we were before, have classnames that need to be cleaned up, etc. So let's talk about refactoring that actually changes your CSS, and maybe even HTML.</p>
+							<p>Our <em>files</em> are a bit easier to read now, but what's in those files may still be clunky and messy. We'll still be getting the bugs we were before, have classnames that need to be cleaned up, etc. So let's talk about refactoring that actually changes your CSS, and maybe even HTML.</p>
 						</aside>
 					</section>
 
@@ -1893,7 +1839,6 @@ h3
 						</aside>
 					</section>
 
-
 					<section>
 						<p>determining the size of a refactor</p>
 					</section>
@@ -1902,7 +1847,8 @@ h3
 
 				<section data-state="cya-classname-refactor">
 					<section>
-						<h2>CYA: class naming refactoring in both HTML and CSS</h2>
+						<h2>Refactoring both HTML and CSS</h2>
+						<p>Goal: Determine how to refactor messy HTML.</p>
 					</section>
 
 					<section>
@@ -1913,7 +1859,8 @@ h3
 
 				<section data-state="cya-naming-conventions">
 					<section>
-						<h2>CYA: naming conventions</h2>
+						<h2>Naming Conventions</h2>
+						<p>Goal: Choose a naming convention that works for you.</p>
 					</section>
 
 					<section>
@@ -1967,11 +1914,57 @@ h3
 
 				<section data-state="cya-documentation">
 					<section>
-						<h2>CYA: documentation</h2>
+						<h2>Documentation & Commenting</h2>
+						<p>Goal: have a consistent comment style and use it!</p>
+					</section>
+
+					<section data-state="comments">
+						<li>Comment each file to explain what is in it</li>
+						<li>Comment every large section of CSS</li>
+						<li>Comment individual items that need clarification</li>
+						<li>Be consistent</li>
+						<aside class="notes">
+							<p>Imagine the next person who inherits your codebase. Your comments should be a guide for them through your CSS. Especially with potentially confusing Sass variables and mixins, it's not enough to have a comment that says "This is a mixin for a CSS3 gradient with eighteen arguments". Better to also add instructions on how to use. If you have a style guide or wiki docs, reference that page/section as well!</p>
+						</aside>
+					</section>
+
+					<section>
+						<p>commenting files</p>
 					</section>
 
 					<section>
 						<p>inline comment documentation; keep it up to date when you change your code.</p>
+					</section>
+
+					<section>
+						<p>commenting imports</p>
+					</section>
+
+					<section>
+						<p>commenting sections</p>
+					</section>
+
+					<section>
+						<p>documentation/instructions</p>
+					</section>
+
+					<section data-state="full-code">
+					<pre><code class="no-highlight">
+// Single-line JS-style comments don't need a closing tag,
+// and they are hidden from your compiled output! This is
+// great for inline documentation about the styles themselves
+// and how they should be used, mentioning hacks, or TODOs.
+
+/* CSS style comments can be multi-line with a closing tag
+   and they appear in your compiled output. This is great for
+   section documentation and headers/dividers! */
+					</code></pre>
+
+						<aside class="notes">
+							<p>In Sass, the JS style single-line comments with the two slashes are hidden from your output, which is great, because you can do a ton of commenting without anything showing up.</p>
+
+							<p>However, there are occasions where you may WANT your comments to show up in your compiled CSS—recently I was trying to do this so that I could see where imported files began and ended in my output. Helpfully, the CSS style slash-asterisk comments DO show up in output! Handy!</p>
+						</aside>
 					</section>
 
 					<section>
@@ -1989,7 +1982,8 @@ h3
 
 				<section data-state="cya-testing">
 					<section>
-						<h2>CYA: testing</h2>
+						<h2>Testing</h2>
+						<p>Goal: Don't be breaking shit.</p>
 					</section>
 
 					<section>

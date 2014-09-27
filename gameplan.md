@@ -36,7 +36,7 @@ I need to make variables and helpers for...
     [ ] Colors
     [ ] Typography
     [ ] CSS3
-    [ ] Clearfix
+    [ ] Clearfix/Floats
     [ ] Grids
     [ ] Buttons
     [ ] I need to create other variables for: _________________________________
@@ -49,63 +49,20 @@ I need to make variables and helpers for...
         [ ] well-organized variables/helpers that need better documentation
 
 I need to have more abstraction because I need...
+    [ ] to have variables names that are more robust
     [ ] to be able to create themes
     [ ] lots of UI states via JavaScript
     [ ] to have an easily editable settings/configuration file
     [ ] to keep my functions/helpers out of my styles
+    [ ] more consistent responsive mixins
 
     I'll probably abstract my variables with a naming convention like
         [ ] primary/secondary/tertiary
         [ ] module-based e.g button-*, header-*, font-*
         [ ] color schemed
 
-I have this much documentation:
-    [ ] zero
-    [ ] a little bit
-        [ ] as code comments in my app
-        [ ] as an external wiki/document
-    [ ] lots, but it's all old and outdated
-    [ ] my documentation is flawless
-
-    I need more comment documentation [ ] per file [ ] in my manifest/import [ ] for a config/settings file [ ] individual modules [ ] how to use mixins, helpers or frameworks.
-
-
-My project's naming conventions... 
-    [ ] are consistent, and it uses...
-            [ ] and they're even documented!
-        [ ] BEM
-        [ ] OOCSS
-        [ ] whatever my framework was using
-        [ ] something I made up but at least we use it consistently
-        [ ] something someone else made up and I hate it
-    [ ] exist, but are confusing, inconsistent, or don't fit with the project
-    [ ] what's a naming convention?
-        [ ] I need to pick a naming convention and...
-            [ ] apply it to existing code as I refactor
-            [ ] write new code with it as we delete old code
-            [ ] beat my coworkers over the head with it til they give in
-            The naming convention that best fits my project might be: _________
-
-My CSS is organized into modules [ ] by individual files/groups of files [ ] by pages and need to be broken down [ ] in my imagination [ ] in someone else's imagination [ ] not even a little bit.
-
-    Modules my project needs:  ______________________________________________________________________________________________________________________________________________________________________________________________________
-
-    [ ] I need to break big files up into smaller ones
-    [ ] I need to group modules by type/folder more clearly
-    [ ] I need to better namespace modules so the styles don't conflict
-    [ ] I need to update, comment, or organize my import/manifest file
-    [ ] I have modules but they're getting messy and need updating
-
-Choose a module that you know of—like buttons, or a profile avatar, or a comment block. Whether it exists as a module/file or just in your imagination, document how you might follow the steps to refactor it.
-
-    Module: __________________________________
-
-    1) Extract partial ________________________________________________________
-    2) Find repeating patterns ________________________________________________
-    3) Create/extract base class ______________________________________________
-    4) Apply nesting __________________________________________________________
-    5) Create mixins/extends __________________________________________________
-
+    [ ] I need to make a settings/config file.
+        Notes on a good setup:  ____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 My CSS is [ ] in one gigantic CSS file [ ] in page-based files [ ] in invididual modules but could be better [ ] perfect.
 
@@ -130,11 +87,69 @@ My CSS is [ ] in one gigantic CSS file [ ] in page-based files [ ] in invididual
         [ ] for modernizr or fallback related
         [ ] themes for certain sites or sections
 
-My project needs [ ] a code standards doc [ ] a static style guide or how-to [ ] a living style guide [ ] a designer.
+[ ] It is time for a break.
 
-    I can best define my styles and how to use them...
-        [ ] in modules, by writing instructional documentation
-        [ ] visually, with images in a static doc, as my styles don't often change or I have designers creating this
-        [ ] in a living style guide, because I change styles in the code more often than a designer changes mockups
+My CSS is organized into modules [ ] by individual files/groups of files [ ] by pages and need to be broken down [ ] in my imagination [ ] in someone else's imagination [ ] not even a little bit.
+
+    Modules my project needs:  ______________________________________________________________________________________________________________________________________________________________________________________________________
+
+    [ ] I need to break big files up into smaller ones
+    [ ] I need to group modules by type/folder more clearly
+    [ ] I need to better namespace modules so the styles don't conflict
+    [ ] I need to update, comment, or organize my import/manifest file
+    [ ] I have modules but they're getting messy and need updating
+
+Choose a module that you know of—like buttons, or a profile avatar, or a comment block. Whether it exists as a module/file or just in your imagination, document how you might follow the steps to refactor it.
+
+    Module: ___________________________________________________________________
+
+    1) Extract partial ___________________________________________________________________________________________________________________________________
+    2) Find repeating patterns ________________________________________________
+    ___________________________________________________________________________
+    3) Create/extract base class ______________________________________________
+    ___________________________________________________________________________
+    4) Apply nesting __________________________________________________________
+    ___________________________________________________________________________
+    5) Create mixins/extends __________________________________________________
+    ___________________________________________________________________________
 
 [ ] I have a headache right now.
+
+My project's naming conventions... 
+    [ ] are consistent, and it uses...
+            [ ] and they're even documented!
+        [ ] BEM
+        [ ] OOCSS
+        [ ] whatever my framework was using
+        [ ] something I made up but at least we use it consistently
+        [ ] something someone else made up and I hate it
+    [ ] exist, but are confusing, inconsistent, or don't fit with the project
+    [ ] what's a naming convention?
+        [ ] I need to pick a naming convention and...
+            [ ] apply it to existing code as I refactor
+            [ ] write new code with it as we delete old code
+            [ ] beat my coworkers over the head with it til they give in
+            The naming convention that best fits my project might be: _________
+
+I have this much documentation:
+    [ ] zero
+    [ ] a little bit
+        [ ] as code comments in my app
+        [ ] as an external wiki/document
+    [ ] lots, but it's all old and outdated
+    [ ] my documentation is flawless
+
+    I need more comment documentation [ ] per file [ ] in my manifest/import [ ] for a config/settings file [ ] individual modules [ ] how to use mixins, helpers or frameworks.
+
+My project needs [ ] a code standards doc [ ] a static style guide or how-to [ ] a living style guide [ ] a designer.
+
+I can best define my styles and how to use them...
+    [ ] in modules, by writing instructional documentation
+    [ ] visually, with images in a static doc, as my styles don't often change or I have designers creating this
+    [ ] in a living style guide, because I change styles in the code more often than a designer changes mockups
+
+A visual testing tool would be [ ] a useful addition to my project [ ] total overkill but really awesome [ ] neat but that involves command line crap, right?
+
+    I might try to install [ ] Wraith [ ] DiffUX [ ] something else.
+
+    

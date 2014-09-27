@@ -131,6 +131,8 @@
 						<h2>Clarity &middot; Maintainability &middot; Efficiency &middot; DRY</h2>
 						<aside class="notes">
 							<p>We generally aim for a few standards in our code: clarity, maintainability, efficiency, and DRYness.</p>
+							<p>We want our CSS to be clear, easy to read, easy to maintain; efficient to debug and to write, and to be DRY. Refactoring should improve upon one of those goals, if not all of them at once.</p>
+							<p>For example: if your CSS (sass or not!) matches your markup too much, you want to remove or consolidate your nesting or chained classes: refactor. If it may be cleaner and easier to use placeholder extend for a class you aren't using in HTML: refactor. If you have a bunch of classnames that should be a group but aren't: refactor.</p>
 						</aside>
 					</section>
 
@@ -270,7 +272,8 @@
 
 				<section data-state="cya-starting">
 					<section>
-						<h2>CYA: Installing and starting with Sass</h2>
+						<h2>Installation & Applications</h2>
+						<p>Goal: Determine the best way to use Sass in your project.</p>
 						<aside class="notes">
 							<p>The tools of using Sass—how to install it, what apps and options there are.</p>
 						</aside>
@@ -307,22 +310,7 @@
 							<p>You install it with the Foundation command line interface, which uses npm and Bower.</p>
 							<p>Then you can choose one of two ways to create a project with Foundation: with Compass as the compiler (which is quite slow), and one with Grunt using the libsass compiler. Obviously the Compass one has Compass included, so you have their styles and mixins available to you automatically, but I prefer the Grunt and libsass version. I find it significantly faster. Neither of these came with livereload, though, or running a server, so you'd have to edit the own grunt file to include it. More on that and libsass later.</p>
 							<p>more: http://foundation.zurb.com/docs/sass.html</p>
-						</aside>
-					</section>
-
-					<section data-state="prototyping gifs">
-						<aside class="notes">
 							<p>If you are prototyping, I <em>love</em> Foundation for this. I think it's valuable to use the Sass version, throw in your variables, colors, type, etc, and super-quickly have a sandbox where you can get a working wireframe up. I know a lot of companies that do this, whether its with Foundation, or like Happy Cog, using Compass and the Susy grid.</p>
-							<p>As Sophie at Happy Cog says, we prototype because "It moves."</p>
-							<p>Gif from: https://dribbble.com/shots/1438407-Live-Prototyping</p>
-						</aside>
-					</section>
-
-					<section>
-						<p class="quote">&#08220;We started building prototypes because responsive websites are fluid, and static wireframes are not. A prototype shows the site as it is meant to be seen—in a browser, on any device.&#08221;</p>
-						<h6>—Sophie Shepherd</h6>
-						<aside class="notes">
-							<p>"We can define how elements change at different screen sizes, and we can add in movement and interaction so that the site is tangible—something users and our clients can actually experience like a live website. We can test user flows and observe how people interact with the site. Since the prototype is a low-fidelity artifact, we can take what we learn from usability testing and iterate rapidly until we get it right."</p>
 						</aside>
 					</section>
 
@@ -394,37 +382,37 @@ Waiting...OK<br/>
 					<section data-state="full-code">
 						<pre><code class="JSON">
   grunt.initConfig({
-    watch: {
-      css: {
-        files: ['Gruntfile.js', 'app/**/*.js', './app/scss/**/*.scss']
-      },
-      livereload: {
-        options: { livereload: true }
-      }
-    },
+	watch: {
+	  css: {
+		files: ['Gruntfile.js', 'app/**/*.js', './app/scss/**/*.scss']
+	  },
+	  livereload: {
+		options: { livereload: true }
+	  }
+	},
 
-    connect: {
-      server: {
-    options: {
-      port: 8000,
-      base: './app',
-      livereload: true
-    }
-     }
-    },
+	connect: {
+	  server: {
+	options: {
+	  port: 8000,
+	  base: './app',
+	  livereload: true
+	}
+	 }
+	},
 
-    open: {
-      dev : {
-    path: 'http://localhost:8000'
-      }
-    }
+	open: {
+	  dev : {
+	path: 'http://localhost:8000'
+	  }
+	}
   });
 
   // Server Task
    grunt.registerTask('server', [
-      'connect',
-      'open',
-      'watch'
+	  'connect',
+	  'open',
+	  'watch'
   ]);
 						</code></pre>
 						<aside class="notes">
@@ -449,7 +437,7 @@ Waiting...OK<br/>
 						</code></pre>
 
 						<aside class="notes">
-							<p>Useful grunt pluginsp>
+							<p>Useful grunt plugins</p>
 						</aside>
 					</section>
 
@@ -462,9 +450,13 @@ Waiting...OK<br/>
 					</section>
 
 					<section>
-						<h3>Steps to switch to Sass</h3>
+						<h2>.scss or .sass?</h2>
+						<p>Goal: Choose a syntax for your project.</p>
+					</section>
+
+					<section>
+						<h3>Steps to switch to .scss</h3>
 						<ol>
-							<li>Pick a compiler</li>
 							<li>change all your <code>.css</code> files to <code>.scss</code></li>
 							<li>compile your code</li>
 							<li>Open your site in a browser</li>
@@ -474,128 +466,267 @@ Waiting...OK<br/>
 					<section data-state="sciencedino gifs">
 					</section>
 
+					<section>
+						<h3>.sass vs .scss</h3>
+						<p>Sass* (the language) has two syntaxes</p>
+						<p class="footnote">* it's not an acronym!</p>
+					</section>
+
+					<section>
+						<h3>.scss</h3>
+						<p>SCSS* or "Sassy CSS" looks just like CSS.<br/>Every <code>.css</code> file is a valid <code>.scss</code> file.</p>
+						<pre>
+						<code class="sass">
+  .widget {
+    color: #fff; /* CSS works here */
+    background: $backgroundColor; /* but so do Sass variables */
+    margin: 20px;
+    padding: 20px;
+  }
+						</code>
+						</pre>
+						<h6>* it's an acronym!</h6>
+						<aside class="notes">
+							<p>.scss is a much easier place to begin, though, since it's a lot more forgiving and accepts all regular CSS.</p>
+							<p>If you are switching from .css, or have a lot of devs/people on your project that are not as familiar with CSS, this is probably a good option. It can also be more convenient if you are pulling in lots of vendor or framework code.</p>
+						</aside>
+					</section>
+
+					<section>
+						<h3>.sass</h3>
+						<p><code>.sass</code> syntax uses indentation rather than brackets to indicate nesting of selectors, and newlines rather than semicolons to separate properties.</p>
+						<pre>
+						<code class="sass">
+  .widget /* look ma, no brackets! */
+    color: #fff /* or semi-colons! */
+    background: $backgroundColor
+    margin: 20px
+    padding: 20px
+
+  // you can use shorthand includes
+  =large-text // instead of @mixin large-text
+    font-size: 20px
+    color: #ff0000
+
+  h1
+    +large-text // instead of @include large-text
+						</code>
+						</pre>
+
+						<aside class="notes">
+							<p>I personally like the .sass syntax; I find it forces me to be more cautious about nesting, and I love not typing brackets or semicolons.</p>
+							<p>It's a good choice for those familiar with things like HAML, or who like significant whitespace, or like me, are lazy. It's also less to type if you use the oldschool syntax. Instead of writing @mixin, you can use the character =; instead of writing @include, you can use the character +</p>
+						</aside>
+					</section>
+
+					<section>
+						<h3>Converting .(s)css to .sass</h3>
+						<pre>
+						<code class="sass">
+  /* SCSS using indentation as relationship */
+  .nav {
+    styles: go here;
+  }
+    .nav-item {generic: styles;} // indented under .nav but NOT nested
+
+  // .sass syntax uses indentation as nesting
+  .nav
+    styles: go here
+    .nav-item // now will output as .nav .nav-item
+      generic: styles // now are possibly not generic anymore
+						</code>
+						</pre>
+						<aside class="notes">
+							<p>It can be difficult to switch from .scss to .sass if you use indentation in .scss to denote relationships. If you do that in .sass, it will be nested. You have to take the time when switching to make sure your code isn't all crazy nested (and therefore potentially broken).</p>
+							<p>in the above example, let's imagine that the .nav-item styles apply to .nav and also to .footer-nav; in the .sass syntax case that would no longer be true, and your styles would be broken.</p>
+						</aside>
+					</section>
+
+				</section>
+
+
+				<section data-state="cya-import">
+					<section>
+						<h2>Importing</h2>
+						<p>Goal: Choose how to import and organize your code.</p>
+					</section>
+
+					<section>
+						<h5>create an application.scss manifest file</h5>
+						<aside class="notes">
+							<p>The first thing you can do is to import everything thru your compiled Sass file; create an application.scss/sass file and link to it from your app. If you're linking to multiple CSS files, import them from your manifest instead.</p>
+						</aside>
+					</section>
+
+					<section>
+						<pre><code>
+  @import [framework or vendor css]
+  @import styles.scss
+						</code></pre>
+						<aside class="notes">
+							<p>Maybe this is all you have right now—but you've created a manifest that you can add files to as you go.</p>
+						</aside>
+					</section>
+
+					<section>
+						<h5>break up existing files and import them</h5>
+					</section>
+
+					<section>
+						<p>Break out related sections of code, e.g. errors/messages, buttons, icons, nav, etc.</p>
+						<p class="fragment">Make a new file for each with a comment explaining what is in the file.</p>
+						<p class="fragment">Keep files small and readable.</p>
+
+						<aside class="notes">
+							<p>Here we are still aiming to have no (or at least very little) visual change on the site. By doing this we just want to group our files, NOT start changing our CSS, classnames, etc.</p>
+							<p>This isn't about creating modules, which may edit your output or HTML, or require HTML cleanup. This is just about taking your existing CSS and dumping it into smaller, grouped files. Keep it as simple as you can. A big part of refactoring is choosing small battles; if you try to do it all at once you will always give up.</p>
+						</aside>
+					</section>
+
+					<section>
+						<h5>import without altering existing CSS output order</h5>
+						<aside class="notes">
+							<p>This is something you just have to do manually and slowly. Presumably, in your CSS, you'll have sections. If you have a section, you can copy it wholesale into a new file and import it. If you import them in the same order as they were in the CSS file, you shouldn't have any errors. Obviously this is not foolproof!</p>
+							<p>As you create new modules later, you can write your code in ways that make it less fragile to output order (namespacing, etc).</p>
+						</aside>
+					</section>
+
+					<section>
+						<h5>reorganize/regroup my files/folders</h5>
+						<aside class="notes">
+							<p>If you already have imported files via a manifest, you may just need to reorganize or regroup them. Remember that you can group into as many folders as you need to make sense of your files. We'll talk more about folder org, architecture, and creating modules later.</p>
+						</aside>
+					</section>
+
 				</section>
 
 				<section data-state="cya-variables">
 					<section>
-						<h2>CYA: Refactoring variables</h2>
+						<h2>Creating Variables</h2>
+						<p>Goal: Create simple, new variables that don't alter output.</p>
 					</section>
 
-                <section>
-                    <h3>Variables</h3>
-                    <p><code>cmd(+opt)+F</code> in Sublime Text is your new BFF.</p>
+					<section>
+						<h3>Variables</h3>
+						<p><code>cmd(+opt)+F</code> in Sublime Text is your new BFF.</p>
 
-                    <aside class="notes">
-                        <p>Color variables will make you more consistent both visually and in your CSS, and you'll never have to search for a hex color code in your CSS ever again.</p>
-                    </aside>
-                </section>
+						<aside class="notes">
+							<p>Color variables will make you more consistent both visually and in your CSS, and you'll never have to search for a hex color code in your CSS ever again.</p>
+						</aside>
+					</section>
 
-                <section>
-                    <ol>
-                        <li>Make a new file: <code>colors.scss</code></li>
-                        <li class="fragment">Make a new variable: <code>$white: #ffffff;</code></li>
-                        <li class="fragment">Search for all the <code>#ffffff</code>, <code>#fff</code>, <code>#FFF</code>, <code>white</code>, maybe even <code>#f9f9f9</code>.</li>
-                        <li class="fragment">Replace them with <code>$white</code></li>
-                        <li class="fragment">Now do the rest!</li>
-                    </ol>
-                    <aside class="notes">
-                        <p>Now is a really good time to take a little inventory of the UI of your app. What _should_ be white but is actually a super light grey? Do you have two VERY similar colors of blue? Can you consolidate some of your colors as you go to make things more efficient?</p>
-                    </aside>
-                </section>
+					<section>
+						<ol>
+							<li>Make a new file: <code>colors.scss</code></li>
+							<li class="fragment">Make a new variable: <code>$white: #ffffff;</code></li>
+							<li class="fragment">Search for all the <code>#ffffff</code>, <code>#fff</code>, <code>#FFF</code>, <code>white</code>, maybe even <code>#f9f9f9</code>.</li>
+							<li class="fragment">Replace them with <code>$white</code></li>
+							<li class="fragment">Now do the rest!</li>
+						</ol>
+						<aside class="notes">
+							<p>Now is a really good time to take a little inventory of the UI of your app. What _should_ be white but is actually a super light grey? Do you have two VERY similar colors of blue? Can you consolidate some of your colors as you go to make things more efficient?</p>
+						</aside>
+					</section>
 
-                <section data-state="colorvariables gifs">
-                    <br><br>
-                    <h3>Use color operations to make variations.</h3>
-                    <aside class="notes">
-                        <p>Here I'm using Sass' built in color operations to make a light grey that is just a lighter version of our dark grey, rather than defining a new hex value. I'm also using transparentize to make an rgba color for transparent text, rather than defining another rgba color.</p>
+					<section>
+						<p>Import <code>colors.scss</code> into your manifest FIRST.</p>
+						<aside class="notes">
+							<p>Now you can import this file into your manifest; of course it has to go first. Now is a good time to do a visual runthrough and make sure you aren't seeing anything that doesn't work. Maybe your #f9f9f9 really did need to be that, and not white. Just check. This is harder on a larger project, but whether you're checking visually or in your codebase (e.g. did you make an element w/ the bg and color both $white) you should take the time. If you already have something like visual diff testing set up, that'd be another great way to test.</p>
+						</aside>
+					</section>
 
-                        <p>Sass has a ton of these: lighten, darken, saturate, desaturate, invert, complement, adjust hue, alpha (returns alpha value), opacify/transparentize (not kidding, real names- makes more or less opaque), even "change-color" to change any property of a color: red, green, blue values, hue, saturation, lightness, and alpha.</p>
+					<section>
+						<h3>Use color operations to make variations.</h3>
+						<aside class="notes">
+							<p>Use Sass' built in color operations to make a light grey that is just a lighter version of our dark grey, rather than defining a new hex value. I'm also using transparentize to make an rgba color for transparent text, rather than defining another rgba color.</p>
 
-                        <a href="http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html">http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html</a>
-                    </aside>
-                </section>
+							<p>Sass has a ton of these: lighten, darken, saturate, desaturate, invert, complement, adjust hue, alpha (returns alpha value), opacify/transparentize (not kidding, real names- makes more or less opaque), even "change-color" to change any property of a color: red, green, blue values, hue, saturation, lightness, and alpha.</p>
 
-                <section>
-                    <h3>Typography Variables</h3>
-                        <pre>
-                    <code class="sass">
+							<a href="http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html">http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html</a>
+						</aside>
+					</section>
+
+					<section>
+						<h3>Typography Variables</h3>
+							<pre>
+						<code class="sass">
   // TYPEFACE VARIABLES
   $fontHeadline: "Proxima Nova Bold", "Calibri", Arial, sans-serif;
   $fontBody: "Calluna", "Cambria", Georgia, sans-serif;
   $fontSecondary: "Proxima Nova Light", "Calibri", Arial, sans-serif;
-                    </code>
-                    </pre>
-                    <aside class="notes">
-                        <p>Here I've defined a headline font, a body font, and a "secondary" font, in case we ever wanted to use that. Like colors, this allows us to change everything in only one place.</p>
-                    </aside>
-                </section>
+						</code>
+						</pre>
+						<aside class="notes">
+							<p>Here I've defined a headline font, a body font, and a "secondary" font, in case we ever wanted to use that. Like colors, this allows us to change everything in only one place.</p>
+						</aside>
+					</section>
 
-                <section>
-                <h5>typography variables</h5>
-                <pre>
-                    <code class="sass">
+					<section>
+					<h5>typography variables</h5>
+					<pre>
+						<code class="sass">
   body {
-    background: $white;
-    font-family: $fontBody
-    color: $greydark;
+	background: $white;
+	font-family: $fontBody
+	color: $greydark;
   }
 
   h1, h2, h3, h4, h5 {
-    line-height: 1.2em;
-    font-family: $fontHeadline;
-    color: $highlight_color_bright;
+	line-height: 1.2em;
+	font-family: $fontHeadline;
+	color: $highlight_color_bright;
   }
-                    </code>
-                </pre>
-                    <aside class="notes">
-                        <p>So here I am pointing our body font to $fontBody, and our headlines to $fontHeadline. Note that it's possible to point the $fontBody variable or vice versa in your variable declarations, if you only wanted one font. I'd still define 2 variables, and use them appropriately: for an h2, I'd use $fontHeadline; if it was in the body or a paragraph declaration, I'd use $fontBody. Even though $fontBody points to $fontHeadline, let's imagine change it later. If you used $fontHeadline in the body declaration, and changed the $fontBody variable, your body font wouldn't change.</p>
-                    </aside>
-                </section>
+						</code>
+					</pre>
+						<aside class="notes">
+							<p>So here I am pointing our body font to $fontBody, and our headlines to $fontHeadline. Note that it's possible to point the $fontBody variable or vice versa in your variable declarations, if you only wanted one font. I'd still define 2 variables, and use them appropriately: for an h2, I'd use $fontHeadline; if it was in the body or a paragraph declaration, I'd use $fontBody. Even though $fontBody points to $fontHeadline, let's imagine change it later. If you used $fontHeadline in the body declaration, and changed the $fontBody variable, your body font wouldn't change.</p>
+						</aside>
+					</section>
 
-                <section data-state="fontsizes">
-                    <h3>it works for font-size too</h3>
-                    <aside class="notes">
-                        <p>Harry Roberts of CSS Wizardry wrote an article called "Pragmatic, practical font sizing in CSS" and in it he came up with this greek lettering method of naming font sizes. Instead of ONLY defining your font sizes on h1, h2, h3, etc, we also define it on classes alpha, beta, etc. "So now .alpha can carry the style information of a h1 wherever you wish; it doesn’t depend on location or a type of element."</p>
-                        <p>I took that one step further with Sass, and used the new placeholder extend functionality. Now I don't have to have classnames in my HTML, but I can extend them in my Sass, like this:</p>
-                    </aside>
-                </section>
+					<section data-state="fontsizes">
+						<h3>it works for font-size too</h3>
+						<aside class="notes">
+							<p>Harry Roberts of CSS Wizardry wrote an article called "Pragmatic, practical font sizing in CSS" and in it he came up with this greek lettering method of naming font sizes. Instead of ONLY defining your font sizes on h1, h2, h3, etc, we also define it on classes alpha, beta, etc. "So now .alpha can carry the style information of a h1 wherever you wish; it doesn’t depend on location or a type of element."</p>
+							<p>I took that one step further with Sass, and used the new placeholder extend functionality. Now I don't have to have classnames in my HTML, but I can extend them in my Sass, like this:</p>
+						</aside>
+					</section>
 
-                <section>
-                    <h5>font-size extends</h5>
-                <pre>
-                    <code class="sass">
+					<section>
+						<h5>font-size extends</h5>
+					<pre>
+						<code class="sass">
   .notification {
 
-      &:hover { background: lighten($tertiary_color,25%); }
+	  &:hover { background: lighten($tertiary_color,25%); }
 
-      // read state of a notification
-      &.read { background: transparentize($tertiary_color,75%); }
+	  // read state of a notification
+	  &.read { background: transparentize($tertiary_color,75%); }
 
-      .icon_arrow_right {
-          @extend %milli;
-          color: $greylight;
-      }
+	  .icon_arrow_right {
+		  @extend %milli;
+		  color: $greylight;
+	  }
 
-      .icon_notification {
-          @extend %delta;
-          color: $primary_color_bright;
-          padding: 5px 10px 0 0;
-          float: left;
-      }
+	  .icon_notification {
+		  @extend %delta;
+		  color: $primary_color_bright;
+		  padding: 5px 10px 0 0;
+		  float: left;
+	  }
 
-      .notification_title {
-          padding: .75em .5em;
-          border-bottom: 1px solid $greypale;
-          @extend %zeta;
-      }
+	  .notification_title {
+		  padding: .75em .5em;
+		  border-bottom: 1px solid $greypale;
+		  @extend %zeta;
+	  }
   }
-                    </code>
-                </pre>
-                    <aside class="notes">
-                        <p>Just @extend %delta, and you'll get 18px, without having to put the classname in your HTML. Additionally, from the content in the typography.sass file, h4 is output, but %delta itself isn't. You could take that one step further and eliminate the h1-6 selectors and ONLY use the placeholders, if you wanted. This works really well for me at work, because in our complex app, we prefer to use unique classnames over HTML selectors, to eliminate cascade issues. For clarity, I also like to not have non-informational classnames in my HTML, like, .delta. If you are working on your own blog or something smaller, it probably isn't as necessary to either eliminate this much CSS output, or avoid the classnames, but whether or not you use placeholder or classes, this is still a very valuable organization technique.</p>
-                        <p>You should be able to do this without really changing much of your output CSS. If you go through the places in your codebase that you have font-size declarations, the same as we did for color variables, and replace with @extend .delta (whether that's a class or placeholder), you'll get the exact same output. If you are adding line-height to your typography.scss file you might have to be a bit more careful. Now you also have consistency going forward. </p>
-                    </aside>
-                </section>
+						</code>
+					</pre>
+						<aside class="notes">
+							<p>Just @extend %delta, and you'll get 18px, without having to put the classname in your HTML. Additionally, from the content in the typography.sass file, h4 is output, but %delta itself isn't. You could take that one step further and eliminate the h1-6 selectors and ONLY use the placeholders, if you wanted. This works really well for me at work, because in our complex app, we prefer to use unique classnames over HTML selectors, to eliminate cascade issues. For clarity, I also like to not have non-informational classnames in my HTML, like, .delta. If you are working on your own blog or something smaller, it probably isn't as necessary to either eliminate this much CSS output, or avoid the classnames, but whether or not you use placeholder or classes, this is still a very valuable organization technique.</p>
+							<p>You should be able to do this without really changing much of your output CSS. If you go through the places in your codebase that you have font-size declarations, the same as we did for color variables, and replace with @extend .delta (whether that's a class or placeholder), you'll get the exact same output. If you are adding line-height to your typography.scss file you might have to be a bit more careful. Now you also have consistency going forward. </p>
+						</aside>
+					</section>
 
 				</section>
 
@@ -748,34 +879,6 @@ $button-color-hover: $white;
 					</section>
 					<section>
 						<p>keeping functions/helpers out of style code</p>
-					</section>
-
-				</section>
-
-				<section data-state="cya-import">
-					<section>
-						<h2>CYA: Import files</h2>
-					</section>
-
-					<section>
-						<p>breaking code out into files</p>
-					</section>
-
-
-                <section>
-                    <h3>File Organization</h3>
-                    <p>Break out sections of your code that are related: errors, buttons, icons, sidebar, header, footer, etc.</p>
-                    <p class="fragment">Make a new file for each with a comment explaining what is in the file.</p>
-                    <p class="fragment">Goal is to keep files small and readable.</p>
-
-                    <aside class="notes">
-                        <p>[read slide - 3 bullets]</p>
-                        <p>Here we are still aiming to have no (or at least very little) visual change on the site. By doing this we just want to group our files, NOT start changing our CSS, classnames, etc.</p>
-                    </aside>
-                </section>
-
-					<section>
-						<p>importing files w/o changing import order</p>
 					</section>
 
 				</section>
@@ -1528,77 +1631,77 @@ $button-color-hover: $white;
 						<h2>CYA: Steps to refactor a module</h2>
 					</section>
 
-	                <section>
-	                    <h5>Step Two</h5>
-	                    <h2>Refactoring Some Actual CSS</h2>
-	                    <aside class="notes">
-	                        <p>So now that we have done that, our <em>files</em> are a bit easier to read, but what's in those files may still be clunky and messy. We'll still be getting the bugs we were before, have classnames that need to be cleaned up, etc. So let's talk about refactoring that actually changes your CSS, and maybe even HTML.</p>
-	                    </aside>
-	                </section>
+					<section>
+						<h5>Step Two</h5>
+						<h2>Refactoring Some Actual CSS</h2>
+						<aside class="notes">
+							<p>So now that we have done that, our <em>files</em> are a bit easier to read, but what's in those files may still be clunky and messy. We'll still be getting the bugs we were before, have classnames that need to be cleaned up, etc. So let's talk about refactoring that actually changes your CSS, and maybe even HTML.</p>
+						</aside>
+					</section>
 
-	                <section data-state="digg">
-	                    <br><br><br>
-	                    <h5>Chris Eppstein, "Refactor My Stylesheets: The Digg.com Edition"</h5>
-	                    <aside class="notes">
-	                        <p>Chris Eppstein, a Sass author, did a refactor of Digg's Feedback/voting stylesheet to see how they could benefit from Sass. This was in 2010—and he mentions a few features Sass didn't have then, like placeholder extend, that they do now that could improve on this even more.</p>
+					<section data-state="digg">
+						<br><br><br>
+						<h5>Chris Eppstein, "Refactor My Stylesheets: The Digg.com Edition"</h5>
+						<aside class="notes">
+							<p>Chris Eppstein, a Sass author, did a refactor of Digg's Feedback/voting stylesheet to see how they could benefit from Sass. This was in 2010—and he mentions a few features Sass didn't have then, like placeholder extend, that they do now that could improve on this even more.</p>
 
-	                        <a href="http://chriseppstein.github.io/blog/2010/05/25/refactor-my-stylesheets-digg-edition/">link</a>
-	                    </aside>
-	                </section>
+							<a href="http://chriseppstein.github.io/blog/2010/05/25/refactor-my-stylesheets-digg-edition/">link</a>
+						</aside>
+					</section>
 
-	                <section>
-	                    <h5>Steps to Refactor</h5>
-	                    <ol>
-	                        <li>Extract partial</li>
-	                        <li>Find repeating patterns</li>
-	                        <li>Create/extract base class</li>
-	                        <li>Apply nesting</li>
-	                        <li>Create mixins/extends</li>
-	                    </ol>
-	                </section>
+					<section>
+						<h5>Steps to Refactor</h5>
+						<ol>
+							<li>Extract partial</li>
+							<li>Find repeating patterns</li>
+							<li>Create/extract base class</li>
+							<li>Apply nesting</li>
+							<li>Create mixins/extends</li>
+						</ol>
+					</section>
 
-	                <section>
-	                    <h3>Extract partial</h3>
-	                    <p>"I cut the related styles and pasted them into a new partial stylesheet named <code>_feedback.scss</code>. Then I inserted <code>@import "feedback";</code> in its place in <code>global.scss</code>. Now I was able to focus on a single set of related styles."</p>
-	                </section>
+					<section>
+						<h3>Extract partial</h3>
+						<p>"I cut the related styles and pasted them into a new partial stylesheet named <code>_feedback.scss</code>. Then I inserted <code>@import "feedback";</code> in its place in <code>global.scss</code>. Now I was able to focus on a single set of related styles."</p>
+					</section>
 
-	                <section>
-	                    <h3>Find repeating patterns</h3>
-	                    <p>"...a large amount of selector duplication that implied an inheritance relationship, ...a repeating pattern relating to the colors and iconography, ...[and] some complex nesting of selectors."</p>
-	                    <aside class="notes">
-	                    <p>"There is a lot of duplication in CSS when you use semantic markup. It can be challenging to identify the different types of duplication. First and foremost, I saw a large amount of selector duplication that implied an inheritance relationship. I looked for a CSS class that could function as the base class and found none. I also saw a repeating pattern relating to the colors and iconography. Lastly, there was some complex nesting of selectors."</p>
-	                    </aside>
-	                </section>
-	                <section>
-	                    <h3>Create/extract base class</h3>
-	                    <p>"I decided to call it <code>.feedback</code> because all of the class names in use described a type of user feedback and this class was not in use already."</p>
-	                    <aside class="notes">
-	                        here is where he says "Unfortunately, Sass does not yet have any notion of an abstract base class, so this cleanup will incur some cost of additional output of a style they don’t want or need." which is exactly what placeholder extend is.
-	                    </aside>
-	                </section>
+					<section>
+						<h3>Find repeating patterns</h3>
+						<p>"...a large amount of selector duplication that implied an inheritance relationship, ...a repeating pattern relating to the colors and iconography, ...[and] some complex nesting of selectors."</p>
+						<aside class="notes">
+						<p>"There is a lot of duplication in CSS when you use semantic markup. It can be challenging to identify the different types of duplication. First and foremost, I saw a large amount of selector duplication that implied an inheritance relationship. I looked for a CSS class that could function as the base class and found none. I also saw a repeating pattern relating to the colors and iconography. Lastly, there was some complex nesting of selectors."</p>
+						</aside>
+					</section>
+					<section>
+						<h3>Create/extract base class</h3>
+						<p>"I decided to call it <code>.feedback</code> because all of the class names in use described a type of user feedback and this class was not in use already."</p>
+						<aside class="notes">
+							here is where he says "Unfortunately, Sass does not yet have any notion of an abstract base class, so this cleanup will incur some cost of additional output of a style they don’t want or need." which is exactly what placeholder extend is.
+						</aside>
+					</section>
 
-	                <section>
-	                    <h3>Apply nesting</h3>
-	                    <p>"Much of the duplication required when styling semantic content is due to styling nested content. ... I’m using Sass’s parent-reference selector <code>&</code> with the styles for h3, strong."</p>
-	                    <aside class="notes">
-	                        <p>"Much of the duplication required when styling semantic content is due to styling nested content. Sass’s ability to nest selectors makes this stylesheet much easier to read and understand what’s going on. Note how I’m using Sass’s parent-reference selector (&) with the styles for h3, strong. The intent of that block is to style those elements, so I have inverted the nesting order to give more clarity to the intent of those styles."</p>
-	                    </aside>
-	                </section>
+					<section>
+						<h3>Apply nesting</h3>
+						<p>"Much of the duplication required when styling semantic content is due to styling nested content. ... I’m using Sass’s parent-reference selector <code>&</code> with the styles for h3, strong."</p>
+						<aside class="notes">
+							<p>"Much of the duplication required when styling semantic content is due to styling nested content. Sass’s ability to nest selectors makes this stylesheet much easier to read and understand what’s going on. Note how I’m using Sass’s parent-reference selector (&) with the styles for h3, strong. The intent of that block is to style those elements, so I have inverted the nesting order to give more clarity to the intent of those styles."</p>
+						</aside>
+					</section>
 
-	                <section>
-	                    <h3>Create mixins/extends</h3>
-	                    <p>"The last major source of duplication ... is the common styling pattern for colors and iconography. To simplify this we extract a mixin and apply it wherever the pattern is in use."</p>
-	                </section>
+					<section>
+						<h3>Create mixins/extends</h3>
+						<p>"The last major source of duplication ... is the common styling pattern for colors and iconography. To simplify this we extract a mixin and apply it wherever the pattern is in use."</p>
+					</section>
 
-	                <section>
-	                <h5>Results?</h5>
-	                <h2 class="fragment">125 lines > 85 lines</h2>
-	                    <aside class="notes">
-	                        "85 lines of code... down from 125 lines of code and providing the exact same output... a 32% reduction!"
-	                        <p>"But the biggest win is that adding a new kind of feedback requires only 1 or 2 points of edit instead of the 5-7 that would have been required before. This is, without a doubt, more maintainable...</p>
-	                        <p>Then he says,"Additionally, we fixed six bugs without trying." "the defect rate in this tested, in-production stylesheet is evidence of how hard it is for even great front-end developers to maintain semantic CSS."</p>
-	                    </aside>
-	                </section>
+					<section>
+					<h5>Results?</h5>
+					<h2 class="fragment">125 lines > 85 lines</h2>
+						<aside class="notes">
+							"85 lines of code... down from 125 lines of code and providing the exact same output... a 32% reduction!"
+							<p>"But the biggest win is that adding a new kind of feedback requires only 1 or 2 points of edit instead of the 5-7 that would have been required before. This is, without a doubt, more maintainable...</p>
+							<p>Then he says,"Additionally, we fixed six bugs without trying." "the defect rate in this tested, in-production stylesheet is evidence of how hard it is for even great front-end developers to maintain semantic CSS."</p>
+						</aside>
+					</section>
 
 
 					<section>
@@ -1704,7 +1807,8 @@ $button-color-hover: $white;
 					</section>
 
 					<section>
-						<p>diffux, phantom</p>
+						<p>diffux, phantom, wraith</p>
+						<p>https://github.com/klamping/UIRegression/blob/master/exercises/1-Wraith.md</p>
 					</section>
 
 					<section>

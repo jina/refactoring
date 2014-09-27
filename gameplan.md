@@ -31,7 +31,6 @@ To import my Sass files I need to
     [ ] break up my existing files and import them
     [ ] make sure I don't alter my existing CSS output order
     [ ] reorganize/regroup my files/folders
-    [ ] choose my output style (expanded, compressed, etc)
 
 I need to make variables and helpers for...
     [ ] Colors

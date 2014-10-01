@@ -1,0 +1,139 @@
+// ------------------------------------------------------------ //
+// BUTTONS MODULE --------------------------------------------- //
+// ------------------------------------------------------------ //
+
+// Copy over new, clean button SCSS into this file. Call it from
+// buttons.html to see if it's working—leave the old one commented
+// out so you can toggle them and make sure everything looks right.
+
+
+
+
+
+// Step 5 ----------------------------------------------------- //
+// Button Base Extend, edit CSS Classes
+%button {
+    display: inline-block; // all buttons line up together
+    padding: 18px 24px; // padding so there's plenty of room around text, more consistent/safe way to determine size
+    margin-right: 10px; // never bump against another button
+    color: #fff; // always have a text color
+    background-color: #ccc; // always have a background color
+    text-transform: uppercase; // always uppercase
+    font-size: 24px; // most buttons have this font size, use it as a base/fallback
+    font-weight: bold; // all buttons are bold
+    border-radius: 4px; // border radius for all buttons
+    &:hover,
+    &:focus {
+        font-weight: bold; // add this so the link styles don't screw with it
+    }
+    &:active,
+    &:visited {}
+}
+
+// New Classes
+
+// HIGHLIGHT BUTTON -- e.g. call to action, sign up, apply now
+.button_highlight {
+    @extend %button;
+    @extend %button;
+    background: #237cbe;
+    box-shadow: 0px 8px 0px 0px rgba(35, 124, 190, 0.25);
+    border: 1px solid #1b6093;
+    text-shadow: 0px 1px 1px #0b283d;
+    font-size: 2em;
+    &:hover,
+    &:focus,
+    &:visited,
+    &:active {
+        background: #1B6093;
+        border-color: #0B283D;
+    }
+
+}
+
+// PRIMARY BUTTON -- default, e.g. submit, save
+.button_primary {
+    @extend %button;
+    color: #c6eff0;
+    background-color: #2ba2a6;
+    box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.125);
+    border-right: 1px solid #217a7d;
+    border-bottom: 1px solid #217a7d;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    &:hover,
+    &:focus,
+    &:visited,
+    &:active {
+        background: #217A7D;
+    }
+}
+
+
+// SECONDARY BUTTON -- e.g. edit
+.button_secondary {
+    @extend %button;
+    color: #d579cc;
+    background-color: #993399;
+    box-shadow: 0px 8px 0px 0px rgba(153, 51, 153, 0.25);
+    border-right: 1px solid #732673;
+    border-bottom: 1px solid #732673;
+    text-shadow: 0px 1px 1px #260d26;
+    &:hover,
+    &:focus,
+    &:visited,
+    &:active {
+        background: #732673;
+    }
+}
+
+// TERTIARY BUTTON -- e.g. delete or cancel
+.button_tertiary {
+    @extend %button;
+    background-color: #e6475b;
+    box-shadow: 0px 8px 0px 0px rgba(230, 71, 91, 0.25);
+    border-right: 1px solid #dc1e36;
+    border-bottom: 1px solid #dc1e36;
+    text-shadow: 0px 1px 1px #821220;
+    &:hover,
+    &:focus,
+    &:visited,
+    &:active {
+        background: darken(#e6475b,10%);
+    }
+}
+
+// DISABLED BUTTON -- any button that is now disabled
+.button_disabled {
+    @extend %button;
+    color: #888;
+    background-color: #ccc;
+    cursor: default;
+    &:hover,
+    &:focus,
+    &:visited,
+    &:active {
+        background: #ccc;
+        color: #888;
+        cursor: default;
+    }
+}
+
+// TEXT BUTTON -- any button that we want to appear as a text link, e.g. cancel usually
+.button_text {
+    @extend %button;
+    // remove %button styles as necessary
+    padding: 0;
+    border: 0;
+    background: 0;
+    border-radius: 0;
+    cursor: pointer;
+    color: black;
+    font-size: .8em;
+    text-transform: capitalize;
+    &:hover,
+    &:focus,
+    &:visited,
+    &:active {
+        color: #666;
+    }
+}

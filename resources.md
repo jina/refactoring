@@ -63,6 +63,7 @@
 * http://www.sitepoint.com/look-different-sass-architectures/
 * http://gist.io/4436524
 * http://csswizardry.com/2013/04/shame-css/
+* http://www.liveeditorcms.com/gc/playbook/sass-css-style-guide/
 
 #### IE, Mobile
 

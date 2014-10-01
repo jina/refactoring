@@ -150,6 +150,6 @@ I can best define my styles and how to use them...
 
 A visual testing tool would be [ ] a useful addition to my project [ ] total overkill but really awesome [ ] neat but that involves command line crap, right?
 
-    I might try to install [ ] Wraith [ ] DiffUX [ ] something else.
+    I might try to install [ ] Wraith [ ] DiffUX [ ] Huxley [ ] something else.
 
     

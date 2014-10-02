@@ -10,6 +10,7 @@
 * [clrs.cc](http://clrs.cc/)
 * [How to dynamically change text color based on a background color](http://thesassway.com/intermediate/dynamically-change-text-color-based-on-its-background-with-sass)
 * [SCSS Blend Modes](https://github.com/heygrady/scss-blend-modes)
+* [Using mix instead of lighten, @flipstewart @KatieK2](http://codepen.io/flipstewart/pen/IofeD?editors=110)
 
 #### Other Stuff
 

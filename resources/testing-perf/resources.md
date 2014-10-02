@@ -8,6 +8,7 @@
 * [Front-end performance for web designers and front-end developers](http://csswizardry.com/2013/01/front-end-performance-for-web-designers-and-front-end-developers/)
 * [One, Two, or Three - Chris Coyier](http://css-tricks.com/one-two-three/)
 * [CSSStats](https://github.com/mrmrs/cssstats)
+* [StyleStats](http://www.stylestats.org/)
 * [Penthouse - Critical Path CSS Generator](https://github.com/pocketjoso/penthouse)
 
 #### Visual Regression Testing

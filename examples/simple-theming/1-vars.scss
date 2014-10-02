@@ -1,0 +1,18 @@
+// COLORS.SCSS ------------------------------------------ //
+
+// Blues ------------------------------------------------ //
+$navy: rgb(1, 46, 81); // MKS Navy
+$blue-dark: rgb(23, 75, 133);
+$blue-bright: rgb(35, 128, 226); // MKS Primary Blue
+$blue-light: rgb(99, 159, 222);
+$blue-pale: rgb(206, 226, 247);
+
+// Secondary colors ------------------------------------- //
+// use sparingly, for contrast and highlight only
+$orange: rgb(255, 152, 0);
+$orange-light: lighten($orange, 50%);
+$orange-dark: rgb(194, 105, 1);
+
+$green: rgb(130, 179, 0);
+$green-light: lighten($green, 50%);
+$green-dark: rgb(18, 120, 0);

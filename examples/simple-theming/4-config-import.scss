@@ -1,0 +1,18 @@
+// ------------------------------------------------------ //
+// Configuration File Import ---------------------------- //
+// ------------------------------------------------------ //
+
+// Import the configuration file that sets default variables
+@import "config/config";
+
+// Import helpers, vars, and mixins
+@import "config/helpers";
+@import "config/colors";
+
+// Choose theme
+@import "config/theme-default";
+// @import "config/theme-dark";
+// @import "config/theme-light";
+
+// Import typography
+@import "config/typography";

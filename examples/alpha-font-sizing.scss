@@ -1,0 +1,53 @@
+// GREEK LETTER NAMING FOR TYPE ------------------------------------------ //
+
+
+// Typography with Variables; Greek Letter Naming
+
+$giga: 4.5em;
+$alpha: 3.662em;
+$beta: 2.930em;
+$gamma: 1.875em;
+$delta: 1.5em;
+$epsilon: 1.2em;
+$zeta: .875em;
+$iota: .75rem;
+
+h1 {
+    font-family: $header-primary;
+    font-size: $beta;
+}
+
+h2 {
+    font-family: $header-secondary;
+    font-size: $beta;
+}
+
+h3 {
+    font-family: $header-tertiary;
+    font-size: $gamma;
+}
+
+
+
+
+
+// Typography with Extends; Greek Letter Naming
+
+h1, %alpha {
+    font-size: 32px;
+    line-height: 1.5;
+}
+
+h2, %beta {
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+h3, %gamma {
+    font-size: 20px;
+    line-height: 1.75;
+}
+
+.quote {
+    @extend %beta;
+}

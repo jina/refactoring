@@ -1,0 +1,58 @@
+// SIMPLE NAMESPACING ------------------------------------------ //
+
+// NAV STYLES
+.nav { width: 50%; }
+
+.nav-item {
+    display: inline-block;
+
+    &:active,
+    &:visited {
+        color: $purple;
+    }
+
+    &:hover {
+        color: $blue;
+        border-bottom: 3px solid $blue;
+    }
+
+    &.is-active {
+        color: $blue;
+        border-bottom: 3px solid $blue-dark;
+    }
+}
+
+
+// HEADER
+.header {
+    nav {
+        float: right;
+    }
+}
+
+// FOOTER
+.footer {
+    background: $grey-dark;
+
+    nav {
+        float: left;
+    }
+
+    .nav-item {
+
+        &:active,
+        &:visited {
+            color: $white;
+        }
+
+        &:hover {
+            color: $blue-light;
+            border-bottom: 3px solid $blue-light;
+        }
+
+        &.is-active {
+            color: $blue-light;
+            border-bottom: 3px solid $blue-light;
+        }
+    }
+}

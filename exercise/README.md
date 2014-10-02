@@ -26,7 +26,7 @@ We highly recommend copying files at certain steps so you can see your progress 
 4. Apply Nesting 
 5. Edit HTML Classes
 6. Apply Variables
-7. Create Mixins
+7. Create Mixins/Extends/Maps
 
 #### Step 1: Extract Partial.
 
@@ -157,7 +157,7 @@ I'm willing to bet you didn't save yourself that many lines of code from the ori
 
 If everything looks good, congrats, you can stop here! Or you can take it one step Sassier and make a mixin to do some of the more repetive work.
 
-#### Step 7: Create Mixins
+#### Step 7: Create Mixins/Extends/Maps
 
 In this—optional—step we're going to take all the redundant code in our unique classes and make a mixin to do the hard work for us. Some modules really benefit from this; in others, there's really no point. You have to determine for yourself if it's valuable to you.
 

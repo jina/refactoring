@@ -1,0 +1,48 @@
+// ------------------------------------------------------ //
+// MODULE: COURSE OUTCOMES ----------------------------- //
+// ------------------------------------------------------ //
+
+.course-outcomes
+    padding: 12em 0 14em
+    background: $off-white
+    @extend %clearfix
+
+    .outcomes-tabs
+        width: 60%
+        float: right
+        margin-bottom: 3em
+
+    .tabs
+        border-bottom: $border-width-small solid darken($off-white,10%)
+        height: 30px
+
+    .tab
+        display: inline-block
+        margin-right: 2em
+        padding-bottom: 7px
+        transition: border-color 0.25s linear
+        border-bottom: $border-width-small solid darken($off-white,10%)
+        @extend h6
+
+        &.is-active
+            border-bottom: $border-width-small solid $fuschia
+            color: $fuschia
+
+    .outcomes-display
+
+    .course-outcome
+        display: none
+        &.is-active
+            display: block
+
+    .course-outcome-image
+        float: left
+        width: 35%
+        margin-right: 5%
+
+    .course-outcome-content
+        float: right
+        width: 60%
+
+        h2
+            color: $fuschia

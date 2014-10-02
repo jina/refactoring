@@ -1,0 +1,60 @@
+// ------------------------------------------------------ //
+// STUDENT QUOTES --------------------------------------- //
+// ------------------------------------------------------ //
+
+.student-quotes
+    border-bottom: 4px solid $off-white
+    @extend %clearfix
+
+.student-quotes-wrapper
+    width: 85%
+    margin: 0 auto
+    text-align: center
+
+.student-quote
+    padding-top: 20px
+
+.student-quote-wrapper
+    width: 75%
+    margin: 0 auto
+
+.student-quote-image
+    border: 4px solid $off-white
+    border-radius: 100%
+    width: 200px
+    height: 200px
+    overflow: hidden
+    margin: 0 auto
+    -webkit-transition: all .3s ease-in-out
+
+    img
+        max-width: 100%
+        width: 200px
+        height: 200px
+
+    &:hover
+        -webkit-transform: scale(1.1)
+
+.student-quote-content
+    margin-top: 2em
+
+.student-quote-text
+    @extend p.intro
+    color: $blue-dark
+
+.student-quote-details
+
+.student-quote-name
+    text-transform: uppercase
+    font-size: $epsilon
+    font-family: $header-tertiary
+
+.student-quote-job,
+.student-quote-past
+    @extend h6
+    display: inline-block
+
+.student-quote-job-link
+    color: $grey-dark
+    &:hover, &:active
+        color: $link-color-hover

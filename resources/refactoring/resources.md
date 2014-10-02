@@ -5,7 +5,7 @@
 
 #### Examples
 
-* http://chriseppstein.github.io/blog/2010/05/25/refactor-my-stylesheets-digg-edition/
+* [http://chriseppstein.github.io/blog/2010/05/25/refactor-my-stylesheets-digg-edition/](Chris Eppstein, Refactor my Stylesheets, Digg Edition)
 
 #### Legacy CSS
 

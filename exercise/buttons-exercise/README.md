@@ -1,6 +1,6 @@
 # Button Refactoring Exercise
 
-"Buttons are the Sass community's Hello World." —someone at SassConf last year
+"Buttons are the Sass community's Hello World." —Eric Suzanne at SassConf last year
 
 Well, it's true. They're easily refactorable, pretty much every site or app has some, and everyone understands their purpose. Plus, they can be as simple or complex as required, so there's a lot of room to play!
 

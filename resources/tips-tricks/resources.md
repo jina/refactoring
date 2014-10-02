@@ -26,3 +26,4 @@
 
 * [Sass and Compass Vertical Rhythm](https://medium.com/@amlinarev/using-sass-compass-vertical-rhythm-to-set-up-typography-defaults-in-a-project-34fe2f1d2c02)
 * [Modular CSS typography](http://thesassway.com/advanced/modular-css-typography)
+* [Pragmatic, practical font sizing in CSS](http://csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/)

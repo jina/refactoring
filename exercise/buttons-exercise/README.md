@@ -44,7 +44,7 @@ We recommend just using the Sass command line compilation for this project. You 
 4. Apply Nesting 
 5. Edit HTML Classes
 6. Apply Variables
-7. Create Mixins
+7. Create Mixins/Extends/Maps
 
 #### Step 1: Extract Partial.
 
@@ -184,7 +184,7 @@ How many lines of code is your `.scss` file now? Compare to how many lines of co
 
 If everything looks good, congrats, you can stop here! Or you can take it one step Sassier and make a mixin to do some of the more repetitive work.
 
-#### Step 7: Create Mixins
+#### Step 7: Create Mixins/Extends/Maps
 
 Copy everything over into folder `/4-mixins`.
 

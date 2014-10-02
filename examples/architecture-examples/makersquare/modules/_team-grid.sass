@@ -1,0 +1,142 @@
+// ------------------------------------------------------ //
+// TEAM GRID -------------------------------------------- //
+// ------------------------------------------------------ //
+
+.team-grid
+    @extend %clearfix
+
+.team-intro
+    @extend %clearfix
+    margin-bottom: 4em
+
+.team-group
+    float: left
+    margin: 0
+    overflow: hidden
+    padding: 2em 2em
+    box-sizing: border-box
+
+    p
+        font-family: $body-italic
+        color: $text-color-reverse
+        font-size: $delta
+
+    &.team-group-instructors
+        background: $fuschia-dark
+        width: 400px
+        height: 400px
+
+    &.team-group-operations
+        background: $blue-dark
+        width: 400px
+        height: 200px
+
+.team-grid-photos
+    padding: 0
+    margin: 0
+    line-height: 11px // HACK elyse 090214 I have no idea why this works, but without it there's a blank space because the .team-member divs aren't the same height/width. thx percentages >:X
+
+.team-member
+    float: left
+    width: 16.666666%
+    position: relative
+    &.is-selected
+        width: 33.33333%
+    @include breakpoint(tiny)
+        width: 50%
+        &.is-selected
+            width: 100%
+    @include breakpoint(small)
+        width: 33.333333%
+        &.is-selected
+            width: 66.6666666%
+    @include breakpoint(medium)
+        width: 25%
+        &.is-selected
+            width: 50%
+    @include breakpoint(large)
+        // same as default
+        width: 16.666666%
+        &.is-selected
+            width: 33.33333%
+
+    &:hover
+        cursor: pointer
+
+        .team-member-info
+            opacity: 1
+
+    &.is-selected
+
+        .team-member-info
+            opacity: 1
+
+
+.avatar
+    position: relative
+    cursor: pointer
+
+    img
+        width: 100%
+        height: 100%
+
+
+
+
+
+.team-member-info
+    opacity: 0
+    position: absolute
+    width: 100%
+    height: 100%
+    z-index: 200
+    text-align: center
+    transition: opacity 0.175s ease-in-out
+    -moz-transition: opacity .175s ease-in-out
+    -webkit-transition: opacity 0.175s ease-in-out
+    background-color: transparentize($primary-color,.25)
+
+.team-member-info-hover
+    width: 80%
+    margin: 0 auto
+
+    h3
+        padding-top: 2em
+        margin-bottom: .5em
+        color: $text-color-reverse
+        font-size: $delta
+        font-family: $body-font
+        font-weight: normal
+
+    h6
+        color: $text-color-sub
+
+.team-member.is-selected
+    .team-member-info-hover
+        display: none
+
+// only display if .team-member.is-selected
+.team-member-info-detail
+    width: 80%
+    margin: 0 auto
+    display: none
+
+    h3
+        padding-top: 2em
+        margin-bottom: .5em
+        color: $text-color-reverse
+        font-size: $delta
+        font-family: $body-font
+        font-weight: normal
+
+    h6
+        color: $text-color-sub
+
+    p
+        padding-top: 2em
+        color: $text-color-reverse
+        line-height: $line-large
+
+.team-member.is-selected
+    .team-member-info-detail
+        display: block

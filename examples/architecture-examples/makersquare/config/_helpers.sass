@@ -1,0 +1,176 @@
+// ------------------------------------------------------ //
+// Helpers & Mixins ------------------------------------- //
+// ------------------------------------------------------ //
+
+// Hide/Show classes ------------------------------------ //
+// ------------------------------------------------------ //
+
+.is-hidden
+    display: none
+
+
+// Clearfix --------------------------------------------- //
+// ------------------------------------------------------ //
+// to use, apply @extend %clearfix on the parent of
+// N number of floated elements, to contain them
+
+%clearfix
+    *zoom: 1
+
+    &:before,
+    &:after
+        content: ""
+        display: table
+        clear: both
+
+
+// Media Queries ---------------------------------------- //
+// ------------------------------------------------------ //
+// to use, @include each breakpoint with the named size, and
+// CSS inside it, for example:
+//      @include breakpoint(tiny) { width: 95%; } // at 0 to 499px
+//      @include breakpoint(small) { width: 80%; } // at 500px to 999px
+//      @include breakpoint(medium) { width: 70%; } // at 1000px to 1299px
+//      @include breakpoint(large) { width: 60%; } // 1300px and up
+
+// Defined Breakpoints
+$tiny: 0
+$small: 480px
+$medium: 780px
+$large: 1000px
+
+
+// Breakpoint mixin
+@mixin breakpoint($media)
+    @if $media == tiny
+        @media only screen and (min-width: $tiny)
+            @content
+
+    @else if $media == small
+        @media only screen and (min-width: $small - 1)
+            @content
+
+    @else if $media == medium
+        @media only screen and (min-width: $medium - 1)
+            @content
+
+    @else if $media == large
+        @media only screen and (min-width: $large)
+            @content
+
+
+
+// Media Query Test Mixin -------------------------------- //
+// ------------------------------------------------------ //
+// include on the body or main container element
+// prints the media query with a 30px top colored border
+// and a :before element that prints the pixel range applicable
+
+@mixin test
+    @include breakpoint(tiny)
+        &:before
+            // this variable sets the max of the range, e.g. 0 - 500px
+            $tiny-defined: $small - 1
+            content: "tiny: #{$tiny}px to #{$tiny-defined}"
+            color: $white
+            position: fixed
+            background: $green
+            z-index: 100000
+            display: block
+            width: 100%
+            top: 0
+            left: 0
+            padding: 5px 15px
+    @include breakpoint(small)
+        &:before
+            $small-defined: $medium - 1
+            content: "small: #{$small} to #{$small-defined}"
+            color: $white
+            position: fixed
+            background: $orange
+            z-index: 100000
+            display: block
+            width: 100%
+            top: 0
+            left: 0
+            padding: 5px 15px
+    @include breakpoint(medium)
+        &:before
+            $medium-defined: $large - 1
+            content: "medium: #{$medium} to #{$medium-defined}"
+            color: $white
+            position: fixed
+            background: $fuschia
+            z-index: 100000
+            display: block
+            width: 100%
+            top: 0
+            left: 0
+            padding: 5px 15px
+    @include breakpoint(large)
+        &:before
+            content: "large: #{$large} to max"
+            color: $white
+            position: fixed
+            background: $turquoise
+            z-index: 100000
+            display: block
+            width: 100%
+            top: 0
+            left: 0
+            padding: 5px 15px
+
+
+// Transitions ------------------------------------------ //
+// ------------------------------------------------------ //
+// to use, apply @include transition() with arguments
+// type, time, and function
+// ex: @include transition(color,0.5s,ease)
+
+@mixin transition($color,$time,$function)
+    -webkit-transition: $color $time $function
+    -moz-transition: $color $time $function
+    -o-transition: $color $time $function
+    transition: $color $time $function
+
+
+
+// Linear Gradient -------------------------------------- //
+// ------------------------------------------------------ //
+// to use, apply @include linear-gradient() with color arguments
+
+@mixin linear-gradient($start-color, $end-color)
+    background-color: $end-color
+    background-image: -webkit-gradient(linear, left top, left bottom, from($start-color), to($end-color))
+    background-image: -webkit-linear-gradient(top, $start-color, $end-color)
+    background-image: -moz-linear-gradient(top, $start-color, $end-color)
+    background-image: -ms-linear-gradient(top, $start-color, $end-color)
+    background-image: -o-linear-gradient(top, $start-color, $end-color)
+    background-image: linear-gradient(top, $start-color, $end-color)
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$start-color}', EndColorStr='#{$end-color}')
+
+
+// Z-Indices -------------------------------------- //
+// ------------------------------------------------------ //
+// ## Elements with z-index
+// use these placeholder extensions as such:
+//
+// modal
+//   @extend %z-ace // z-index: 8
+//
+// ## Components with z-indices
+// use as above, but with +1 or -1 math on elements that need their position defined in reference to another element:
+//
+// modal
+//   @extend %z-ace // z-index: 8
+// modal-backdrop
+//   @extend %z-ace - 1 // z-index: 7
+
+$z-indices: jack, queen, king, ace
+
+@each $z-index in $z-indices
+
+    $base-index: index($z-indices, $z-index) * 3 - 4
+
+    %z-#{$z-index}
+        z-index: $base-index

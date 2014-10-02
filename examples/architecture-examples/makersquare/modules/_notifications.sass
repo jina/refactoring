@@ -1,0 +1,47 @@
+// ------------------------------------------------------ //
+// NOTIFICATIONS: PERMANENT ----------------------------- //
+// ------------------------------------------------------ //
+// these notifications sit under the overview box and
+// are not closeable. these are not like alert messages!
+
+.notifications
+
+.message
+    text-align: center
+    padding: 1.5em 0
+    color: $white
+
+.message-icon,
+.message-title
+    display: inline-block
+
+a.message-link
+    color: $white
+
+.message-icon.fa
+    font-size: $epsilon
+
+.message-title
+    font-size: $epsilon
+    font-family: $body-font-alt
+    line-height: $line-large
+    margin-left: 1em
+
+.message-cta
+    margin-top: 1em
+
+
+// Message Styles and Colors
+.message-frontend
+    @extend .message
+    background: $fuschia-dark
+
+    .message-title
+        border-bottom: $border-width-link dotted $fuschia-dark
+
+    &:hover .message-title
+        border-bottom: $border-width-link dotted $fuschia
+
+.message-general
+    @extend .message
+    background: lighten($blue-dark,10%)

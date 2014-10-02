@@ -1,0 +1,83 @@
+// ------------------------------------------------------ //
+// OVERVIEW of COURSES ---------------------------------- //
+// ------------------------------------------------------ //
+
+.course-overview
+    padding-bottom: 4em
+    padding-top: 8em
+
+.overview-headline
+
+    h1
+        font-size: $alpha
+        color: $white
+        margin-bottom: .25em
+    h2
+        font-size: $gamma
+        color: $white
+        margin-bottom: 2em
+
+// description intro paragraphs
+.parttime-description
+    background: $blue-dark
+    margin-bottom: 6em
+
+    p.intro
+        color: $white
+        margin: 2em 0
+        width: 75%
+
+
+// Two-up Overview Blocks for PT only ------------------- //
+// ------------------------------------------------------ //
+
+.parttime-courses
+    @extend %clearfix
+
+.course-overview-frontend,
+.course-overview-backend
+    float: left
+    width: 45%
+    margin-bottom: 2em
+
+.course-overview-frontend
+    margin-right: 8%
+
+
+.course-overview-frontend
+
+    h2 a
+        display: block
+        color: $fuschia
+        border-left: $border-width-default solid $fuschia-dark
+        padding-left: .5em
+        margin-left: -.5em
+
+        &:hover
+            color: $fuschia-dark
+
+    p.intro
+        color: $fuschia-dark
+        margin: 0
+
+.course-overview-backend
+
+    h2 a
+        display: block
+        color: $green
+        border-left: $border-width-default solid $green-dark
+        padding-left: .5em
+        margin-left: -.5em
+
+        &:hover
+            color: $green-dark
+
+    p.intro
+        color: $green-dark
+        margin: 0
+
+.overview-cta
+    margin-top: 2em
+
+.course-overview-description
+    min-height: 18em

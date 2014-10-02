@@ -1,0 +1,56 @@
+// ------------------------------------------------------ //
+// MODULE: UPCOMING COURSES ----------------------------- //
+// ------------------------------------------------------ //
+
+[class^=parttime-location-]
+    margin-top: 3em
+
+    .location-info
+        margin-bottom: 1em
+        @extend %clearfix
+
+    .city,
+    .next-class,
+    .tuition,
+    .apply,
+    .date-time
+        display: inline-block
+
+    .city
+        width: 25%
+    .date-time
+        width: 32%
+    .tuition
+        width: 12%
+    .next-class
+        width: 15%
+    .apply
+        width: 8%
+        vertical-align: 2px
+
+
+    .city
+        font-family: $header-secondary-bold
+        color: $blue-dark
+        font-size: $delta
+
+        .fa-map-marker
+            padding-right: 5px
+            color: $green
+            margin-left: -24px
+
+    .next-class,
+    .tuition,
+    .date-time
+        font-size: $delta
+        color: $black
+        font-family: $body-font-alt
+
+    .meta
+        @extend h6
+        font-size: $iota
+        display: block
+        margin-bottom: 0
+
+    .description
+        margin-top: 1em

@@ -1,0 +1,30 @@
+// ------------------------------------------------------ //
+// BUTTONS ---------------------------------------------- //
+// ------------------------------------------------------ //
+
+.button
+    display: inline-block
+    transition: .5s background-color ease
+    -webkit-transition: .5s background-color ease
+    border: 0
+    border-radius: $border-radius-default
+    padding: .75em 1.25em
+    line-height: $line-large
+    text-transform: uppercase
+    font-family: $button-font
+    font-size: $epsilon
+    text-rendering: geometricPrecision
+    color: $button-color
+    background: $button-bg
+
+    a
+        color: $button-color
+
+    &:hover,
+    &:focus,
+    &:active
+        font-family: $button-font
+        color: $button-color-hover
+        background: $button-bg-hover
+
+// varying button styles here

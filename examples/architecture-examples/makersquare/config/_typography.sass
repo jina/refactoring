@@ -1,0 +1,186 @@
+// -------------------------------------------------- //
+// TYPOGRAPHY --------------------------------------- //
+// -------------------------------------------------- //
+// variables are set in _config.sass and themes
+
+
+
+// Body text -------------------------------------------- //
+body
+    font-family: $body-font
+    font-size: $base-font-size
+    line-height: $line-base
+
+
+
+// Headers ---------------------------------------------- //
+
+
+h1, h2, h3, h4, h5, h6
+    line-height: $line-small // keep line-height smaller if they stack
+    margin: 0
+    text-rendering: geometricPrecision
+
+// h1 - Pluto SC Thin 60px+
+h1
+    font-family: $header-primary
+    @include breakpoint(tiny)
+        font-size: $beta
+    @include breakpoint(medium)
+        font-size: $alpha
+
+
+// h2 - Adelle 46px
+h2
+    font-family: $header-secondary
+    font-size: $beta
+
+
+// h3 - Pluto SC Regular 30px
+h3
+    font-family: $header-tertiary
+    font-size: $gamma
+
+
+// h4 - Adelle Semibold 24px
+h4
+    font-family: $header-secondary
+    font-size: $delta
+
+
+// h5 - Adelle Semibold 17px
+h5
+    font-family: $header-secondary-bold
+    font-size: $epsilon
+
+
+// h6 - Pluto SC Regular 14px
+h6
+    font-family: $header-tertiary
+    font-size: $zeta
+    text-transform: uppercase
+    margin-bottom: 1em // this is used above paragraphs, so needs a small bottom margin
+
+
+
+
+// Paragraphs, Lists, and Links
+
+p, ul, ol
+    font-family: $body-font
+    text-rendering: geometricPrecision
+
+em
+    font-family: $body-italic
+
+b, strong
+    font-family: $body-bold
+    font-weight: normal
+
+// Quotes
+p.quote
+    font-family: $header-primary
+    color: $header-color-primary
+    @include breakpoint(tiny)
+        font-size: $gamma
+    @include breakpoint(medium)
+        font-size: $beta
+
+// Remove Quote margin when combined with h6 header
+h6 + p.quote
+    margin: 0
+
+// Intro paragraph
+p.intro
+    font-size: $gamma
+    color: $navy
+    font-family: $body-font-alt
+    line-height: $line-large
+
+    b, strong
+        font-family: $body-font-alt-bold
+        font-weight: normal
+
+// Small text for meta info, disclaimers
+p.small
+    font-size: $zeta
+
+
+// code - Fira Mono 16px
+
+// block code
+code
+    display: block
+    font-family: $code-font
+    padding: 2px 8px
+    margin-left: 6px
+    background-color: $off-white
+    border-radius: $border-radius-default
+
+// inline code
+p code,
+li code
+    display: inline-block
+    font-family: $code-font-bold
+    margin: 0
+
+.course-description-bullets li code
+    padding: 0
+
+
+// Links
+
+a, a:active, a:visited
+    font-family: inherit
+    text-decoration: none
+    @include transition(color,0.25s,linear)
+
+a:hover, a:focus
+    text-decoration: none
+
+
+
+
+// Typography Colors ------------------------------------- //
+// pulls from theme files
+
+
+h1
+    color: $header-color-primary
+
+h2
+    color: $header-color-secondary
+
+h3
+    color: $header-color-tertiary
+
+h4
+    color: $header-color-tertiary
+
+h5
+    color: $header-color-primary
+
+h6
+    color: $text-color-sub
+
+p
+    color: $text-color
+
+p.intro
+    color: $header-color-primary
+
+small, p.small
+    color: $text-color-sub
+
+.quote
+    color: $text-color-reverse
+
+a, a:active, a:visited
+    color: $link-color
+
+a:hover, a:focus
+    color: $link-color-hover
+
+code
+    color: $primary-color
+

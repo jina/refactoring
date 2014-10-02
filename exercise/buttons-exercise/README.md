@@ -1,6 +1,6 @@
 # Button Refactoring Exercise
 
-"Buttons are the Sass community's Hello World." —someone at SassConf last year
+"Buttons are the Sass community's Hello World." —Eric Suzanne (I think?) at SassConf last year
 
 Well, it's true. They're easily refactorable, pretty much every site or app has some, and everyone understands their purpose. Plus, they can be as simple or complex as required, so there's a lot of room to play!
 
@@ -81,11 +81,11 @@ We've created a blank `buttons.scss` file so that we can copy over clean CSS int
 
 First, extract a base class. Most likely it'll be `.button`. Copy over all the repeated styles that you might want all buttons to share.
 
-    "I decided to call it `.feedback` because all of the class names in use described a type of user feedback and this class was not in use already." — Chris Eppstein, Digg refactor post
+> "I decided to call it `.feedback` because all of the class names in use described a type of user feedback and this class was not in use already." — Chris Eppstein, Digg refactor post
 
 Compile your new file—now you'll probably have completely unstyled buttons. Time to mess with the HTML!
 
-    Refactoring Tip! Delete or comment out the lines in the old styles once you remove them, to help you keep track. All that should be left are unique styles.
+> Refactoring Tip! Delete or comment out the lines in the old styles once you remove them, to help you keep track. All that should be left are unique styles.
 
 For now let's just add the base class to all the HTML buttons. We can clean this up even more going forward, but first let's make sure that our button styles are applying as we wanted them to.
 
@@ -137,7 +137,7 @@ Determine what naming convention works best for these buttons. Do you want to us
 
 Add in the unique styles again into the new classes. Now is a great time to make sure your hover, active, etc states are consistent—or exist! Be sure to nest those, if you need to.
 
-    Refactoring Tip! Don't remove the old classnames from your CSS or HTML quite yet! You can comment them out in the CSS so they don't apply, but leave them for your reference until you're sure that the new ones are working appropriately!
+> Refactoring Tip! Don't remove the old classnames from your CSS or HTML quite yet! You can comment them out in the CSS so they don't apply, but leave them for your reference until you're sure that the new ones are working appropriately!
 
 Now edit the HTML of the buttons to use the new classes; make sure you make any other HTML edits that might be necessary while you're at it! Add the new classes into your CSS and you should have some much prettier code now. Be sure to check your output!
 
@@ -151,7 +151,7 @@ You have a couple options:
 * make the old CSS classes into IDs and edit the JavaScript to use IDs instead of classes, if it's doing that (medium difficultly)
 * refactor the IDs into a consistent naming scheme and edit the JavaScript (preferred, but most difficult)
 
-Now you can remove the old classnames from your CSS.
+Now you can remove the old class names from your CSS.
 
 
 #### Step 6: Apply Variables
@@ -160,7 +160,7 @@ Now that we know our refactored classnames, how our `%extend` is working, and th
 
 Assuming you already have some variables in a `colors.scss` file, you can go ahead and replace things like `#fff` with `$white`.
 
-But now what about all the colors we have for the backgrounds, shadows, etc? How do we name these colors? `turquoise`, `turquoise-light`, `turquoise-dark`? Then we have a zillion variables for variations fo the same color. Those names don't give us a lot of insight into what the colors are for. So let's take our variable naming one more level abstract.
+But now what about all the colors we have for the backgrounds, shadows, etc? How do we name these colors? `turquoise`, `turquoise-light`, `turquoise-dark`? Then we have a zillion variables for variations for the same color. Those names don't give us a lot of insight into what the colors are for. So let's take our variable naming one more level abstract.
 
 Create variables strictly for the button colors and name them the same as our classes. For example, if my naming convention is primary/secondary:
 
@@ -182,7 +182,7 @@ Be sure to check your output and make sure everything is working!
 
 How many lines of code is your `.scss` file now? Compare to how many lines of code your original `.css` file was. I'm willing to bet you didn't save yourself that many lines of code from the original—so it's not a huge reduction in CSS file size—but the maintainability, class naming consistency, readability, and future-proofing of the code is drastically improved.
 
-If everything looks good, congrats, you can stop here! Or you can take it one step Sassier and make a mixin to do some of the more repetive work.
+If everything looks good, congrats, you can stop here! Or you can take it one step Sassier and make a mixin to do some of the more repetitive work.
 
 #### Step 7: Create Mixins
 

@@ -2,7 +2,7 @@
 
 You'll be choosing a module in your project and refactoring it following the 1-6 steps of how to refactor a module.
 
-If you didn't bring your own project code to work on, or just prefer to do a pre-made exercise, you can do the sample button module in the `/buttons-exercise` folder [/buttons-exercise](here).
+If you didn't bring your own project code to work on, or just prefer to do a pre-made exercise, you can do the sample button module in the `/buttons-exercise` folder [/buttons-exercise](https://github.com/jina/refactoring/tree/master/exercise/buttons-exercise).
 
 
 

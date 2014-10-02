@@ -37,3 +37,16 @@
     font-style: normal;
 
 }
+
+
+@font-face {
+    font-family: 'fira-mono-medium';
+    src: url('fonts/fira-mono-medium.eot');
+    src: url('fonts/fira-mono-medium.eot?#iefix') format('embedded-opentype'),
+         url('fonts/fira-mono-medium.woff') format('woff'),
+         url('fonts/fira-mono-medium.ttf') format('truetype'),
+         url('fonts/fira-mono-medium.svg#fira-mono-medium') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}

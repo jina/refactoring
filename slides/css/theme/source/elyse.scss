@@ -12,7 +12,7 @@
 
 
 // Colors
-$fuschia: #C2185B;
+$fuschia: darken(#C2185B,5%);
 $purple: #904098;
 $turquoise: #3b8aa2;
 $blue: #0f59b4;
@@ -21,6 +21,9 @@ $green: #5b8138;
 $black: #000;
 $grey: #bbb;
 $white: #fff;
+$bouquet: #b37399;
+$hopbush: #c69;
+$wafer: #e1d7d2;
 
 .reveal [class^=color-sample-] {
     width: 175px;
@@ -32,23 +35,8 @@ $white: #fff;
     font-size: 22px;
 }
 
-// yes this could have been a map but I was too lazy to look up the syntax
-.color-sample-fuschia {background: $fuschia;}
-.color-sample-purple {background: $purple;}
-.color-sample-turquoise {background: $turquoise;}
-.color-sample-blue {background: $blue;}
-.color-sample-orange {background: $orange;}
-.color-sample-green {background: $green;}
-.color-sample-black {background: $black;}
-.color-sample-grey {background: $grey;}
-
 // Backgrounds
 $backgroundColor: $fuschia;
-
-// make a slide bg white with data-state="white"
-.white body {
-    background-color: $white;
-}
 
 // Primary/body text
 $mainFont: 'pluto-sans-condensed-exlight', Impact, sans-serif;
@@ -67,13 +55,15 @@ $headingTextShadow: none;
 $heading1TextShadow: $headingTextShadow;
 
 // Links and actions
-$linkColor: lighten($fuschia,45%);
+// $linkColor: lighten($fuschia,45%);
+$linkColor: $wafer;
 $linkColorHover: $white;
 
 // Text selection
-$selectionBackgroundColor: $fuschia;
+$selectionBackgroundColor: $turquoise;
 $selectionColor: $white;
 
+$codeFont: 'Fira Mono', 'Inconsolata', 'Menlo', monoscaped;
 
 // Theme template ------------------------------
 @import "../template/theme";
@@ -96,19 +86,23 @@ $selectionColor: $white;
 .reveal .slides {text-align: left;}
 
 .reveal h1 {
-    font-size: 1.85em;
+    font-size: 1.75em;
+    line-height: 1.2;
     text-transform: uppercase;
     font-family: $headingBold;
 }
 .reveal h2,
 .reveal h3,
 .reveal h4 {
-    // text-transform: uppercase;
     font-size: 1.35em;
 }
 
+.reveal h2 {
+    font-family: $headingBold;
+    text-transform: uppercase;
+}
+
 .reveal h5 {
-    // text-transform: uppercase;
     font-size: 1em;
 }
 
@@ -117,12 +111,18 @@ $selectionColor: $white;
     line-height: 18px;
     margin-bottom: 18px;
     text-transform: uppercase;
-    color: $grey;
+    color: lighten($hopbush,15%);
     font-family: $headingBold;
 }
 
 .reveal p {
     font-size: 1em;
+}
+
+.reveal code,
+.reveal p code {
+    font-family: $codeFont;
+    text-transform: lowercase;
 }
 
 .reveal li {

@@ -12,50 +12,23 @@
   margin: 0 30px 30px 0;
   font-size: 22px; }
 
-.color-sample-fuschia {
-  background: #C2185B; }
-
-.color-sample-purple {
-  background: #904098; }
-
-.color-sample-turquoise {
-  background: #3b8aa2; }
-
-.color-sample-blue {
-  background: #0f59b4; }
-
-.color-sample-orange {
-  background: #f19732; }
-
-.color-sample-green {
-  background: #5b8138; }
-
-.color-sample-black {
-  background: #000; }
-
-.color-sample-grey {
-  background: #444; }
-
-.white body {
-  background-color: #fff; }
-
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #fff;
-  background-color: #fff; }
+  background: #ab1550;
+  background-color: #ab1550; }
 
 .reveal {
-  font-family: "RooneyLight", "Adelle", Georgia sans-serif;
+  font-family: "pluto-sans-condensed-exlight", Impact, sans-serif;
   font-size: 36px;
   font-weight: normal;
   letter-spacing: -0.02em;
-  color: #0f59b4; }
+  color: #fff; }
 
 ::selection {
   color: #fff;
-  background: #C2185B;
+  background: #3b8aa2;
   text-shadow: none; }
 
 /*********************************************
@@ -68,8 +41,8 @@ body {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #000;
-  font-family: "PlutoSansRegular", "pluto-sans-condensed-light", Impact, sans-serif;
+  color: #fff;
+  font-family: "PlutoSansExtraLight", "PlutoSansRegular", "pluto-sans-condensed-medium", Impact, sans-serif;
   line-height: 150%;
   letter-spacing: 0;
   text-transform: none;
@@ -82,7 +55,7 @@ body {
  * LINKS
  *********************************************/
 .reveal a:not(.image) {
-  color: #f19732;
+  color: #e1d7d2;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
@@ -91,13 +64,13 @@ body {
   transition: color .15s ease; }
 
 .reveal a:not(.image):hover {
-  color: #5b8138;
+  color: #fff;
   text-shadow: none;
   border: none; }
 
 .reveal .roll span:after {
   color: #fff;
-  background: #c9710e; }
+  background: #c2aea4; }
 
 /*********************************************
  * IMAGES
@@ -115,31 +88,31 @@ body {
  *********************************************/
 .reveal .controls div.navigate-left,
 .reveal .controls div.navigate-left.enabled {
-  border-right-color: #f19732; }
+  border-right-color: #e1d7d2; }
 
 .reveal .controls div.navigate-right,
 .reveal .controls div.navigate-right.enabled {
-  border-left-color: #f19732; }
+  border-left-color: #e1d7d2; }
 
 .reveal .controls div.navigate-up,
 .reveal .controls div.navigate-up.enabled {
-  border-bottom-color: #f19732; }
+  border-bottom-color: #e1d7d2; }
 
 .reveal .controls div.navigate-down,
 .reveal .controls div.navigate-down.enabled {
-  border-top-color: #f19732; }
+  border-top-color: #e1d7d2; }
 
 .reveal .controls div.navigate-left.enabled:hover {
-  border-right-color: #5b8138; }
+  border-right-color: #fff; }
 
 .reveal .controls div.navigate-right.enabled:hover {
-  border-left-color: #5b8138; }
+  border-left-color: #fff; }
 
 .reveal .controls div.navigate-up.enabled:hover {
-  border-bottom-color: #5b8138; }
+  border-bottom-color: #fff; }
 
 .reveal .controls div.navigate-down.enabled:hover {
-  border-top-color: #5b8138; }
+  border-top-color: #fff; }
 
 /*********************************************
  * PROGRESS BAR
@@ -148,7 +121,7 @@ body {
   background: rgba(0, 0, 0, 0.2); }
 
 .reveal .progress span {
-  background: #f19732;
+  background: #e1d7d2;
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -ms-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
@@ -159,73 +132,68 @@ body {
  * SLIDE NUMBER
  *********************************************/
 .reveal .slide-number {
-  color: #f19732; }
+  color: #e1d7d2; }
 
-.fuschia .reveal {
-  background-color: #C2185B; }
+.fuschia body {
+  background-color: #ab1550; }
 
-.purple .reveal {
+.purple body {
   background-color: #904098; }
 
-.turquoise .reveal {
+.turquoise body {
   background-color: #3b8aa2; }
 
-.blue .reveal {
+.blue body {
   background-color: #0f59b4; }
 
-.orange .reveal {
+.orange body {
   background-color: #f19732; }
 
-.green .reveal {
+.green body {
   background-color: #5b8138; }
 
-.black .reveal {
+.black body {
   background-color: #000; }
 
-.white .reveal {
+.white body {
   background-color: #fff; }
 
 .reveal .slides {
   text-align: left; }
 
 .reveal h1 {
-  font-family: "RooneyLight", "Adelle", Georgia sans-serif;
-  font-size: 2.25em;
-  color: #C2185B; }
+  font-size: 1.75em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-family: "PlutoSansRegular", "pluto-sans-condensed-medium", Impact, sans-serif; }
+
+.reveal h2,
+.reveal h3,
+.reveal h4 {
+  font-size: 1.35em; }
 
 .reveal h2 {
-  font-family: "PlutoSansRegular", "pluto-sans-condensed-light", Impact, sans-serif;
-  font-size: 1.65em;
-  text-transform: uppercase;
-  color: #904098; }
-
-.reveal h3 {
-  font-family: "pluto-sans-condensed-light", Impact, sans-serif;
-  text-transform: uppercase;
-  font-size: 1.35em;
-  color: #000; }
-
-.reveal h4 {
-  font-family: "pluto-sans-condensed-light", Impact, sans-serif;
-  font-size: 1.125em;
-  color: #0f59b4; }
+  font-family: "PlutoSansRegular", "pluto-sans-condensed-medium", Impact, sans-serif;
+  text-transform: uppercase; }
 
 .reveal h5 {
-  font-family: "PlutoSansRegular", "pluto-sans-condensed-light", Impact, sans-serif;
-  text-transform: uppercase;
-  font-size: 1em;
-  color: #0f59b4; }
+  font-size: 1em; }
 
 .reveal h6 {
-  font-family: "PlutoSansRegular", "pluto-sans-condensed-light", Impact, sans-serif;
   font-size: 18px;
   line-height: 18px;
   margin-bottom: 18px;
   text-transform: uppercase;
-  color: #444; }
+  color: #df9fbf;
+  font-family: "PlutoSansRegular", "pluto-sans-condensed-medium", Impact, sans-serif; }
 
 .reveal p {
   font-size: 1em; }
+
+.reveal code,
+.reveal p code {
+  font-family: "Fira Mono", "Inconsolata", "Menlo", monoscaped;
+  text-transform: lowercase; }
 
 .reveal li {
   line-height: 170%; }
@@ -233,12 +201,6 @@ body {
 .reveal p.quote {
   font-size: 1.25em;
   line-height: 160%; }
-
-.full-code body {
-  background: #0a2028; }
-  .full-code body .reveal pre code {
-    max-height: 600px;
-    margin-top: -50px; }
 
 .sass-terminal body {
   background: url("/images/sass-terminal.jpg") no-repeat 0 -22px; }

@@ -50,7 +50,7 @@
 				</section>
 
 				<!-- un/comment me to see type styles for reference! -->
-				<section>
+				<!-- <section>
 					<h1>Header</h1>
 					<h2>Subhead or big quote</h2>
 					<h3>Copy Headline</h3>
@@ -58,7 +58,7 @@
 					<h5>Big copy</h5>
 					<h6>Meta</h6>
 					<p>Paragraph copy</p>
-				</section>
+				</section> -->
 
 				<!-- un/comment me to see colors for reference! -->
 				<!-- <section data-state="white">
@@ -99,18 +99,6 @@
 						<div><b>1</b>&nbsp;&nbsp;&nbsp;responsive code or browser-compliancy</div>
 						<div><b>18</b>&nbsp;&nbsp;&nbsp;documentation</div>
 						<div><b>4</b>&nbsp;&nbsp;&nbsp;how to best install/set up Sass</div>
-						<!-- <ol>
-							<li>getting my team to agree on a system/refactoring/using Sass at all</li>
-							<li>how to best install/set up Sass in my project</li>
-							<li>issues with consistency of visual styles, variables, etc</li>
-							<li>specificity and naming problems in my HTML/CSS</li>
-							<li>creating or editing modules</li>
-							<li>importing, file size, confusing framework/vendor CSS</li>
-							<li>responsive code or browser-compliancy</li>
-							<li>I want one of these style guide things everyone is talking about</li>
-							<li>organization and architecture</li>
-							<li>documentation or testing</li>
-						</ol> -->
 					</div>
 					<aside class="notes">
 						<p>If we are lucky we can make a "stats" slide and put in some basic #s about the survey responses!</p>
@@ -199,7 +187,7 @@
 					</section>
 
 					<section>
-						<h3>getting everyone on the same page</p>
+						<h2>getting everyone <br/>on the same page</h2>
 						<aside class="notes">
 							<p>In many ways, refactoring is like exercise and eating a proper diet. Many of us know that we ought to exercise more and eat a more balanced diet. Some of us live in cultures that highly encourage this. Some of us can get by, for a while, without doing this, perhaps even without visible effects. We can always make excuses for not doing this. But, we are only fooling ourselves if we continue to ignore it. Some of us are motivated by near term benefits of exercise and eating a proper diet, such as high(er) energy levels, greater flexibility, higher self-esteem and other benefits. Nearly all of us know that these near term benefits are very real. Many - but not all - of us make at least sporadic efforts in these areas. Others, however, aren't sufficiently motivated to "do something" until they reach a crisis point.</p>
 							<p><small>Source: http://st-www.cs.illinois.edu/users/opdyke/wfo.990201.refac.html</small></p>
@@ -207,7 +195,7 @@
 					</section>
 
 					<section>
-						<h6>Why we Don&rsquo;t refactor</h6>
+						<h5>Why we Don&rsquo;t refactor</h5>
 						<ul>
 							<li>your team doesn&rsquo;t understand how</li>
 							<li>long-term benefits aren&rsquo;t worth immediate effort</li>
@@ -216,16 +204,16 @@
 						</ul>
 					</section>
 
-					<section>
+<!-- 					<section>
 						<p>understanding principles of why you are doing a certain way</p>
 					</section>
-
+ -->
 					<section>
-						<h3>Why Sass helps us refactor</h3>
+						<h2>Why Sass helps <br/>with refactoring</h2>
 					</section>
 
 					<section>
-						<h2>Systems, not Pages</h2>
+						<h1>Systems, not Pages</h1>
 
 						<aside class="notes">
 							<p>Jina (YEAH YOU!), in her Sass presentations, says "create systems, not pages." We used to do this—about page, home page, etc etc—but now as our apps and projects have gotten significantly more complex, that's a particularly bad plan.</p>
@@ -240,26 +228,29 @@
 					</section>
 
 					<section>
-						<p>separation of concerns</p>
-						<p>importing files, import order</p>
-						<p>variables</p>
-						<p>mixins</p>
-						<p>nesting and namespacing</p>
+                        <ul>
+    						<li>separation of concerns</li>
+    						<li>importing files, folder structure</li>
+    						<li>variables</li>
+    						<li>mixins and extends</li>
+    						<li>nesting and namespacing</li>
+                        </ul>
 					</section>
 
 					<section>
-						<h3>Make refactoring a regular <br/>part of your workflow</h3>
+						<h1>Make refactoring a regular part of your workflow.</h1>
 						<aside class="notes">
 							<p>don't refactor everything at once; small manageable chunks</p>
 						</aside>
 					</section>
 
-					<section>
+<!-- 					<section>
 						<p>keep things documented as you go</p>
-					</section>
+					</section> -->
 
 					<section>
 						<p class="quote">&#8220;Sass is not a replacement for CSS, it’s more like having a CSS assistant who will help you write your code.&#8221;</p>
+                        <h6>— Tom Genoni</h6>
 						<aside class="notes">
 							<p>Tom Genoni wrote a blog post about switching to Sass, in which he says that the best way to learn Sass without getting the insane output is to not use the crazy functionality in Sass.</p>
 							<p>"Sass is not a replacement for CSS, it’s more like having a CSS assistant who will help you write your code. So when you’re ready to really put it to work I recommend occasional sanity checks on the resulting CSS to see if this “assistant” has created too much repeated code or if the selectors are getting too complicated. Refactoring your Sass will help keep your code clean and you’ll start learning how you can make the best use of it."</p>
@@ -272,8 +263,8 @@
 
 				<section data-state="cya-starting">
 					<section>
-						<h2>Installation &#38; Applications</h2>
-						<p>Goal: Determine the best way to use Sass in your project.</p>
+						<h1>Installation &#38; Apps</h1>
+						<h6>Goal: Determine the best way to use Sass in your project.</h6>
 						<aside class="notes">
 							<p>The tools of using Sass—how to install it, what apps and options there are.</p>
 						</aside>
@@ -290,7 +281,7 @@
 					</section>
 
 					<section data-state="sass-terminal">
-						<code class="fragment">sass --watch /path/style.scss:/path/style.css</code>
+						<p><code class="fragment">sass --watch /path/style.scss:/path/style.css</code></p>
 						<aside class="notes">
 							<p>When to use terminal: small personal projects that don't require many other tasks done, if you want to learn and get comfortable in Terminal, to quickly compile one file and look at output. Knowing how to use this is a handy skill in your arsenal even if you don't use it as your primary compilation option.</p>
 						</aside>
@@ -337,11 +328,11 @@
 							<p>This is great if you are using Node, or other JS apps.. or Grunt. Or the Foundation libsass option. They all use the nodesass bind to libsass to compile.</p>
 
 							<p>More: http://benfrain.com/lightning-fast-sass-compiling-with-libsass-node-sass-and-grunt-sass/</p>
-
 						</aside>
 					</section>
 
 					<section data-state="sass-maps">
+                        <h2 class="fragment wrong">LIES!</h2>
 						<aside class="notes">
 							<p>And no.. libsass does not yet support Sass 3.3, so it does not support maps. This is probably the biggest complaint we hear about libsass. So if you use the Foundation libsass version, you can't use maps, or plugins like Susy that require Sass 3.3</p>
 							<p>On screen is a color-guide that Una Kravets made, and it's using the maps functionality to do so. When I try to copy this into my Foundation-with-libsass project, I get the following error:</p>
@@ -349,20 +340,10 @@
 						</aside>
 					</section>
 
-					<section data-state="full-code">
-						<code style="color:white;">
-$ grunt<br/>
-Running "watch" task<br/>
-Waiting...OK<br/>
->> File "scss/app.scss" changed.<br/><br/>
+                    <section>
+                        <h3>Compass</h3>
+                    </section>
 
-<span style="color:yellow;">Warning: /Users/elyse/Documents/test-libsass/scss/app.scss:61: error:
- error reading values after brick-red</span><br/><br/>
-
-<span style="color:red;">Aborted due to warnings.</span>
-						</code>
-
-					</section>
 
 					<section data-state="white">
 						<img src="/images/grunt-logo.png" alt="" style="margin-right: 250px;">
@@ -450,12 +431,12 @@ Waiting...OK<br/>
 					</section>
 
 					<section>
-						<h2><code>.scss</code> or <code>.sass</code>?</h2>
-						<p>Goal: Choose a syntax for your project.</p>
+						<h1><code>.scss</code> or <code>.sass</code>?</h1>
+						<h6>Goal: Choose a syntax for your project.</h6>
 					</section>
 
 					<section>
-						<h3>Steps to switch to .scss</h3>
+						<h5>Steps to switch to .scss</h5>
 						<ol>
 							<li>change all your <code>.css</code> files to <code>.scss</code></li>
 							<li>compile your code</li>
@@ -467,14 +448,13 @@ Waiting...OK<br/>
 					</section>
 
 					<section>
-						<h3><code>.sass</code> vs <code>.scss</code></h3>
+						<h1><code>.scss</code> or <code>.sass</code>?</h1>
 						<p>Sass* (the language) has two syntaxes</p>
 						<br />
 						<h6>* it&rsquo;s not an acronym!</h6>
 					</section>
 
 					<section>
-						<h3>.scss</h3>
 						<p>SCSS* or &ldquo;Sassy CSS&rdquo; looks just like CSS.<br/>Every <code>.css</code> file is a valid <code>.scss</code> file.</p>
 						<pre>
 						<code class="sass">
@@ -495,7 +475,6 @@ Waiting...OK<br/>
 					</section>
 
 					<section>
-						<h3>.sass</h3>
 						<p><code>.sass</code> syntax uses indentation rather than brackets to indicate nesting of selectors, and newlines rather than semicolons to separate properties.</p>
 						<pre>
 						<code class="sass">
@@ -522,7 +501,7 @@ Waiting...OK<br/>
 					</section>
 
 					<section>
-						<h3>Converting <code>.(s)css</code> to <code>.sass</code></h3>
+						<p>Converting <code>.css</code> to <code>.scss</code></p>
 						<pre>
 						<code class="sass">
   /* SCSS using indentation as relationship */
@@ -549,8 +528,8 @@ Waiting...OK<br/>
 
 				<section data-state="cya-import">
 					<section>
-						<h2>Importing</h2>
-						<p>Goal: Choose how to import and organize your code.</p>
+						<h1>Importing</h1>
+						<h6>Goal: Choose how to import and organize your code.</h6>
 					</section>
 
 					<section>
@@ -575,8 +554,8 @@ Waiting...OK<br/>
 					</section>
 
 					<section>
-						<p>Break out related sections of code, e.g. errors/messages, buttons, icons, nav, etc.</p>
-						<p class="fragment">Make a new file for each with a comment explaining what is in the file.</p>
+						<p>Break out related sections of code, <br/>e.g. errors/messages, buttons, icons, nav, etc.</p>
+						<p class="fragment">Make a new file for each with a comment <br/>explaining what is in the file.</p>
 						<p class="fragment">Keep files small and readable.</p>
 
 						<aside class="notes">
@@ -586,7 +565,7 @@ Waiting...OK<br/>
 					</section>
 
 					<section>
-						<h5>import without altering existing CSS output order</h5>
+						<h5>import without altering <br/>existing CSS output order</h5>
 						<aside class="notes">
 							<p>This is something you just have to do manually and slowly. Presumably, in your CSS, you'll have sections. If you have a section, you can copy it wholesale into a new file and import it. If you import them in the same order as they were in the CSS file, you shouldn't have any errors. Obviously this is not foolproof!</p>
 							<p>As you create new modules later, you can write your code in ways that make it less fragile to output order (namespacing, etc).</p>
@@ -594,7 +573,7 @@ Waiting...OK<br/>
 					</section>
 
 					<section>
-						<h5>reorganize/regroup my files/folders</h5>
+						<h5>Re/organize files & folders</h5>
 						<aside class="notes">
 							<p>If you already have imported files via a manifest, you may just need to reorganize or regroup them. Remember that you can group into as many folders as you need to make sense of your files. We'll talk more about folder org, architecture, and creating modules later.</p>
 						</aside>
@@ -604,12 +583,12 @@ Waiting...OK<br/>
 
 				<section data-state="cya-variables">
 					<section>
-						<h2>Creating Variables</h2>
-						<p>Goal: Create simple, new variables that don&rsquo;t alter output.</p>
+						<h1>Creating Variables</h1>
+						<h6>Goal: Create simple, new variables that don&rsquo;t alter output.</h6>
 					</section>
 
 					<section>
-						<h3>Variables</h3>
+						<h5>Switching to variables</h5>
 						<p><code>cmd(+opt)+F</code> in Sublime Text is your new BFF.</p>
 
 						<aside class="notes">
@@ -619,7 +598,7 @@ Waiting...OK<br/>
 
 					<section>
 						<ol>
-							<li>Make a new file: <code>colors.scss</code></li>
+							<li>Make a new file: <code>variables.scss</code></li>
 							<li class="fragment">Make a new variable: <code>$white: #ffffff;</code></li>
 							<li class="fragment">Search for all the <code>#ffffff</code>, <code>#fff</code>, <code>#FFF</code>, <code>white</code>, maybe even <code>#f9f9f9</code>.</li>
 							<li class="fragment">Replace them with <code>$white</code></li>
@@ -631,14 +610,18 @@ Waiting...OK<br/>
 					</section>
 
 					<section>
-						<p>Import <code>colors.scss</code> into your manifest FIRST.</p>
+						<p>Import <code>variables.scss</code> into your manifest first.</p>
 						<aside class="notes">
 							<p>Now you can import this file into your manifest; of course it has to go first. Now is a good time to do a visual runthrough and make sure you aren't seeing anything that doesn't work. Maybe your #f9f9f9 really did need to be that, and not white. Just check. This is harder on a larger project, but whether you're checking visually or in your codebase (e.g. did you make an element w/ the bg and color both $white) you should take the time. If you already have something like visual diff testing set up, that'd be another great way to test.</p>
 						</aside>
 					</section>
 
 					<section>
-						<h3>Use color operations to make variations.</h3>
+						<p>Use color operations to make variations.</p>
+                        <pre><code>
+  $dark-purple: darken($purple, 20%);
+  $light-purple: transparentize($purple, 20%);
+                        </code></pre>
 						<aside class="notes">
 							<p>Use Sass' built in color operations to make a light grey that is just a lighter version of our dark grey, rather than defining a new hex value. I'm also using transparentize to make an rgba color for transparent text, rather than defining another rgba color.</p>
 
@@ -649,13 +632,13 @@ Waiting...OK<br/>
 					</section>
 
 					<section>
-						<h3>Typography Variables</h3>
+						<h5>Typography Variables</h5>
 							<pre>
 						<code class="sass">
   // TYPEFACE VARIABLES
-  $fontHeadline: "Proxima Nova Bold", "Calibri", Arial, sans-serif;
-  $fontBody: "Calluna", "Cambria", Georgia, sans-serif;
-  $fontSecondary: "Proxima Nova Light", "Calibri", Arial, sans-serif;
+  $font-headline: "Proxima Nova Bold", "Calibri", Arial, sans-serif;
+  $font-body: "Calluna", "Cambria", Georgia, sans-serif;
+  $font-secondary: "Proxima Nova Light", "Calibri", Arial, sans-serif;
 						</code>
 						</pre>
 						<aside class="notes">
@@ -669,14 +652,14 @@ Waiting...OK<br/>
 						<code class="sass">
   body {
 	background: $white;
-	font-family: $fontBody
-	color: $greydark;
+	font-family: $font-body
+	color: $grey-dark;
   }
 
   h1, h2, h3, h4, h5 {
 	line-height: 1.2em;
-	font-family: $fontHeadline;
-	color: $highlight_color_bright;
+	font-family: $font-headline;
+	color: $highlight-color-bright;
   }
 						</code>
 					</pre>
@@ -686,7 +669,6 @@ Waiting...OK<br/>
 					</section>
 
 					<section data-state="fontsizes">
-						<h3>it works for <code>font-size</code> too</h3>
 						<aside class="notes">
 							<p>Harry Roberts of CSS Wizardry wrote an article called "Pragmatic, practical font sizing in CSS" and in it he came up with this greek lettering method of naming font sizes. Instead of ONLY defining your font sizes on h1, h2, h3, etc, we also define it on classes alpha, beta, etc. "So now .alpha can carry the style information of a h1 wherever you wish; it doesn’t depend on location or a type of element."</p>
 							<p>I took that one step further with Sass, and used the new placeholder extend functionality. Now I don't have to have classnames in my HTML, but I can extend them in my Sass, like this:</p>
@@ -698,30 +680,21 @@ Waiting...OK<br/>
 					<pre>
 						<code class="sass">
   .notification {
+    &:hover { background: lighten($tertiary_color,25%); }
+    &.read { background: transparentize($tertiary_color,75%); }
 
-	  &:hover { background: lighten($tertiary_color,25%); }
+    .icon-arrow-right {
+      @extend %milli;
+      color: $greylight;
+    }
 
-	  // read state of a notification
-	  &.read { background: transparentize($tertiary_color,75%); }
-
-	  .icon_arrow_right {
-		  @extend %milli;
-		  color: $greylight;
-	  }
-
-	  .icon_notification {
-		  @extend %delta;
-		  color: $primary_color_bright;
-		  padding: 5px 10px 0 0;
-		  float: left;
-	  }
-
-	  .notification_title {
-		  padding: .75em .5em;
-		  border-bottom: 1px solid $greypale;
-		  @extend %zeta;
-	  }
-  }
+    .icon-notification {
+      @extend %delta;
+      color: $primary_color_bright;
+      padding: 5px 10px 0 0;
+      float: left;
+    }
+}
 						</code>
 					</pre>
 						<aside class="notes">
@@ -734,8 +707,8 @@ Waiting...OK<br/>
 
 				<section data-state="cya-abstracting-vars">
 					<section>
-						<h2>Variable Abstraction</h2>
-						<p>Goal: Clarify variable names, create themes, named media queries.</p>
+						<h1>Variable Abstraction</h1>
+						<h6>Goal: Clarify variable names, create themes, named media queries.</h6>
 					</section>
 
 					<section data-state="white">
@@ -748,7 +721,7 @@ Waiting...OK<br/>
 					</section>
 
 					<section>
-						<h3>Shared Name First</h3>
+						<h5>Shared Name First</h5>
 						<pre><code>
   // by shades...                       // better: by shared name
   $blue;                                $blue;
@@ -765,9 +738,8 @@ Waiting...OK<br/>
 					</section>
 
 					<section>
-						<h4>Abstracted Variable Names</h4>
+						<h5>Abstracted Variable Names</h5>
 						<pre><code>
-
   $header-primary
   $header-secondary
   $header-tertiary
@@ -789,7 +761,7 @@ Waiting...OK<br/>
 					</section>
 
 					<section>
-						<h3>Creating Simple Themes</h3>
+						<h2>Creating Simple Themes</h2>
 					</section>
 
 					<section data-state="full-code">
@@ -985,19 +957,19 @@ $button-color-hover: $white;
 
 				<section data-state="cya-organization">
 					<section>
-						<h2>Organize files and folders</h2>
-						<p>Goal: Keep style, vendor, and helper code separate; <br />make files easy to find and not cluttered.</p>
+						<h1>Organize Files & Folders</h1>
+						<h6>Goal: Keep style, vendor, and helper code separate; <br />make files easy to find and not cluttered.</h6>
 					</section>
 
 					<section>
-						<p>config: settings, variables</p>
-						<p>themes, if you have any</p>
-						<p>helpers: mixins, JS state classes, CSS3</p>
-						<p>frameworks: foundation, bootstrap, grids</p>
-						<p>components: icons, buttons, page components like header/footer</p>
-						<p>modules/base: your semantic HTML - page content, not elements like buttons</p>
-						<p>IE or responsive if you keep it separate</p>
-						<p>vendor: third party libraries, JS</p>
+						<p class="fragment">config: settings, variables</p>
+						<p class="fragment">themes, if you have any</p>
+						<p class="fragment">helpers: mixins, JS state classes, CSS3</p>
+						<p class="fragment">frameworks: foundation, bootstrap, grids</p>
+						<p class="fragment">components: icons, buttons, page components like header/footer</p>
+						<p class="fragment">modules/base: your semantic HTML - page content, not elements like buttons</p>
+						<p class="fragment">IE or responsive if you keep it separate</p>
+						<p class="fragment">vendor: third party libraries, JS</p>
 					</section>
 
 					<section>
@@ -1029,7 +1001,7 @@ $button-color-hover: $white;
 					</section>
 
 					<section>
-						<h3>Creating Configuration Files</h3>
+						<h2>Configuration Files</h2>
 						<aside class="notes">
 							<p>A simple theme is a nice way to separate out colors, if you need it, but you can take it one step further and break things out into a config.</p>
 							<p>This config is then called into the app manifest; you can call different configs, or change it based on what's required for the project/theme.</p>
@@ -1228,26 +1200,6 @@ h3
 							</pre>
 						</code></section>
 
-					<section>
-						<pre><code class="scss">
-// base
-@import "base/_variables"
-@import "base/_typography"
-@import "base/_helpers"
-
-// layout
-@import "layout/_layout"
-
-// modules
-@import "modules/_modules"
-
-
-						</code></pre>
-						<aside class="notes">
-							<p>Here's how I do it on my blog.</p>
-							<p>In this case, super simple—but on a small site like this, that's totally fine.</p>
-						</aside>
-					</section>
 
 					<section data-state="dale-sande">
 						<br/><br/><br/><br/><br/><br/>
@@ -1295,7 +1247,7 @@ h3
 					</section>
 
 					<section data-state="sassystarter">
-						<h3 style="color:#666; text-transform: none;">Mina Markham&rsquo;s Sassy Starter</h3>
+						<h5 style="color:#666; text-transform: none;">Mina Markham&rsquo;s Sassy Starter</h3>
 						<a href="http://moourl.com/sassystarter" class="ref-link"><span class="ref-arrow">&#10172; moourl.com/sassystarter</a><br/>
 						<aside class="notes">
 							<p>Mina Markham wrote a GREAT starter toolkit based on Scalable and Modular Architecture for CSS SMACSS for Sass (SCSS) projects. Styles are broken down into the following groups: Base, Layout, Modules, States, Themes</p>
@@ -1361,20 +1313,20 @@ h3
 
 				<section data-state="cya-modules">
 					<section>
-						<h2>Creating Modules</h2>
-						<p>Goal: determine what modules your project has<br /> &#38; how to group them</p>
+						<h1>Creating Modules</h1>
+						<h6>Goal: determine what modules your project has<br /> &#38; how to group them</h6>
 					</section>
 
 					<section>
-						<p>Systems, not pages</p>
+						<h2>What modules <br/>do you have?</h2>
 					</section>
 
 					<section>
-						<p>How to determine WHAT modules you have;<br /> going through old HTML and CSS and determining<br /> what is the same and what is different.</p>
+                        <p>How do you determine in your old code <br/>what is the same and what is different?</p>
 					</section>
 
 					<section>
-						<p>Print your website out on paper!</p>
+						<h1>Print your website out!</h1>
 						<aside class="notes">
 							<p>No but srsly. At Bazaarvoice we had 3 separate codebases, one for Reviews, one for AA, one for Stories. We wanted to consolidate the CSS, but it was too big of an undertaking to refactor all the HTML and UI components.</p>
 							<p>So what we did is we printed out every page/area of our software. Then we took them in groups and with colored pencils, boxed out what sections were the same.</p>
@@ -1384,11 +1336,14 @@ h3
 					</section>
 
 					<section>
-						<p>Which need a parent to have a style change under (namespacing); WHERE they are and which should be the same.</p>
+                        <h2>Namespacing Modules</h2>
+						<aside class="notes">
+                            <p>Which need a parent to have a style change under (namespacing); WHERE they are and which should be the same.</p>
+                        </aside>
 					</section>
 
 					<section>
-						<h3><code>&amp;</code> parent selector</h3>
+						<h5><code>&amp;</code> parent selector</h5>
 						<aside class="notes">
 							<p>Some other tips for eliminating extra output—other than not matching your HTML in your Sass—are things like the parent selector, placeholder extend, and using them to namespace modules. Not only can this help eliminate extra output, but it can also make AUTHORING a lot easier.</p>
 						</aside>
@@ -1460,7 +1415,7 @@ h3
 					</section>
 
 					<section>
-						<h2>State Classes</h2>
+						<h5>State Classes</h5>
 					</section>
 
 					<section data-state="full-code">
@@ -1492,7 +1447,7 @@ h3
 					</section>
 
 					<section>
-						<h2>Namespacing Modules</h2>
+						<h5>Namespacing Modules</h5>
 						<aside class="notes">
 							<p>Nesting CAN be used to namespace modules, and it can be VERY helpful in this regard. But <b>THINK</b> about what you are namespacing.</p>
 						</aside>
@@ -1594,14 +1549,21 @@ h3
 					</section>
 
 					<section>
-						<div><p class="quote" style="font-size: 1.5em;"><code>@include</code> duplicates CSS</p>> use when you need to alter variables</div><br/><br/>
-						<div><p class="quote" style="font-size: 1.5em;"><code>@extend</code> comma-delineates selectors</p>> reuse code with no extra output</div><br/><br/>
+						<div>
+                            <p><code>@include</code> duplicates CSS</p>
+                            <h6>use when you need to alter variables</h6>
+                        </div>
+                        <br/><br/>
+						<div>
+                            <p><code>@extend</code> comma-delineates selectors</p>
+                            <h6>reuse code with no extra output</h6>
+                        </div>
 						<aside class="notes">
 							<p>@extend is an easy way for one selector to share the styles of another selector, without duplicating the lines of CSS in your output</p>
 						</aside>
 					</section>
 
-					<section data-state="full-code">
+<!-- 					<section data-state="full-code">
 						<pre>
 						<code class="scss">
   // SCSS
@@ -1674,19 +1636,18 @@ h3
 							<p>But note that we have defined .box as a class, so in our output, .box is there.</p>
 							<a href="http://codepen.io/elyseholladay/pen/CyEqs">http://codepen.io/elyseholladay/pen/CyEqs</a>
 						</aside>
-					</section>
+					</section> -->
 
 					<section>
-						<h3><code>%placeholder</code></h3>
+						<h5><code>%placeholder</code></h5>
 						<p><code>%placeholder</code> extend takes this one step further, <br />and eliminates the output for the original ruleset.</p>
 
 						<aside class="notes">
 							<p>[read before slide] Sometimes you’ll write styles for a class that you only ever want to @extend, and never want to use directly in your HTML. For our box styles, if that's visual only and the class .box never appears in our HTML, why output it into our CSS if it will never get applied? If you use normal classes and use @extend for this, you end up creating a lot of extra CSS when the stylesheets are generated. [now read slide]</p>
 						</aside>
-
 					</section>
 
-					<section data-state="full-code">
+<!-- 					<section data-state="full-code">
 						<pre>
 						<code class="scss">
   // SCSS
@@ -1712,11 +1673,11 @@ h3
 							<p>So here you can see it's just removed class .box from the output. Not a major decrease here but if you do this a lot, then you will see much less clutter in your CSS. This is especially helpful for visual helpers, like typography classes; I use it for named sizes and a "meta" style, which is ~20-40 lines of code in my CSS that I can eliminate with placeholders. Again, not a HUGE amount of file size.. but less junk. And when you are writing a BIG project, it adds up.</p>
 							<p>more: http://css-tricks.com/the-extend-concept/</p>
 						</aside>
-					</section>
+					</section> -->
 
 
 					<section>
-						<h2><code>%clearfix</code></h2>
+						<h5><code>%clearfix</code></h5>
 					</section>
 
 					<section data-state="full-code">
@@ -1762,9 +1723,18 @@ h3
 					</section>
 
 					<section>
-						<p>where do you put new modules?</p>
-						<p>create new folder structure when you outgrow it</p>
+						<h5>where do you put new modules?</h5>
+						<aside class="notes">
+                            <p>create new folder structure when you outgrow it</p>
+                        </aside>
 					</section>
+
+                    <section>
+                        <p>It's okay to refactor your folder <br/>structure as your project grows.</p>
+                        <aside class="notes">
+                            <p>Most of us don't start our projects with a fully fledged, totally built out folder and file structure. Start with what you know you need—and if that's no folders, fine. if it's a components folder for vars and helpers and a modules folder for your page stuff? fine. but as your project grows, don't be afraid to move stuff around.</p>
+                        </asides>
+                    </section>
 
 					<!-- namespacing / nesting leads to bloat -->
 					<section data-state="badcomputer gifs">
@@ -1779,8 +1749,8 @@ h3
 
 				<section data-state="cya-module-refactor">
 					<section>
-						<h2>Steps to refactor a module</h2>
-						<p>Goal: take your modules and do the actual refactor work!</p>
+						<h1>Steps to Refactor</h1>
+						<h6>Goal: take your modules and do the actual refactor work!</h6>
 
 						<aside class="notes">
 							<p>Our <em>files</em> are a bit easier to read now, but what's in those files may still be clunky and messy. We'll still be getting the bugs we were before, have classnames that need to be cleaned up, etc. So let's talk about refactoring that actually changes your CSS, and maybe even HTML.</p>
@@ -1788,91 +1758,134 @@ h3
 					</section>
 
 					<section data-state="digg">
-						<br><br><br>
-						<h5>Chris Eppstein, &ldquo;Refactor My Stylesheets: <br />The Digg.com Edition&rdquo;</h5>
+						<p><a href="http://chriseppstein.github.io/blog/2010/05/25/refactor-my-stylesheets-digg-edition/">Chris Eppstein, &ldquo;Refactor My Stylesheets: <br />The Digg.com Edition&rdquo;</a></p>
 						<aside class="notes">
-							<p>Chris Eppstein, a Sass author, did a refactor of Digg's Feedback/voting stylesheet to see how they could benefit from Sass. This was in 2010—and he mentions a few features Sass didn't have then, like placeholder extend, that they do now that could improve on this even more.</p>
-
+							<p>Chris Eppstein did a refactor of Digg's Feedback/voting stylesheet to see how they could benefit from Sass. This was in 2010—and he mentions a few features Sass didn't have then, like placeholder extend, that they do now that could improve on this even more.</p>
+                            <p>We've taken his notes and process from that and expanded on it.</p>
 							<a href="http://chriseppstein.github.io/blog/2010/05/25/refactor-my-stylesheets-digg-edition/">link</a>
 						</aside>
 					</section>
 
 					<section>
-						<h5>Steps to Refactor</h5>
-						<ol>
-							<li>Extract partial</li>
-							<li>Find repeating patterns</li>
-							<li>Create/extract base class/extend</li>
-							<li>Apply nesting</li>
-							<li>Create mixins</li>
-						</ol>
+                        <h5>1. Extract partial</h5>
+                        <h5 class="fragment">2. Find repeating patterns</h5>
+                        <h5 class="fragment">3. Create/Extract Base Class/Extend</h5>
+                        <h5 class="fragment">4. Apply/Remove Nesting</h5>
+                        <h5 class="fragment">5. Edit HTML Classes</h5>
+                        <h5 class="fragment">6. Apply Variables</h5>
+                        <h5 class="fragment">7. Create Mixins</h5>
+                        <aside class="notes">
+                            <p>I hope it's obvious that these are general rules that you can apply to most projects or modules. These rules start from pure CSS and go thru turning it into Sass, but should apply to a Sass refactor, too, although you may skip or edit steps, or do things like pull in variables much sooner than you would if you were switching from CSS. Take these as guidelines!</p>
+                        </aside>
 					</section>
 
-					<section>
-						<h3>Extract partial</h3>
-						<p>&ldquo;I cut the related styles and pasted them into a new partial stylesheet named <code>_feedback.scss</code>. Then I inserted <code>@import "feedback";</code> in its place in <code>global.scss</code>. Now I was able to focus on a single set of related styles.&rdquo;</p>
-					</section>
+                    <section>
+                        <h1>1. Extract Partial</h1>
+                        <aside class="notes">
+                            <p>Find all the different places in your CSS that you have code for this module. Create a new `.scss` file—lets call it `[MODULENAME]-original.scss` and dump all that CSS into it. Import that from your manifest. Now check and make sure you didn't break anything! Sometimes import order can cause specificity problems, so it's worth taking some time to look at all the places you know this module exists on your site/app to see if it's still working. Yes, that's tedious, but it'll save you a lot of headache later.</p>
+                        </aside>
+                    </section>
 
-					<section>
-						<h3>Find repeating patterns</h3>
-						<p>&ldquo;&hellip;a large amount of selector duplication that implied<br /> an inheritance relationship, &hellip;a repeating pattern relating<br /> to the colors and iconography, &hellip;[and] some complex nesting of selectors.&rdquo;</p>
-						<aside class="notes">
-						<p>"There is a lot of duplication in CSS when you use semantic markup. It can be challenging to identify the different types of duplication. First and foremost, I saw a large amount of selector duplication that implied an inheritance relationship. I looked for a CSS class that could function as the base class and found none. I also saw a repeating pattern relating to the colors and iconography. Lastly, there was some complex nesting of selectors."</p>
-						</aside>
-					</section>
-					<section>
-						<h3>Create/extract base class</h3>
-						<p>&ldquo;I decided to call it <code>.feedback</code> because all of the class names in use described a type of user feedback and this class was not in use already.&rdquo;</p>
-						<aside class="notes">
-							here is where he says "Unfortunately, Sass does not yet have any notion of an abstract base class, so this cleanup will incur some cost of additional output of a style they don’t want or need." which is exactly what placeholder extend is.
-						</aside>
-					</section>
+                    <section>
+                        <h1>2. Find Repeating Patterns</h1>
+                        <aside class="notes">
+                            <p></p>
+                        </aside>
+                    </section>
 
-					<section>
-						<h3>Apply nesting</h3>
-						<p>&ldquo;Much of the duplication required when styling semantic content is due to styling nested content. &hellip; I’m using Sass’s parent-reference selector <code>&#38;</code> with the styles for <code>h3</code>, <code>strong</code>.&rdquo;</p>
-						<aside class="notes">
-							<p>"Much of the duplication required when styling semantic content is due to styling nested content. Sass’s ability to nest selectors makes this stylesheet much easier to read and understand what’s going on. Note how I’m using Sass’s parent-reference selector (&#38;) with the styles for h3, strong. The intent of that block is to style those elements, so I have inverted the nesting order to give more clarity to the intent of those styles."</p>
-						</aside>
-					</section>
+                    <section>
+                        <h5>Repeating Patterns</h5>
+                        <ul>
+                            <li>selector duplication that implies inheritance relationship</li>
+                            <li>repeating patterns relating to colors, typography, etc</li>
+                            <li>complex nesting or selector chaining</li>
+                        </ul>
+                    </section>
 
-					<section>
-						<h3>Create mixins/extends</h3>
-						<p>&ldquo;The last major source of duplication &hellip; is the common styling pattern for colors and iconography. To simplify<br /> this we extract a mixin and apply it wherever the pattern<br /> is in use.&rdquo;</p>
-					</section>
+                    <section>
+                        <h5>Repeating Patterns</h5>
+                        <ul>
+                            <li>a CSS class that can function as a consistent base class</li>
+                            <li>plain ol' duplicated CSS of any type</li>
+                            <li>states (active, disabled, etc) that should be combined</li>
+                            <li>IDs or classes for JavaScript that may also have styles</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h1>3. Create/Extract Base Class/Extend</h1>
+                        <aside class="notes">
+                            <p>First, extract a base class. Determine what a shared classname might be and copy over all the repeated styles that you might want all buttons to share.</p>
+                            <p>For now we're going to add that base class to some/all of the places this module exists in our HTML. This is a test step, to make sure everything applies OK. We'll clean this up even more going forward.</p>
+                            <p>If that's looking good, let's change our base class from a class to a placeholder extend.</p>
+                            <p>If you have individual classes (for example, generic button base class versus unique button classes), apply the `@extend %[MODULE]` on all of them. Compile and check it out—should be exactly the same.</p>
+                            <p>You can now add unique styles to each module that requires it—colors, backgrounds, icons text colors, etc, to each class so that they look the same as they did before. </p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h1>4. Apply/Remove Nesting</h1>
+                        <aside class="notes">
+                            <p>Figure out what you can nest inside the parent `%MODULE`—or under each individual button class. For clickable elements, `:hover` and `:active` states should be pretty obvious.</p>
+                            <p>For some modules, you may need to <em>remove</em> nesting—if you're editing Sass, perhaps things are nested in so far you want to refactor that <strong>out</strong>.</p>
+                            <p>Use the &#38; parent selector to nest, and don't forget you can do it three ways, depending on a) what output you want and b) what makes for the most understandable code</p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h1>5. Edit HTML Classes</h1>
+                        <aside class="notes">
+                            <p>We have made a lot of good progress toward reusability and modularity, so even if the classes of the actual individual modules are all inconsistent, we have done a lot. But some good search-and-replace can get us to a modular setup that will help in the future, when we want to add even more of the same module.</p>
+                            <p>Determine what naming convention works best for this module. Write out the naming convention and then create classes for it. Now edit the HTML of the buttons to use the new classes; make sure you make any other HTML edits that might be necessary while you're at it! Add the new classes into your CSS and you should have some much prettier code now.</p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h1>6. Apply Variables</h1>
+                        <aside class="notes">
+                            <p>Now that we know our refactored classnames, how our `%extend` is working, and the unique styles are applied, let's do a pass to see what those unique styles—colors, backgrounds, icons, fonts, etc—actually are.</p>
+                            <p>Your module may just use existing variables from `variables.scss` or your grid or what not.
+                            <p>It might also be worthwhile to create variables strictly for your module.</p>
+                            <p>Now is a good time to fix up things like inconsistent background colors or hover colors, highlighting, borders, etc. Visual errors are much easier to fix up now, when you can automate how they change.</p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h1>7. Create Mixins</h1>
+                        <aside class="notes">
+                            <p>In this—optional—step we're going to take all the redundant code in our unique classes and make a mixin to do the hard work for us. Some modules really benefit from this; in others, there's really no point. You have to determine for yourself if it's valuable to you.</p>
+
+                            <p>If you're rewriting CSS properties for multiple unique versions of a module—such as color, background-color, borders or box-shadows, hover states, etc—you might want to make a mixin, so you can change all those styles in _one line_?</p>
+                        </aside>
+                    </section>
+
 
 					<section>
 					<h5>Results?</h5>
-					<h2 class="fragment">125 lines > 85 lines</h2>
+					<h2 class="fragment">125 lines to 85 lines</h2>
 						<aside class="notes">
-							"85 lines of code... down from 125 lines of code and providing the exact same output... a 32% reduction!"
+							<p>In Chris' refactor—which again is from before placeholder extend—"85 lines of code... down from 125 lines of code and providing the exact same output... a 32% reduction!"</p>
 							<p>"But the biggest win is that adding a new kind of feedback requires only 1 or 2 points of edit instead of the 5-7 that would have been required before. This is, without a doubt, more maintainable...</p>
 							<p>Then he says,"Additionally, we fixed six bugs without trying." "the defect rate in this tested, in-production stylesheet is evidence of how hard it is for even great front-end developers to maintain semantic CSS."</p>
 						</aside>
 					</section>
 
-					<section>
-						<p>Determining the size of a refactor</p>
-					</section>
-
-					<section>
-						<h2>Refactoring both HTML &#38; CSS</h2>
-					</section>
-
-					<section>
-						<p>elements -> classnames</p>
-					</section>
+                    <section>
+                        <p>"But the biggest win is that adding a new kind of feedback requires only 1 or 2 points of edit instead of the 5-7 that would have been required before. This is, without a doubt, more maintainable..."</p>
+                        <h6>— Chris Eppstein</h6>
+                    </section>
 
 				</section>
 
 				<section data-state="cya-naming-conventions">
 					<section>
-						<h2>Naming Conventions</h2>
-						<p>Goal: Choose a naming convention that works for you.</p>
+						<h1>Naming Conventions</h1>
+						<h6>Goal: Choose a naming convention that works for you.</h6>
 					</section>
 
 					<section>
-						<p>Whatever you do, be consistent: <code>.section</code>, <code>.section-item</code>, <code>.section-item-individualthingy</code></p>
+						<p>Whatever you do, be consistent:</p>
+                        <code>.section</code>, <code>.section-item</code>, <code>.section-item-thingy</code></p>
 					</section>
 
 					<section>
@@ -1907,7 +1920,7 @@ h3
 					</section>
 
 					<section>
-						<h3>Style Guides are all the rage</h3>
+						<h5>Style Guides are all the rage</h5>
 						<h6>&hellip;and they have come a long way.</h6>
 					</section>
 
@@ -1973,11 +1986,11 @@ h3
 
 				<section data-state="cya-documentation">
 					<section>
-						<h2>Documentation &#38; Commenting</h2>
-						<p>Goal: have a consistent comment style and use it!</p>
+						<h1>Documentation &#38; <br/>/* Commenting */</h1>
+						<h6>Goal: have a consistent comment style and use it!</h6>
 					</section>
 
-					<section data-state="comments">
+					<section>
 						<li>Comment each file to explain what is in it</li>
 						<li>Comment every large section of CSS</li>
 						<li>Comment individual items that need clarification</li>
@@ -1987,28 +2000,26 @@ h3
 						</aside>
 					</section>
 
-					<section>
-						<p>commenting files</p>
+					<section data-state="comments">
+                        <aside class="notes">
+    						<p>commenting files</p>
+                        </aside>
 					</section>
 
 					<section>
-						<p>inline comment documentation; keep it up to date when you change your code.</p>
+						<h5>inline comment documentation</h5>
+                        <h6>keep it up to date when you change your code.</h6>
 					</section>
 
-					<section>
-						<p>commenting imports</p>
+					<section data-state="importcomments">
+						<aside class="notes">
+                            <p>commenting imports</p>
+                        </aside>
 					</section>
 
-					<section>
-						<p>commenting sections</p>
-					</section>
 
-					<section>
-						<p>documentation/instructions</p>
-					</section>
-
-					<section data-state="full-code">
-					<pre><code class="no-highlight">
+                    <section data-state="full-code">
+                    <pre><code class="no-highlight">
 // Single-line JS-style comments don't need a closing tag,
 // and they are hidden from your compiled output! This is
 // great for inline documentation about the styles themselves
@@ -2017,50 +2028,91 @@ h3
 /* CSS style comments can be multi-line with a closing tag
    and they appear in your compiled output. This is great for
    section documentation and headers/dividers! */
-					</code></pre>
+                    </code></pre>
 
+                        <aside class="notes">
+                            <p>In Sass, the JS style single-line comments with the two slashes are hidden from your output, which is great, because you can do a ton of commenting without anything showing up.</p>
+
+                            <p>However, there are occasions where you may WANT your comments to show up in your compiled CSS—recently I was trying to do this so that I could see where imported files began and ended in my output. Helpfully, the CSS style slash-asterisk comments DO show up in output! Handy!</p>
+                        </aside>
+                    </section>
+
+					<section>
+                        <h5>Write instructions in your comments.</h5>
+                        <pre><code>
+  // Transitions ------------------------------------------ //
+  // ------------------------------------------------------ //
+  // to use, apply @include transition() with arguments
+  // type, time, and function
+  // ex: @include transition(color,0.5s,ease)
+
+  @mixin transition($type,$time,$function) {
+    -webkit-transition: $type $time $function;
+    -moz-transition: $type $time $function;
+    -o-transition: $type $time $function;
+    transition: $type $time $function;
+  }
+
+                        </code></pre>
 						<aside class="notes">
-							<p>In Sass, the JS style single-line comments with the two slashes are hidden from your output, which is great, because you can do a ton of commenting without anything showing up.</p>
-
-							<p>However, there are occasions where you may WANT your comments to show up in your compiled CSS—recently I was trying to do this so that I could see where imported files began and ended in my output. Helpfully, the CSS style slash-asterisk comments DO show up in output! Handy!</p>
-						</aside>
-					</section>
-
-					<section>
-						<p>if you move files, change classnames that are referenced elsewhere</p>
-					</section>
-
-					<section>
-						<p>if you make or change a mixin or helper, explain it, write instructions</p>
-					</section>
-
-					<section>
-						<p>instructions for using mixins and extends</p>
-					</section>
+                            <p>documentation/instructions</p>
+    						<p>if you make or change a mixin or helper, explain it, write instructions</p>
+    						<p>instructions for using mixins and extends—imagine a new developer on the project</p>
+                        </aside>
+                    </section>
 				</section>
 
 				<section data-state="cya-testing">
 					<section>
-						<h2>Testing</h2>
-						<p>Goal: Don&rsquo;t be breaking shit.</p>
+						<h1>Testing</h1>
+						<h6>Goal: Don&rsquo;t be breaking shit.</h6>
 					</section>
 
 					<section>
-						<p>how to test for changes/things that are broken after a refactor</p>
+						<h2><a href="https://github.com/diffux/diffux">DiffUX,</a> <a href="https://github.com/BBC-News/wraith">Wraith,</a> <a href="https://github.com/facebook/huxley">Huxley</a></h4>
+                        <aside class="notes">
+                            <p>Visual regression testing</p>
+                            <p>https://github.com/diffux/diffux</p>
+    						<p>https://github.com/BBC-News/wraith</p>
+    						<p>https://github.com/facebook/huxley</p>
+                        </aside>
 					</section>
 
-					<section>
-						<p>diffux, wraith, huxley</p>
-						<p>https://github.com/klamping/UIRegression/blob/master/exercises/1-Wraith.md</p>
-						<p>https://github.com/facebook/huxley</p>
-					</section>
+                    <section>
+                        <iframe width="1280" height="720" src="//www.youtube.com/embed/_5GmODE-AHs?rel=0" frameborder="0" allowfullscreen></iframe>
+                    </section>
 
 					<section>
-						<p>True</p>
+						<h2><a href="https://github.com/ericam/true">True</a></h2>
 					</section>
 
+                    <section>
+                        <pre><code>
+  @include test('[function] is-symmetrical()') {
+    $sym: 12;
+    $asym: 1 2 4 1 2 1;
+    $baz: compact(4);
+
+    // 12 is a symmetrical grid.
+    $s: is-symmetrical($sym);
+    @include assert-true($s,
+      'Simple number should be symmetrical grid.');
+
+    // (1 2 4 1 2 1) is not a symmetrical grid.
+    $a: is-symmetrical($asym);
+    @include assert-false($a,
+      'List should be asymmetrical grid.');
+
+    // compact(4) is not a symmetrical grid (because it is a list).
+    $b: is-symmetrical($baz);
+    @include assert-false($b,
+      'Single-item list should be asymmetrical grid.');
+  }
+                        </code></pre>
+                    </section>
+
 					<section>
-						<p>Keeping refactors small so they don&rsquo;t break things</p>
+						<p>Keep refactors small so they don&rsquo;t break things</p>
 						<br />
 						<h6>&hellip;or simply overwhelm you.</h6>
 					</section>
@@ -2069,28 +2121,16 @@ h3
 
 				<section data-state="cya-myproject">
 					<section>
-						<h2>CYA: what&rsquo;s right for my project</h2>
-					</section>
+						<h1>What&rsquo;s right for <br/>my project?</h1>
+    					<aside class="notes">
+    						<p>how to tell what works for you</p>
+    						<p>naming conventions - why one would work better than another FOR your project</p>
+    						<p>organization of files/folders</p>
+    						<p>using elements vs classnames, BEM, OOCSS, etc</p>
+    						<p>using frameworks or not</p>
+    					</aside>
+                    </section>
 
-					<section>
-						<p>how to tell what works for you</p>
-					</section>
-
-					<section>
-						<p>naming conventions - why one would work better than another FOR your project</p>
-					</section>
-
-					<section>
-						<p>organization of files/folders</p>
-					</section>
-
-					<section>
-						<p>using elements vs classnames, BEM, OOCSS, etc</p>
-					</section>
-
-					<section>
-						<p>using frameworks or not</p>
-					</section>
 				</section>
 
 			</div>

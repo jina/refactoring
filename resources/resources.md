@@ -97,3 +97,13 @@
 
 * https://github.com/ericam/true
 * diffux
+
+
+#### References
+
+* http://st-www.cs.illinois.edu/users/opdyke/wfo.990201.refac.html
+
+
+#### Book!
+
+* Dale Sande's Sass in the Real World book - Newest release is out https://www.gitbook.io/book/anotheruiguy/sass-in-the-real-world-book-2-of-4 and you get 30% off with SassConf30

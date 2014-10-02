@@ -82,7 +82,7 @@ body {
  * LINKS
  *********************************************/
 .reveal a:not(.image) {
-  color: #1a1a1a;
+  color: #f19732;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
@@ -91,13 +91,13 @@ body {
   transition: color .15s ease; }
 
 .reveal a:not(.image):hover {
-  color: gray;
+  color: #5b8138;
   text-shadow: none;
   border: none; }
 
 .reveal .roll span:after {
   color: #fff;
-  background: black; }
+  background: #c9710e; }
 
 /*********************************************
  * IMAGES
@@ -115,31 +115,31 @@ body {
  *********************************************/
 .reveal .controls div.navigate-left,
 .reveal .controls div.navigate-left.enabled {
-  border-right-color: #1a1a1a; }
+  border-right-color: #f19732; }
 
 .reveal .controls div.navigate-right,
 .reveal .controls div.navigate-right.enabled {
-  border-left-color: #1a1a1a; }
+  border-left-color: #f19732; }
 
 .reveal .controls div.navigate-up,
 .reveal .controls div.navigate-up.enabled {
-  border-bottom-color: #1a1a1a; }
+  border-bottom-color: #f19732; }
 
 .reveal .controls div.navigate-down,
 .reveal .controls div.navigate-down.enabled {
-  border-top-color: #1a1a1a; }
+  border-top-color: #f19732; }
 
 .reveal .controls div.navigate-left.enabled:hover {
-  border-right-color: gray; }
+  border-right-color: #5b8138; }
 
 .reveal .controls div.navigate-right.enabled:hover {
-  border-left-color: gray; }
+  border-left-color: #5b8138; }
 
 .reveal .controls div.navigate-up.enabled:hover {
-  border-bottom-color: gray; }
+  border-bottom-color: #5b8138; }
 
 .reveal .controls div.navigate-down.enabled:hover {
-  border-top-color: gray; }
+  border-top-color: #5b8138; }
 
 /*********************************************
  * PROGRESS BAR
@@ -148,7 +148,7 @@ body {
   background: rgba(0, 0, 0, 0.2); }
 
 .reveal .progress span {
-  background: #1a1a1a;
+  background: #f19732;
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -ms-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
@@ -159,7 +159,7 @@ body {
  * SLIDE NUMBER
  *********************************************/
 .reveal .slide-number {
-  color: #1a1a1a; }
+  color: #f19732; }
 
 .fuschia .reveal {
   background-color: #C2185B; }
@@ -262,6 +262,27 @@ body {
 .sass-maps body {
   background: url("/images/una-sass-maps.png") no-repeat 0 -100px;
   background-size: cover; }
+
+.reveal h2.wrong {
+  font-size: 120px;
+  color: red; }
+
+.fontsizes body {
+  background: url("/images/fontsizes.png") no-repeat 0 -15px; }
+
+.dale-sande body {
+  background: url("/images/dale-sande-sassconf.png") no-repeat 0 0;
+  background-size: cover; }
+
+.badcomputer body {
+  background: url("/images/gifs/badcomputer.gif") no-repeat center center;
+  background-size: cover; }
+
+.comments body {
+  background: url("/images/comments.png") no-repeat 0 -15px; }
+
+.importcomments body {
+  background: url("/images/importcomments.png") no-repeat 0 -15px; }
 
 .gifs body {
   background-size: cover;

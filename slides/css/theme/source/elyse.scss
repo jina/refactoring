@@ -69,8 +69,8 @@ $headingTextShadow: none;
 $heading1TextShadow: $headingTextShadow;
 
 // Links and actions
-$linkColor: lighten($black,10%);
-$linkColorHover: lighten($black,50%);
+$linkColor: $orange;
+$linkColorHover: $green;
 
 // Text selection
 $selectionBackgroundColor: $fuschia;
@@ -186,6 +186,34 @@ $selectionColor: $white;
     background: url('/images/una-sass-maps.png') no-repeat 0 -100px;
     background-size: cover;
 }
+
+.reveal h2.wrong {
+    font-size: 120px;
+    color: red;
+}
+
+.fontsizes body {
+    background: url('/images/fontsizes.png') no-repeat 0 -15px;
+}
+
+.dale-sande body {
+    background: url('/images/dale-sande-sassconf.png') no-repeat 0 0;
+    background-size: cover;
+}
+
+.badcomputer body {
+    background: url('/images/gifs/badcomputer.gif') no-repeat center center;
+    background-size: cover;
+}
+
+.comments body {
+    background: url('/images/comments.png') no-repeat 0 -15px;
+}
+
+.importcomments body {
+    background: url('/images/importcomments.png') no-repeat 0 -15px;
+}
+
 
 // GIFs
 

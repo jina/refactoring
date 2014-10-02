@@ -78,6 +78,8 @@ You can now add unique styles to each module that requires it—colors, backgrou
 
 Figure out what you can nest inside the parent `%MODULE`—or under each individual button class. For clickable elements, `:hover` and `:active` states should be pretty obvious. Anything else?
 
+For some modules, you may need to _remove_ nesting—if you're editing Sass, perhaps things are nested in so far you want to refactor that **out**.
+
 Use the &#38; parent selector to nest, and don't forget you can do it three ways, depending on a) what output you want and b) what makes for the most understandable code:
 
     /* Output is: .feedback .test */
@@ -127,7 +129,7 @@ Now you can remove the old classnames from your CSS.
 
 Now that we know our refactored classnames, how our `%extend` is working, and the unique styles are applied, let's do a pass to see what those unique styles—colors, backgrounds, icons, fonts, etc—actually are.
 
-Your module may just use existing variables from `colors.scss` or your grid or what not. 
+Your module may just use existing variables from `variables.scss` or your grid or what not. 
 
 It might also be worthwhile to create variables strictly for your module.
 

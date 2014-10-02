@@ -10,8 +10,14 @@
 * [Breakup -  create multiple CSS files from a single Sass partial ](https://github.com/BPScott/breakup)
 
 
+#### SVG
+
+* [Blender - convert SVG to PNG with an array of sizes](https://github.com/salesforce-ux/blender)
+
+
 #### Responsive
 
 * [Simple Media Queries with Compass by Patrick Fulton - slides](http://pfulton.github.io/breakpoint/)
 * [Handling IE8 and lower with Breakpoint + compass/support - John Albin - gist](https://gist.github.com/JohnAlbin/7192522)
 * [Responsive Web Design in Sass Part 2: Media queries in Sass](http://thesassway.com/intermediate/responsive-web-design-part-2)
+* [Susy - Layout Toolkit](http://susy.oddbird.net/)

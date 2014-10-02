@@ -13,3 +13,4 @@
 * [Naming UI components in OOCSS, CSS Wizardry](http://csswizardry.com/2014/03/naming-ui-components-in-oocss/)
 * [Choosing Great Variable Names, The Sass Way](http://thesassway.com/beginner/variable-naming)
 * [Modular CSS naming conventions](http://thesassway.com/advanced/modular-css-naming-conventions)
+* [Name Your SASS Variables Modularly](http://webdesign.tutsplus.com/tutorials/quick-tip-name-your-sass-variables-modularly--webdesign-13364)

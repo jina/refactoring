@@ -8,7 +8,6 @@
 * [at-import Color Schemer](https://github.com/Team-Sass/color-schemer)
 * [Buttons and Color Chips with Sass Color Functions](http://www.kurtemch.com/blog/buttons-and-color-chips-with-sass-color-functions/)
 * [clrs.cc](http://clrs.cc/)
-* [Name Your SASS Variables Modularly](http://webdesign.tutsplus.com/tutorials/quick-tip-name-your-sass-variables-modularly--webdesign-13364)
 * [How to dynamically change text color based on a background color](http://thesassway.com/intermediate/dynamically-change-text-color-based-on-its-background-with-sass)
 * [SCSS Blend Modes](https://github.com/heygrady/scss-blend-modes)
 
@@ -20,6 +19,7 @@
 
 * [How to write Sass within Chrome's DevTools using Workspaces and Auto reload](http://www.amazeelabs.com/en/How-to-write-Sass-within-Chromes-DevTools-using-Workspaces-and-Auto-reload)
 * [Responsive Design Testing](https://github.com/mattkersley/Responsive-Design-Testing)
+* [Pesticide](https://github.com/mrmrs/pesticide)
 
 #### Typography
 

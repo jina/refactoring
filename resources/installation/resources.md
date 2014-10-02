@@ -27,5 +27,9 @@
 * [Frontend-Boilerplate, Architect](https://github.com/wearearchitect/Frontend-Boilerplate)
 * [Rolodex - Belly](https://github.com/bellycard/rolodex/tree/master/vendor/assets/stylesheets)
 * [North Generator Style Prototype](https://github.com/north/generator-style-prototype)
+* [Google Web Starter Kit](https://github.com/google/web-starter-kit)
+* [Refills - component library for Bourbon, Neat, and Bitters](http://refills.bourbon.io/)
 
-####  
+#### Cross-Platform
+
+* [Theo - Design Property converter](https://github.com/salesforce-ux/theo)

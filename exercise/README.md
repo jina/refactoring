@@ -78,6 +78,8 @@ You can now add unique styles to each module that requires it—colors, backgrou
 
 Figure out what you can nest inside the parent `%MODULE`—or under each individual button class. For clickable elements, `:hover` and `:active` states should be pretty obvious. Anything else?
 
+For some modules, you may need to _remove_ nesting—if you're editing Sass, perhaps things are nested in so far you want to refactor that **out**.
+
 Use the &#38; parent selector to nest, and don't forget you can do it three ways, depending on a) what output you want and b) what makes for the most understandable code:
 
     /* Output is: .feedback .test */

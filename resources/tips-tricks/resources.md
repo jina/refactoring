@@ -11,6 +11,7 @@
 * [Name Your SASS Variables Modularly](http://webdesign.tutsplus.com/tutorials/quick-tip-name-your-sass-variables-modularly--webdesign-13364)
 * [How to dynamically change text color based on a background color](http://thesassway.com/intermediate/dynamically-change-text-color-based-on-its-background-with-sass)
 * [SCSS Blend Modes](https://github.com/heygrady/scss-blend-modes)
+* [Using mix instead of lighten, @flipstewart @KatieK2](http://codepen.io/flipstewart/pen/IofeD?editors=110)
 
 #### Other Stuff
 

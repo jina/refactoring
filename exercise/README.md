@@ -56,9 +56,9 @@ Now create your new `[MODULENAME].scss` file so that we can copy over clean CSS 
 
 **Extracting Base Class**
 
-First, extract a base class. Determine what a shared classname might be and copy over all the repeated styles that you might want all buttons to share.
+First, extract a base class. Determine what a shared class name might be and copy over all the repeated styles that you might want all buttons to share.
 
-    "I decided to call it `.feedback` because all of the class names in use described a type of user feedback and this class was not in use already." — Chris Eppstein, Digg refactor post
+> "I decided to call it `.feedback` because all of the class names in use described a type of user feedback and this class was not in use already." — Chris Eppstein, Digg refactor post
 
 For now we're going to add that base class to some/all of the places this module exists in our HTML. This is a test step, to make sure everything applies OK. We'll clean this up even more going forward.
 
@@ -108,13 +108,13 @@ We have made a lot of good progress toward reusability and modularity, so even i
 
 Determine what naming convention works best for this module. Do you want to use BEM, or a primary/secondary/tertiary setup, semantic names, or something else you prefer? Write out the naming convention and then create classes for it. 
 
-    Refactoring Tip! Don't remove the old classnames from your CSS or HTML quite yet! You can comment them out in the CSS so they don't apply, but leave them for your reference until you're sure that the new ones are working appropriately!
+> Refactoring Tip! Don't remove the old class names from your CSS or HTML quite yet! You can comment them out in the CSS so they don't apply, but leave them for your reference until you're sure that the new ones are working appropriately!
 
 Now edit the HTML of the buttons to use the new classes; make sure you make any other HTML edits that might be necessary while you're at it! Add the new classes into your CSS and you should have some much prettier code now. Be sure to check your output!
 
 **Unique IDs or Classes**
 
-If your module has individual classnames/IDs that might have been used in JavaScript to make them work or track events on click, you probably don't want to get rid of those altogether.
+If your module has individual class names/IDs that might have been used in JavaScript to make them work or track events on click, you probably don't want to get rid of those altogether.
 
 You have a couple options:
 
@@ -122,12 +122,12 @@ You have a couple options:
 * make the old CSS classes into IDs and edit the JavaScript to use IDs instead of classes, if it's doing that (medium difficultly)
 * refactor the IDs into a consistent naming scheme and edit the JavaScript (preferred, but most difficult)
 
-Now you can remove the old classnames from your CSS.
+Now you can remove the old class names from your CSS.
 
 
 #### Step 6: Apply Variables
 
-Now that we know our refactored classnames, how our `%extend` is working, and the unique styles are applied, let's do a pass to see what those unique styles—colors, backgrounds, icons, fonts, etc—actually are.
+Now that we know our refactored class names, how our `%extend` is working, and the unique styles are applied, let's do a pass to see what those unique styles—colors, backgrounds, icons, fonts, etc—actually are.
 
 Your module may just use existing variables from `colors.scss` or your grid or what not. 
 

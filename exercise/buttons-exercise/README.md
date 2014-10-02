@@ -14,7 +14,7 @@ If you didn't bring your own project code to work on, or just prefer to do a pre
 
 ### /1-original-css-html
 
-This folder contains some super-messy pure CSS and HTML of some buttons. There are a few types, and a disabled state button, but they have varying classnames and a lot of redundant and/or competing styles. (It was really painful to write this so badly on purpose!)
+This folder contains some super-messy pure CSS and HTML of some buttons. There are a few types, and a disabled state button, but they have varying class names and a lot of redundant and/or competing styles. (It was really painful to write this so badly on purpose!)
 
 ### /2-shared-scss-nesting
 
@@ -107,7 +107,7 @@ You can now add back in the unique styles to each individual button—applying c
 
 Figure out what you can nest inside the parent `%button`—or under each individual button class. `:hover` and `:active` states should be pretty obvious. Anything else?
 
-Use the &#38; parent selector to nest, and don't forget you can do it three ways, depending on a) what output you want and b) what makes for the most understandable code:
+Use the `&` parent selector to nest, and don't forget you can do it three ways, depending on a) what output you want and b) what makes for the most understandable code:
 
     /* Output is: .feedback .test */
     .feedback {
@@ -137,7 +137,7 @@ Determine what naming convention works best for these buttons. Do you want to us
 
 Add in the unique styles again into the new classes. Now is a great time to make sure your hover, active, etc states are consistent—or exist! Be sure to nest those, if you need to.
 
-> Refactoring Tip! Don't remove the old classnames from your CSS or HTML quite yet! You can comment them out in the CSS so they don't apply, but leave them for your reference until you're sure that the new ones are working appropriately!
+> Refactoring Tip! Don't remove the old class names from your CSS or HTML quite yet! You can comment them out in the CSS so they don't apply, but leave them for your reference until you're sure that the new ones are working appropriately!
 
 Now edit the HTML of the buttons to use the new classes; make sure you make any other HTML edits that might be necessary while you're at it! Add the new classes into your CSS and you should have some much prettier code now. Be sure to check your output!
 
@@ -156,7 +156,7 @@ Now you can remove the old class names from your CSS.
 
 #### Step 6: Apply Variables
 
-Now that we know our refactored classnames, how our `%extend` is working, and the unique styles are applied, let's do a pass to see what those unique styles—colors, backgrounds, icons, fonts, etc—actually are.
+Now that we know our refactored class names, how our `%extend` is working, and the unique styles are applied, let's do a pass to see what those unique styles—colors, backgrounds, icons, fonts, etc—actually are.
 
 Assuming you already have some variables in a `colors.scss` file, you can go ahead and replace things like `#fff` with `$white`.
 

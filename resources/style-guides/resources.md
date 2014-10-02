@@ -10,8 +10,10 @@
 
 #### Style Guides General
 
+* [http://alistapart.com/article/writingainterfacestyleguide](Writing an Interface Style Guide)
 * [https://blog.engineyard.com/2011/front-end-maintainability-with-sass-and-style-guides](Front End Maintainability with Sass and Style Guides, Jina)
 * [http://alistapart.com/article/creating-style-guides](Creating Style Guides)
+* [http://medium.com/@soenkerohde/living-design-system-3ab1f2280ef7](Living Design System)
 
 #### Style Guide Examples
 

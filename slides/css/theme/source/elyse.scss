@@ -19,7 +19,7 @@ $blue: #0f59b4;
 $orange: #f19732;
 $green: #5b8138;
 $black: #000;
-$grey: #444;
+$grey: #bbb;
 $white: #fff;
 
 .reveal [class^=color-sample-] {
@@ -43,7 +43,7 @@ $white: #fff;
 .color-sample-grey {background: $grey;}
 
 // Backgrounds
-$backgroundColor: $white; // $fuschia;
+$backgroundColor: $fuschia;
 
 // make a slide bg white with data-state="white"
 .white body {
@@ -51,16 +51,14 @@ $backgroundColor: $white; // $fuschia;
 }
 
 // Primary/body text
-$mainFont: 'RooneyLight', 'Adelle', Georgia sans-serif;
+$mainFont: 'pluto-sans-condensed-exlight', Impact, sans-serif;
 $mainFontSize: 36px;
-$mainColor: $blue;
+$mainColor: $white;
 
 // Headings
-$headerPrimary: 'PlutoSansRegular', 'pluto-sans-condensed-light', Impact, sans-serif;
-$headerSecondary: 'pluto-sans-condensed-light', Impact, sans-serif;
-$headerTertiary: $mainFont;
-$headingFont: $headerPrimary;
-$headingColor: $black;
+$headingFont: 'PlutoSansExtraLight', 'PlutoSansRegular', 'pluto-sans-condensed-medium', Impact, sans-serif;
+$headingBold: 'PlutoSansRegular', 'pluto-sans-condensed-medium', Impact, sans-serif;
+$headingColor: $white;
 $headingLineHeight: 150%;
 $headingLetterSpacing: 0;
 $headingTextTransform: none;
@@ -69,8 +67,8 @@ $headingTextShadow: none;
 $heading1TextShadow: $headingTextShadow;
 
 // Links and actions
-$linkColor: $orange;
-$linkColorHover: $green;
+$linkColor: lighten($fuschia,45%);
+$linkColorHover: $white;
 
 // Text selection
 $selectionBackgroundColor: $fuschia;
@@ -84,55 +82,43 @@ $selectionColor: $white;
 
 // Backgrounds
 // use by adding data-state="fuschia" to a section in index.html
-.fuschia .reveal { background-color: $fuschia; }
-.purple .reveal { background-color: $purple; }
-.turquoise .reveal { background-color: $turquoise; }
-.blue .reveal { background-color: $blue; }
-.orange .reveal { background-color: $orange; }
-.green .reveal { background-color: $green; }
-.black .reveal { background-color: $black; }
-.white .reveal { background-color: $white; }
+.fuschia body { background-color: $fuschia; }
+.purple body { background-color: $purple; }
+.turquoise body { background-color: $turquoise; }
+.blue body { background-color: $blue; }
+.orange body { background-color: $orange; }
+.green body { background-color: $green; }
+.black body { background-color: $black; }
+.white body { background-color: $white; }
 
 // Overriding text styles
 
 .reveal .slides {text-align: left;}
 
 .reveal h1 {
-    font-family: $headerTertiary;
-    font-size: 2.25em;
-    color: $fuschia;
-}
-.reveal h2 {
-    font-family: $headerPrimary;
-    font-size: 1.65em;
+    font-size: 1.85em;
     text-transform: uppercase;
-    color: $purple;
+    font-family: $headingBold;
 }
-.reveal h3 {
-    font-family: $headerSecondary;
-    text-transform: uppercase;
-    font-size: 1.35em;
-    color: $black;
-}
+.reveal h2,
+.reveal h3,
 .reveal h4 {
-    font-family: $headerSecondary;
-    font-size: 1.125em;
-    color: $blue;
+    // text-transform: uppercase;
+    font-size: 1.35em;
 }
+
 .reveal h5 {
-    font-family: $headerPrimary;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     font-size: 1em;
-    color: $blue;
 }
 
 .reveal h6 {
-    font-family: $headerPrimary;
     font-size: 18px;
     line-height: 18px;
     margin-bottom: 18px;
     text-transform: uppercase;
     color: $grey;
+    font-family: $headingBold;
 }
 
 .reveal p {
@@ -151,13 +137,6 @@ $selectionColor: $white;
 
 // slide backgrounds
 
-.full-code body {
-    background: #0a2028;
-    .reveal pre code {
-        max-height: 600px;
-        margin-top: -50px;
-    }
-}
 
 .sass-terminal body {
     background: url('/images/sass-terminal.jpg') no-repeat 0 -22px;

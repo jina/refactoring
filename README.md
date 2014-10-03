@@ -18,21 +18,21 @@ In this four-hour workshop, Jina and Elyse will walk you through the basics of r
 This folder contains a few items for your reference during the workshop.
 
 * **schedule.md** — Today's schedule
-* **worksheet.pdf** — A worksheet for you to fill out during the workshop, to give you a checklist of things you can do to refactor your project when you leave! You'll receive a paper version of this as well.
+* **worksheet.pdf** — A worksheet for you to fill out during the workshop, to give you a checklist of things you can do to refactor your project when you leave!
 
 ### /resources
 
 There is a resources doc for each section of the workshop. These contain all kinds of links and goodies for more details on what we cover during the day. You'll find lots of information on how other people tackle similar issues, build front-end architectures, and more in-depth tutorials.
+
+### /examples
+
+Some code examples from our own projects, or other ideas and projects. We don't want you going cross-eyed trying to look at code samples on slides, so instead we put them here for you to browse at your own leisure.
 
 ### /exercise
 
 The workshop exercises will be determining some modules in your project that you can break out and refactor. Depending on time we'll actually get started refactoring one!
 
 If you didn't bring your own project code to work on, there's a sample module in this folder you can work on. See the README in that folder for more details.
-
-## Slides
-
-Slides are available online at [link TBD] for your following-along pleasure!
 
 ## Contact Us
 

@@ -16,8 +16,8 @@
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #ab1550;
-  background-color: #ab1550; }
+  background: #904098;
+  background-color: #904098; }
 
 .reveal {
   font-family: "pluto-sans-condensed-exlight", Impact, sans-serif;
@@ -55,7 +55,7 @@ body {
  * LINKS
  *********************************************/
 .reveal a:not(.image) {
-  color: #e1d7d2;
+  color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
@@ -70,7 +70,7 @@ body {
 
 .reveal .roll span:after {
   color: #fff;
-  background: #c2aea4; }
+  background: rgba(217, 217, 217, 0.5); }
 
 /*********************************************
  * IMAGES
@@ -88,19 +88,19 @@ body {
  *********************************************/
 .reveal .controls div.navigate-left,
 .reveal .controls div.navigate-left.enabled {
-  border-right-color: #e1d7d2; }
+  border-right-color: rgba(255, 255, 255, 0.5); }
 
 .reveal .controls div.navigate-right,
 .reveal .controls div.navigate-right.enabled {
-  border-left-color: #e1d7d2; }
+  border-left-color: rgba(255, 255, 255, 0.5); }
 
 .reveal .controls div.navigate-up,
 .reveal .controls div.navigate-up.enabled {
-  border-bottom-color: #e1d7d2; }
+  border-bottom-color: rgba(255, 255, 255, 0.5); }
 
 .reveal .controls div.navigate-down,
 .reveal .controls div.navigate-down.enabled {
-  border-top-color: #e1d7d2; }
+  border-top-color: rgba(255, 255, 255, 0.5); }
 
 .reveal .controls div.navigate-left.enabled:hover {
   border-right-color: #fff; }
@@ -121,7 +121,7 @@ body {
   background: rgba(0, 0, 0, 0.2); }
 
 .reveal .progress span {
-  background: #e1d7d2;
+  background: rgba(255, 255, 255, 0.5);
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -ms-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
@@ -132,7 +132,7 @@ body {
  * SLIDE NUMBER
  *********************************************/
 .reveal .slide-number {
-  color: #e1d7d2; }
+  color: rgba(255, 255, 255, 0.5); }
 
 .fuschia body {
   background-color: #ab1550; }
@@ -145,6 +145,9 @@ body {
 
 .blue body {
   background-color: #0f59b4; }
+
+.navy body {
+  background-color: #002451; }
 
 .orange body {
   background-color: #f19732; }
@@ -165,7 +168,7 @@ body {
   font-size: 1.75em;
   line-height: 1.2;
   text-transform: uppercase;
-  font-family: "PlutoSansRegular", "pluto-sans-condensed-medium", Impact, sans-serif; }
+  font-family: "PlutoSansRegular", Impact, sans-serif; }
 
 .reveal h2,
 .reveal h3,
@@ -173,7 +176,7 @@ body {
   font-size: 1.35em; }
 
 .reveal h2 {
-  font-family: "PlutoSansRegular", "pluto-sans-condensed-medium", Impact, sans-serif;
+  font-family: "PlutoSansRegular", Impact, sans-serif;
   text-transform: uppercase; }
 
 .reveal h5 {
@@ -184,8 +187,8 @@ body {
   line-height: 18px;
   margin-bottom: 18px;
   text-transform: uppercase;
-  color: #df9fbf;
-  font-family: "PlutoSansRegular", "pluto-sans-condensed-medium", Impact, sans-serif; }
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "PlutoSansRegular", Impact, sans-serif; }
 
 .reveal p {
   font-size: 1em; }
@@ -214,6 +217,13 @@ body {
 .foundation-sass body {
   background: url("/images/foundation-sass.png") no-repeat 0 -22px;
   background-size: cover; }
+
+.bootstrap-sass body {
+  background: url("/images/bootstrap-sass.png") no-repeat 0 -22px;
+  background-size: cover; }
+
+.compass body {
+  background: #2F2F2F url("/images/compass-logo.png") no-repeat center center; }
 
 .libsass body {
   background: #5e5e5e url("/images/libsass-logo.png") no-repeat center center; }

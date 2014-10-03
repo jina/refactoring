@@ -43,32 +43,33 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 
-				<section>
-					<h1>Choose your own Refactoring Adventure</h1>
-					<h5>A workshop at SassConf 2014</h5>
-					<h6>by Elyse Holladay &amp; Jina Bolton</h6>
-				</section>
-
-				<section data-state="elyse">
-					<h2>@elyseholladay</h2>
-					<h6>Dev/Designer, Instructor, MakerSquare</h6>
-				</section>
-
-				<section data-state="jina">
-					<h2>@jina</h2>
-					<h6>Senior Product Designer, Salesforce UX</h6>
-				</section>
-
-				<section>
-					<h3><a href="http://bit.ly/cya-refactoring">http://bit.ly/cya-refactoring</a></h3>
-					<h6>Mini Questionnaire!</h6>
+				<section data-state="green">
+                    <h2><a href="http://bit.ly/cya-refactoring">http://bit.ly/cya-refactoring</a></h2>
+                    <h6>Please fill out this short survey before we get started!</h6>
 					<aside class="notes">
 						<p>We just want to get an idea of where you're at before we begin. Nothing's required but any information you're willing to share helps us tailor this adventure to you!</p>
 						<p>[give about 5-10]</p>
 					</aside>
 				</section>
 
-				<section>
+                <section data-state="blue">
+                    <h1>Choose your own Refactoring Adventure</h1>
+                    <h5>A workshop at SassConf 2014</h5>
+                    <h6>by Elyse Holladay &amp; Jina Bolton</h6>
+                </section>
+
+                <section>
+                    <h2>@elyseholladay</h2>
+                    <h6>Dev/Designer, Instructor, MakerSquare</h6>
+                </section>
+
+                <section>
+                    <h2>@jina</h2>
+                    <h6>Senior Product Designer, Salesforce UX</h6>
+                </section>
+
+
+<!-- 				<section>
 					<div class="survey-responses">
 						<h6>My biggest issues or concerns with my codebase is&hellip;</h6>
 						<div><b>10</b>&nbsp;&nbsp;&nbsp;getting my team to agree</div>
@@ -81,7 +82,7 @@
 						<p>If we are lucky we can make a "stats" slide and put in some basic #s about the survey responses!</p>
 					</aside>
 				</section>
-
+ -->
 
 				<section>
 					<h4>&#8220;I always code perfectly <br/>the first time!&#8221;</h4>
@@ -227,7 +228,7 @@
 					</aside>
 				</section>
 
-				<section>
+				<section data-state="blue">
 					<h1>Installation &#38; Apps</h1>
 					<h6>Goal: Determine the best way to use Sass in your project.</h6>
 					<aside class="notes">
@@ -295,11 +296,6 @@
 					</aside>
 				</section>
 
-                <section>
-                    <h3>Compass</h3>
-                </section>
-
-
 				<section data-state="white">
 					<img src="/images/grunt-logo.png" alt="" style="margin-right: 250px;">
 					<img src="/images/gulp-logo.png" alt="">
@@ -342,15 +338,13 @@
                     </aside>
                 </section>
 
-                <section>
-                    <h2>Bootstrap Sass</h2>
+                <section data-state="bootstrap-sass">
                 </section>
 
-                <section>
-                    <h2>Compass</h2>
+                <section data-state="compass">
                 </section>
 
-				<section>
+				<section data-state="blue">
 					<h1><code>.scss</code> or <code>.sass</code>?</h1>
 					<h6>Goal: Choose a syntax for your project.</h6>
 				</section>
@@ -372,7 +366,7 @@
 					<h6>* the language name! It&rsquo;s not an acronym!</h6>
 				</section>
 
-				<section>
+				<section data-state="navy">
                     <h3>SCSS* or &ldquo;Sassy CSS&rdquo;</h3>
                     <p>Looks just like CSS.</p>
 					<p>Every <code>.css</code> file is a valid <code>.scss</code> file.</p>
@@ -394,12 +388,12 @@
 					</aside>
 				</section>
 
-				<section>
+				<section data-state="navy">
 					<p><code>.sass</code> syntax uses indentation rather than brackets to indicate nesting of selectors, and newlines rather than semicolons to separate properties.</p>
 					<pre>
-					<code class="sass">
-  .widget /* look ma, no brackets! */
-    color: #fff /* or semi-colons! */
+					<code class="scss">
+  .widget /* look ma, no brackets or semicolons! */
+    color: #fff
     background: $backgroundColor
     margin: 20px
     padding: 20px
@@ -415,12 +409,13 @@
 					</pre>
 
 					<aside class="notes">
+                        <p>also highlightjs syntax highlighting totally doesnt work with sass syntax lulz</p>
 						<p>I personally like the .sass syntax; I find it forces me to be more cautious about nesting, and I love not typing brackets or semicolons.</p>
 						<p>It's a good choice for those familiar with things like HAML, or who like significant whitespace, or like me, are lazy. It's also less to type if you use the oldschool syntax. Instead of writing @mixin, you can use the character =; instead of writing @include, you can use the character +</p>
 					</aside>
 				</section>
 
-				<section>
+				<section data-state="navy">
 					<h3>Converting <code>.(s)css</code> to <code>.sass</code></h3>
 					<pre>
 					<code class="sass">
@@ -443,19 +438,20 @@
 					</aside>
 				</section>
 
-				<section>
+				<section data-state="blue">
 					<h1>Importing</h1>
 					<h6>Goal: Choose how to import and organize your code.</h6>
 				</section>
 
 				<section>
-					<h5>create an <code>application.scss</code> manifest file</h5>
+					<h2>Create a manifest file.</h2>
+                    <p><code>application.scss</code> </p>
 					<aside class="notes">
 						<p>The first thing you can do is to import everything thru your compiled Sass file; create an application.scss/sass file and link to it from your app. If you're linking to multiple CSS files, import them from your manifest instead.</p>
 					</aside>
 				</section>
 
-				<section>
+				<section data-state="navy">
 					<pre><code class="scss">
   @import [framework or vendor css]
   @import styles.scss
@@ -495,7 +491,7 @@
 					</aside>
 				</section>
 
-				<section>
+				<section data-state="blue">
 					<h1>Creating Variables</h1>
 					<h6>Goal: Create simple, new variables that don&rsquo;t alter output.</h6>
 				</section>
@@ -529,8 +525,8 @@
 					</aside>
 				</section>
 
-				<section>
-					<p>Use color operations to make variations.</p>
+				<section data-state="navy">
+					<h2>Use color operations <br/>for variations.</h2>
                     <pre><code>
   $dark-purple: darken($purple, 20%);
   $light-purple: transparentize($purple, 20%);
@@ -544,7 +540,7 @@
 					</aside>
 				</section>
 
-				<section>
+				<section data-state="navy">
 					<h2>Typography Variables</h2>
 						<pre>
 					<code class="sass">
@@ -576,7 +572,7 @@
 					</aside>
 				</section>
 
-				<section>
+				<section data-state="blue">
 					<h1>Variable Abstraction</h1>
 					<h6>Goal: Clarify variable names, create themes, named media queries.</h6>
 				</section>
@@ -590,8 +586,8 @@
 
 				</section>
 
-				<section>
-					<h5>Shared Name First</h5>
+				<section data-state="navy">
+					<h2>Shared Name First</h2>
 					<pre><code>
   // by shades...                       // better: by shared name
   $blue;                                $blue;
@@ -608,7 +604,7 @@
 				</section>
 
 				<section>
-					<h5>Abstracted Variable Names</h5>
+					<h2>Abstracted Variable Names</h2>
                     <p class="ref-link"><span class="ref-arrow">&#10172; /examples/abstracted-var-names.md</p>
 				</section>
 
@@ -632,13 +628,13 @@
 					</aside>
 				</section>
 
-				<section>
+				<section data-state="blue">
 					<h1>Organize Files & Folders</h1>
 					<h6>Goal: Keep style, vendor, and helper code separate; <br />make files easy to find and not cluttered.</h6>
 				</section>
 
 				<section>
-					<p class="fragment">config: settings, variables</p>
+					<p>config: settings, variables</p>
 					<p class="fragment">themes, if you have any</p>
 					<p class="fragment">helpers: mixins, JS state classes, CSS3</p>
 					<p class="fragment">frameworks: foundation, bootstrap, grids</p>
@@ -682,7 +678,7 @@
 				</section>
 
 				<section data-state="sassystarter">
-					<h5 style="color:#666; text-transform: none;">Mina Markham&rsquo;s Sassy Starter</h3>
+					<h2>Mina Markham&rsquo;s Sassy Starter</h2>
 					<p><a href="http://moourl.com/sassystarter" class="ref-link"><span class="ref-arrow">&#10172; moourl.com/sassystarter</a></p>
                     <p class="ref-link"><span class="ref-arrow">&#10172; /examples/architecture-examples/sassy-starter.md</p>
 					<aside class="notes">
@@ -692,13 +688,13 @@
 					</aside>
 				</section>
 
-				<section>
+				<section data-state="blue">
 					<h1>Creating Modules</h1>
-					<h6>Goal: determine what modules your project has<br /> &#38; how to group them</h6>
+					<h6>Goal: determine what modules your project has &#38; how to group them</h6>
 				</section>
 
 				<section>
-					<h2>What modules <br/>do you have?</h2>
+					<h2>What modules do you have?</h2>
 				</section>
 
 				<section>
@@ -706,7 +702,7 @@
 				</section>
 
 				<section>
-					<h1>Print your website out!</h1>
+					<h3>Print your website out!</h3>
 					<aside class="notes">
 						<p>No but srsly. At Bazaarvoice we had 3 separate codebases, one for Reviews, one for AA, one for Stories. We wanted to consolidate the CSS, but it was too big of an undertaking to refactor all the HTML and UI components.</p>
 						<p>So what we did is we printed out every page/area of our software. Then we took them in groups and with colored pencils, boxed out what sections were the same.</p>
@@ -779,7 +775,7 @@
 				</section>
 
 				<section>
-					<h5>where do you put new modules?</h5>
+					<h2>where do you put new modules?</h2>
 					<aside class="notes">
                         <p>create new folder structure when you outgrow it</p>
                     </aside>
@@ -790,6 +786,7 @@
                     <aside class="notes">
                         <p>Most of us don't start our projects with a fully fledged, totally built out folder and file structure. Start with what you know you need—and if that's no folders, fine. if it's a components folder for vars and helpers and a modules folder for your page stuff? fine. but as your project grows, don't be afraid to move stuff around.</p>
                     </asides>
+
                 </section>
 
 				<!-- namespacing / nesting leads to bloat -->
@@ -801,7 +798,7 @@
 					</aside>
 				</section>
 
-				<section>
+				<section data-state="blue">
 					<h1>Steps to Refactor</h1>
 					<h6>Goal: take your modules and do the actual refactor work!</h6>
 
@@ -819,7 +816,7 @@
 					</aside>
 				</section>
 
-				<section>
+				<section data-state="turquoise">
                     <h5>1. Extract partial</h5>
                     <h5 class="fragment">2. Find repeating patterns</h5>
                     <h5 class="fragment">3. Create/Extract Base Class/Extend</h5>
@@ -847,7 +844,7 @@
                 </section>
 
                 <section>
-                    <h5>Repeating Patterns</h5>
+                    <h2>Repeating Patterns</h2>
                     <ul>
                         <li>selector duplication that implies inheritance relationship</li>
                         <li>repeating patterns relating to colors, typography, etc</li>
@@ -856,7 +853,7 @@
                 </section>
 
                 <section>
-                    <h5>Repeating Patterns</h5>
+                    <h2>Repeating Patterns</h2>
                     <ul>
                         <li>a CSS class that can function as a consistent base class</li>
                         <li>plain ol' duplicated CSS of any type</li>
@@ -928,7 +925,20 @@
                     <h6>— Chris Eppstein</h6>
                 </section>
 
-				<section>
+                <section data-state="turquoise">
+                    <h5>1. Extract partial</h5>
+                    <h5>2. Find repeating patterns</h5>
+                    <h5>3. Create/Extract Base Class/Extend</h5>
+                    <h5>4. Apply/Remove Nesting</h5>
+                    <h5>5. Edit HTML Classes</h5>
+                    <h5>6. Apply Variables</h5>
+                    <h5>7. Create Mixins</h5>
+                    <aside class="notes">
+                        <p>break and work time!</p>
+                    </aside>
+                </section>
+
+				<section data-state="blue">
 					<h1>Naming Conventions</h1>
 					<h6>Goal: Choose a naming convention that works for you.</h6>
 				</section>
@@ -939,36 +949,22 @@
 				</section>
 
 				<section>
-					<p>OOCSS</p>
+					<p>OOCSS, BEM, SMACSS?</p>
 				</section>
 
 				<section>
-					<p>BEM</p>
+					<h2>Organizing Properties</h2>
+                    <p>alphabetical, by property type, camelcase vs underscore vs dashes</p>
+				</section>
+
+				<section data-state="blue">
+					<h1>Living Style Guides</h1>
+                    <h6>Goal: Keep your styles maintainable, consistent, & visible</h6>
 				</section>
 
 				<section>
-					<p>SMACSS</p>
-				</section>
-
-				<section>
-					<p>pros and cons of naming convention standards</p>
-				</section>
-
-				<section>
-					<p>how to iterate on naming conventions and change them</p>
-				</section>
-
-				<section>
-					<p>organizing properties (alpha, properties, camelcase vs underscore vs dash, etc)</p>
-				</section>
-
-				<section>
-					<h2>Living Style Guides</h2>
-				</section>
-
-				<section>
-					<h5>Style Guides are all the rage</h5>
-					<h6>&hellip;and they have come a long way.</h6>
+					<h2>Style Guides are all the rage</h2>
+					<p>&hellip;and they have come a long way.</p>
 				</section>
 
 				<section>
@@ -989,16 +985,9 @@
 				</section>
 
 				<section>
-				  <ol>
-				    <li>Design &#38; Brand Standards</li>
-				    <li>Front-end Development Standards</li>
-				    <li>Keeping Style Guides <span style="color: #C2185B;">Current &#38; Useful</span></li>
-				  </ul>
-				</section>
-
-				<section>
-				  <h4>The key is &ldquo;Current &#38; Useful&rdquo;</h4>
-				  <h6>Once the style guide is not up-to-date, it is no longer useful.</h6>
+				  <h4 style="display: inline;">The key is</h4>
+                  <h2 style="display: inline;">&ldquo;Current &#38; Useful&rdquo;</h2>
+				  <p class="fragment">Once the style guide is not up-to-date, it is no longer useful.</p>
 				</section>
 
 				<section>
@@ -1007,11 +996,11 @@
 
 				<section>
 				  <h4>What if a color gets added?</h4>
-				  <h6>You need to update the style guide, too.</h6>
+				  <p>You need to update the style guide, too.</p>
 				</section>
 
 				<section>
-				  <h4>Automated Style Guides</h4>
+				  <h2>Automated Style Guides</h2>
 				  <ul>
 				    <li>KSS</li>
 				    <li>StyleDocco</li>
@@ -1024,13 +1013,14 @@
 				</section>
 
 				<section>
-				  <h4>Manual Creation gives you flexibility</h4>
+				  <h2>Manual Creation</h2>
+                    <p>gives you flexibility</h4>
 					<p>&hellip;but you have to stay on top of it.</p>
 					<br />
 					<h6>I like a hybrid approach.</h6>
 				</section>
 
-				<section>
+				<section data-state="blue">
 					<h1>Documentation &#38; <br/>/* Commenting */</h1>
 					<h6>Goal: have a consistent comment style and use it!</h6>
 				</section>
@@ -1045,26 +1035,13 @@
 					</aside>
 				</section>
 
-				<section data-state="comments">
-                    <aside class="notes">
-						<p>commenting files</p>
-                    </aside>
-				</section>
-
 				<section>
-					<h5>inline comment documentation</h5>
+					<h2>inline comment documentation</h2>
                     <h6>keep it up to date when you change your code.</h6>
 				</section>
 
-				<section data-state="importcomments">
-					<aside class="notes">
-                        <p>commenting imports</p>
-                    </aside>
-				</section>
-
-
-                <section data-state="full-code">
-                <pre><code class="no-highlight">
+                <section data-state="navy">
+                <pre><code class="scss">
 // Single-line JS-style comments don't need a closing tag,
 // and they are hidden from your compiled output! This is
 // great for inline documentation about the styles themselves
@@ -1083,7 +1060,7 @@ section documentation and headers/dividers! */
                 </section>
 
 				<section>
-                    <h5>Write instructions in your comments.</h5>
+                    <h2>Write instructions in comments.</h2>
                     <p class="ref-link"><span class="ref-arrow">&#10172; /examples/comment-instructions.scss</p>
 					<aside class="notes">
                         <p>documentation/instructions</p>
@@ -1092,7 +1069,7 @@ section documentation and headers/dividers! */
                     </aside>
                 </section>
 
-				<section>
+				<section data-state="blue">
 					<h1>Testing</h1>
 					<h6>Goal: Don&rsquo;t be breaking shit.</h6>
 				</section>
@@ -1130,6 +1107,11 @@ section documentation and headers/dividers! */
 						<p>using elements vs classnames, BEM, OOCSS, etc</p>
 						<p>using frameworks or not</p>
 					</aside>
+                </section>
+
+                <section data-state="blue">
+                    <h1>Thank You!</h1>
+                    <p>@elyseholladay + @jina</p>
                 </section>
 
 			</div>

@@ -36,7 +36,7 @@ $wafer: #e1d7d2;
 }
 
 // Backgrounds
-$backgroundColor: $fuschia;
+$backgroundColor: $purple;
 
 // Primary/body text
 $mainFont: 'pluto-sans-condensed-exlight', Impact, sans-serif;
@@ -45,7 +45,7 @@ $mainColor: $white;
 
 // Headings
 $headingFont: 'PlutoSansExtraLight', 'PlutoSansRegular', 'pluto-sans-condensed-medium', Impact, sans-serif;
-$headingBold: 'PlutoSansRegular', 'pluto-sans-condensed-medium', Impact, sans-serif;
+$headingBold: 'PlutoSansRegular', Impact, sans-serif;
 $headingColor: $white;
 $headingLineHeight: 150%;
 $headingLetterSpacing: 0;
@@ -56,7 +56,7 @@ $heading1TextShadow: $headingTextShadow;
 
 // Links and actions
 // $linkColor: lighten($fuschia,45%);
-$linkColor: $wafer;
+$linkColor: transparentize($white,.5);
 $linkColorHover: $white;
 
 // Text selection
@@ -76,6 +76,7 @@ $codeFont: 'Fira Mono', 'Inconsolata', 'Menlo', monoscaped;
 .purple body { background-color: $purple; }
 .turquoise body { background-color: $turquoise; }
 .blue body { background-color: $blue; }
+.navy body { background-color: #002451; }
 .orange body { background-color: $orange; }
 .green body { background-color: $green; }
 .black body { background-color: $black; }
@@ -111,7 +112,7 @@ $codeFont: 'Fira Mono', 'Inconsolata', 'Menlo', monoscaped;
     line-height: 18px;
     margin-bottom: 18px;
     text-transform: uppercase;
-    color: lighten($hopbush,15%);
+    color: transparentize($white,.5);
     font-family: $headingBold;
 }
 
@@ -153,6 +154,14 @@ $codeFont: 'Fira Mono', 'Inconsolata', 'Menlo', monoscaped;
     background-size: cover;
 }
 
+.bootstrap-sass body {
+    background: url('/images/bootstrap-sass.png') no-repeat 0 -22px;
+    background-size: cover;
+}
+
+.compass body {
+    background: #2F2F2F url('/images/compass-logo.png') no-repeat center center;
+}
 .libsass body {
     background: #5e5e5e url('/images/libsass-logo.png') no-repeat center center;
 }

@@ -1,3 +1,4 @@
+```
 + css/
 
 | - [project name].scss
@@ -49,3 +50,4 @@
 |   |--- [various media queries for responsive layout]
 |   |--- _high-definition.scss    # print & retina
 |   |--- _print.scss
+```

@@ -1,3 +1,4 @@
+```
 
 + scss/
 |
@@ -44,3 +45,4 @@
 + deploy.rb               # Capistrano configuration file
 + Gruntfile.js            # Grunt configuration & tasks
 + package.json            # Grunt metadata & dependencies
+```

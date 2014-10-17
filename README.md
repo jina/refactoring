@@ -40,8 +40,8 @@ Want to get in touch with us about the workshop? More questions or feedback? We'
 
 ### Jina Bolton
 
-[http://twitter.com/jina](@jina)
+[@jina](http://twitter.com/jina)
 
 ### Elyse Holladay
 
-[http://twitter.com/elyseholladay](@elyseholladay)
+[@elyseholladay](http://twitter.com/elyseholladay)
